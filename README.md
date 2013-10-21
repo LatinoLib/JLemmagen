@@ -6,7 +6,28 @@ JLemmaGen is java implmentation of [LemmaGen][lemmagen] project.
 
 
 ### Sample Usage
-    Lemmatizer lm = LemmatizerFactory.getPrebuild("en");
+    Lemmatizer lm = LemmatizerFactory.getPrebuild("mlteast-en");
     assert("be".equals(lm.lemmatize("are")));
+
+### Maven
+Repository:
+
+    <repository>
+        <id>jlemmagen-snapshots</id>
+        <name>JLemmaGen snaphsot repository</name>
+        <url>https://mvn.datalan.sk/maven2/libs-snapshots-local/</url>
+        <snapshots>
+            <enabled>true</enabled>
+        </snapshots>
+        <layout>default</layout>
+    </repository>
+
+Dependency:
+
+    <dependency>
+        <groupId>eu.hlavki.text</groupId>
+        <artifactId>lemmagen-lang</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </dependency>
 
 [lemmagen]: http://lemmatise.ijs.si/Software/Version3

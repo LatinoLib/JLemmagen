@@ -1,6 +1,7 @@
 # JLemmagen
 
-JLemmaGen is java implmentation of [LemmaGen][lemmagen] project.
+JLemmaGen is java implmentation of [LemmaGen][lemmagen] project. It's open source lemmatizer with 15 prebuilded european lexicons.
+Of course you can build your own lexicon.
 
 [LemmaGen][lemmagen] project aims at providing standardized open source multilingual platform for lemmatisation.
 

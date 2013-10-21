@@ -23,6 +23,21 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
+    <distributionManagement>
+        <repository>
+            <id>dtln-ext-releases</id>
+            <name>External releases repository</name>
+            <url>https://mvn.datalan.sk/maven2/libs-releases-local</url>
+            <layout>default</layout>
+        </repository>
+        <snapshotRepository>
+            <id>dtln-ext-snapshots</id>
+            <name>External snapshots repository</name>
+            <url>https://mvn.datalan.sk/maven2/libs-snapshots-local</url>
+            <layout>default</layout>
+        </snapshotRepository>
+    </distributionManagement>
+
     <dependencyManagement>
         <dependencies>
             <dependency>
@@ -63,6 +78,30 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
+            <plugin>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.9.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-javadocs</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <artifactId>maven-source-plugin</artifactId>
+                <version>2.2.1</version>
+                <executions>
+                    <execution>
+                        <id>attach-sources</id>
+                        <goals>
+                            <goal>jar</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin> 
         </plugins>
     </build>
 </project>

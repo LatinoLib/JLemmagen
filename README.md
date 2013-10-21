@@ -4,6 +4,10 @@ JLemmaGen is java implmentation of [LemmaGen][lemmagen] project.
 
 [LemmaGen][lemmagen] project aims at providing standardized open source multilingual platform for lemmatisation.
 
+Project contains 2 libraries:
+
+*    **lemmagen.jar** - implementation of lemmatizer and API for building own lemmatizers
+*    **lemmagen-lang.jar** - prebuilded lemmatizers from [Multext Eastern dictionaries][multeast]
 
 ### Sample Usage
     Lemmatizer lm = LemmatizerFactory.getPrebuild("mlteast-en");
@@ -31,3 +35,4 @@ Dependency:
     </dependency>
 
 [lemmagen]: http://lemmatise.ijs.si/Software/Version3
+[multeast]: http://nl.ijs.si/ME/V4/

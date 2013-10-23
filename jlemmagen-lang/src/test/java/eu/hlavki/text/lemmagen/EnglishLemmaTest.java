@@ -62,7 +62,7 @@ public class EnglishLemmaTest {
             String[] words = text.split("(?=[,.])|\\s+");
             for (String word : words) {
                 if (word.trim().length() > 1) {
-                    String lemma = lm.lemmatize(word.trim());
+                    CharSequence lemma = lm.lemmatize(word.trim());
                     if (!word.equals(lemma)) {
                         System.out.println(word + " -> " + lemma);
                     }

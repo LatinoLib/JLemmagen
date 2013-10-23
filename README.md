@@ -35,5 +35,18 @@ Dependency:
         <version>1.0-SNAPSHOT</version>
     </dependency>
 
+### Lucene (Solr)
+You need these jars to integrate with lucene/solr:
+
+*    lemmagen-lucene.jar
+*    lemmagen.jar
+*    lemmagen-lang.jar
+*    SLF4J API and implememtation (e.g. slf4j-jdk14.jar)
+
+Example of solr filter definition in schema (e.g. Slovak):
+    
+    <filter class="org.apache.lucene.analysis.lemmagen.LemmagenFilterFactory" lexicon="mlteast-sk"/>
+
+
 [lemmagen]: http://lemmatise.ijs.si/Software/Version3
 [multeast]: http://nl.ijs.si/ME/V4/

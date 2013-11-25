@@ -50,7 +50,7 @@ public class EnglishLemmaTest {
     }
 
     @Test
-    public void longText() {
+    public void longEnglishText() {
         try {
             Lemmatizer lm = LemmatizerFactory.getPrebuild("mlteast-en");
             String text = "On the other hand, inflectional paradigms, "
@@ -73,7 +73,7 @@ public class EnglishLemmaTest {
     }
 
     @Test
-    public void shortText() {
+    public void shortEnglishText() {
         try {
             Lemmatizer lm = LemmatizerFactory.getPrebuild("mlteast-en");
             assertEquals("be", lm.lemmatize("are"));
@@ -83,4 +83,13 @@ public class EnglishLemmaTest {
         }
     }
 
+    @Test
+    public void testMakedoniaWord() {
+        try {
+            Lemmatizer lm = LemmatizerFactory.getPrebuild("mlteast-mk");
+            assertEquals("инвестиција", lm.lemmatize("инвестиции"));
+        } catch (IOException e) {
+            fail(e.getMessage());
+        }
+    }
 }

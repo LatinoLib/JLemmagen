@@ -9,7 +9,7 @@ Project contains 2 libraries:
 
 *    **lemmagen.jar** - implementation of lemmatizer and API for building own lemmatizers
 *    **lemmagen-lang.jar** - prebuilded lemmatizers from [Multext Eastern dictionaries][multeast]
-  * **IMPORTANT!**  - see [License](##markdown-header-license) chapter.
+    * **IMPORTANT!**  - see [License](#markdown-header-license) chapter.
 
 ### Sample Usage
     Lemmatizer lm = LemmatizerFactory.getPrebuild("mlteast-en");

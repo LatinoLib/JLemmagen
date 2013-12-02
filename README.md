@@ -9,6 +9,7 @@ Project contains 2 libraries:
 
 *    **lemmagen.jar** - implementation of lemmatizer and API for building own lemmatizers
 *    **lemmagen-lang.jar** - prebuilded lemmatizers from [Multext Eastern dictionaries][multeast]
+  * **IMPORTANT!**  - see [License](##markdown-header-license) chapter.
 
 ### Sample Usage
     Lemmatizer lm = LemmatizerFactory.getPrebuild("mlteast-en");
@@ -47,6 +48,10 @@ Example of solr filter definition in schema (e.g. Slovak):
     
     <filter class="org.apache.lucene.analysis.lemmagen.LemmagenFilterFactory" lexicon="mlteast-sk"/>
 
+
+### License
+
+All source code is licensed under Apache License 2.0. Important note is that binary rule tree files (*.lem) are **NOT** licensed under Apache License 2.0 and can be used only for non-commercial projects.
 
 [lemmagen]: http://lemmatise.ijs.si/Software/Version3
 [multeast]: http://nl.ijs.si/ME/V4/

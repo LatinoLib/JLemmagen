@@ -82,14 +82,4 @@ public class EnglishLemmaTest {
             fail(e.getMessage());
         }
     }
-
-    @Test
-    public void testMakedoniaWord() {
-        try {
-            Lemmatizer lm = LemmatizerFactory.getPrebuild("mlteast-mk");
-            assertEquals("инвестиција", lm.lemmatize("инвестиции"));
-        } catch (IOException e) {
-            fail(e.getMessage());
-        }
-    }
 }

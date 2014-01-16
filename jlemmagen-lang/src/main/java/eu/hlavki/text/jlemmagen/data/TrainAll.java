@@ -23,12 +23,16 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /**
  *
  * @author Michal Hlavac <hlavki@hlavki.eu>
  */
 public final class TrainAll {
+
+    private static final Logger log = LoggerFactory.getLogger(TrainAll.class);
 
     public static void main(String[] args) throws Exception {
         File dir = new File(".");
@@ -43,24 +47,24 @@ public final class TrainAll {
                     BufferedReader br = null;
                     try {
                         br = new BufferedReader(new FileReader(file));
-                        System.out.println("Reading " + file.getName());
+                        log.info("Reading " + file.getName());
                         DefaultLemmatizer lm = new DefaultLemmatizer(br, "WLM", settings);
-                        System.out.println("Building " + file.getName());
+                        log.info("Building " + file.getName());
                         lm.buildModel();
                         String filename = file.getName().substring(0, file.getName().lastIndexOf("."));
-                        System.out.println("Saving to " + filename + ".lem");
-                        LemmatizerFactory.saveToFile(lm, new File(filename + ".lem"));
+                        log.info("Saving to " + filename + ".lem");
+                        LemmatizerFactory.saveToFile(lm, new File(dir, filename + ".lem"));
                     } finally {
                         try {
                             if (br != null) br.close();
                         } catch (IOException e) {
-                            System.out.println("Cant close stream");
+                            log.warn("Can't close stream", e);
                         }
                     }
                 }
             }
         } else {
-            System.out.println(dir.getAbsolutePath() + " is not directory");
+            log.error(dir.getAbsolutePath() + " is not directory");
         }
     }
 }

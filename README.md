@@ -21,7 +21,7 @@ Repository:
     <repository>
         <id>jlemmagen-snapshots</id>
         <name>JLemmaGen snaphsot repository</name>
-        <url>https://mvn.datalan.sk/maven2/libs-snapshots-local/</url>
+        <url>https://xmaven.datalan.sk/maven2/libs-snapshots-local/</url>
         <snapshots>
             <enabled>true</enabled>
         </snapshots>

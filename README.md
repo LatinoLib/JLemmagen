@@ -1,6 +1,6 @@
 # JLemmagen
 
-JLemmaGen is java implmentation of [LemmaGen][lemmagen] project. It's open source lemmatizer with 15 prebuilded european lexicons.
+JLemmaGen is java implmentation of [LemmaGen][lemmagen] project. It's open source lemmatizer with 15 prebuilted european lexicons.
 Of course you can build your own lexicon.
 
 [LemmaGen][lemmagen] project aims at providing standardized open source multilingual platform for lemmatisation.
@@ -8,11 +8,11 @@ Of course you can build your own lexicon.
 Project contains 2 libraries:
 
 *    **lemmagen.jar** - implementation of lemmatizer and API for building own lemmatizers
-*    **lemmagen-lang.jar** - prebuilded lemmatizers from [Multext Eastern dictionaries][multeast]
+*    **lemmagen-lang.jar** - prebuilted lemmatizers from [Multext Eastern dictionaries][multeast]
     * **IMPORTANT!**  - see [License](#markdown-header-license) chapter.
 
 ### Sample Usage
-    Lemmatizer lm = LemmatizerFactory.getPrebuild("mlteast-en");
+    Lemmatizer lm = LemmatizerFactory.getPrebuilt("mlteast-en");
     assert("be".equals(lm.lemmatize("are")));
 
 ### Maven

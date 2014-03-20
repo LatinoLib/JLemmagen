@@ -52,7 +52,7 @@ public class EnglishLemmaTest {
     @Test
     public void longEnglishText() {
         try {
-            Lemmatizer lm = LemmatizerFactory.getPrebuild("mlteast-en");
+            Lemmatizer lm = LemmatizerFactory.getPrebuilt("mlteast-en");
             String text = "On the other hand, inflectional paradigms, "
                     + "or lists of inflected forms of typical words (such as sing, sang, "
                     + "sung, sings, singing, singer, singers, song, songs, songstress, "
@@ -75,7 +75,7 @@ public class EnglishLemmaTest {
     @Test
     public void shortEnglishText() {
         try {
-            Lemmatizer lm = LemmatizerFactory.getPrebuild("mlteast-en");
+            Lemmatizer lm = LemmatizerFactory.getPrebuilt("mlteast-en");
             assertEquals("be", lm.lemmatize("are"));
             assertEquals("sing", lm.lemmatize("singing"));
         } catch (IOException e) {

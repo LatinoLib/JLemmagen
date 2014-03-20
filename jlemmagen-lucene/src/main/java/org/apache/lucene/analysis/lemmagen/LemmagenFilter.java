@@ -40,7 +40,7 @@ public class LemmagenFilter extends TokenFilter {
         super(input);
         this.charUtils = CharacterUtils.getInstance(version);
         try {
-            this.lm = LemmatizerFactory.getPrebuild(lexiconResource);
+            this.lm = LemmatizerFactory.getPrebuilt(lexiconResource);
         } catch (IOException e) {
             throw new IllegalArgumentException("Can't initialize lemmatizer from resource " + lexiconResource, e);
         }

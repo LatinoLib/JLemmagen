@@ -52,7 +52,7 @@ public class MakedoniaLemmaTest {
     @Test
     public void testOneWord() {
         try {
-            Lemmatizer lm = LemmatizerFactory.getPrebuild("mlteast-mk");
+            Lemmatizer lm = LemmatizerFactory.getPrebuilt("mlteast-mk");
             assertEquals("инвестиција", lm.lemmatize("инвестиции"));
         } catch (IOException e) {
             fail(e.getMessage());

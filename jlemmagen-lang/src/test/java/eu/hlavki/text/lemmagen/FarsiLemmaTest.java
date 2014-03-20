@@ -94,7 +94,7 @@ public class FarsiLemmaTest {
     @Test
     public void testOneWord() {
         try {
-            Lemmatizer lm = LemmatizerFactory.getPrebuild("mlteast-fa");
+            Lemmatizer lm = LemmatizerFactory.getPrebuilt("mlteast-fa");
             assertEquals("دوست", lm.lemmatize("دوستان"));
         } catch (IOException e) {
             fail(e.getMessage());

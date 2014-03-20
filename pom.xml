@@ -28,13 +28,13 @@
         <repository>
             <id>dtln-ext-releases</id>
             <name>External releases repository</name>
-            <url>https://mvn.datalan.sk/maven2/libs-releases-local</url>
+            <url>https://xmaven.datalan.sk/maven2/libs-releases-local</url>
             <layout>default</layout>
         </repository>
         <snapshotRepository>
             <id>dtln-ext-snapshots</id>
             <name>External snapshots repository</name>
-            <url>https://mvn.datalan.sk/maven2/libs-snapshots-local</url>
+            <url>https://xmaven.datalan.sk/maven2/libs-snapshots-local</url>
             <layout>default</layout>
         </snapshotRepository>
     </distributionManagement>

@@ -13,124 +13,124 @@ public class finnishStemmer extends org.tartarus.snowball.SnowballStemmer {
 
 private static final long serialVersionUID = 1L;
 
-        private final static finnishStemmer methodObject = new finnishStemmer ();
+        private final static finnishStemmer instance = new finnishStemmer ();
 
                 private final static Among a_0[] = {
-                    new Among ( "pa", -1, 1, "", methodObject ),
-                    new Among ( "sti", -1, 2, "", methodObject ),
-                    new Among ( "kaan", -1, 1, "", methodObject ),
-                    new Among ( "han", -1, 1, "", methodObject ),
-                    new Among ( "kin", -1, 1, "", methodObject ),
-                    new Among ( "h\u00E4n", -1, 1, "", methodObject ),
-                    new Among ( "k\u00E4\u00E4n", -1, 1, "", methodObject ),
-                    new Among ( "ko", -1, 1, "", methodObject ),
-                    new Among ( "p\u00E4", -1, 1, "", methodObject ),
-                    new Among ( "k\u00F6", -1, 1, "", methodObject )
+                    new Among ( "pa", -1, 1, "", instance),
+                    new Among ( "sti", -1, 2, "", instance),
+                    new Among ( "kaan", -1, 1, "", instance),
+                    new Among ( "han", -1, 1, "", instance),
+                    new Among ( "kin", -1, 1, "", instance),
+                    new Among ( "h\u00E4n", -1, 1, "", instance),
+                    new Among ( "k\u00E4\u00E4n", -1, 1, "", instance),
+                    new Among ( "ko", -1, 1, "", instance),
+                    new Among ( "p\u00E4", -1, 1, "", instance),
+                    new Among ( "k\u00F6", -1, 1, "", instance)
                 };
 
                 private final static Among a_1[] = {
-                    new Among ( "lla", -1, -1, "", methodObject ),
-                    new Among ( "na", -1, -1, "", methodObject ),
-                    new Among ( "ssa", -1, -1, "", methodObject ),
-                    new Among ( "ta", -1, -1, "", methodObject ),
-                    new Among ( "lta", 3, -1, "", methodObject ),
-                    new Among ( "sta", 3, -1, "", methodObject )
+                    new Among ( "lla", -1, -1, "", instance),
+                    new Among ( "na", -1, -1, "", instance),
+                    new Among ( "ssa", -1, -1, "", instance),
+                    new Among ( "ta", -1, -1, "", instance),
+                    new Among ( "lta", 3, -1, "", instance),
+                    new Among ( "sta", 3, -1, "", instance)
                 };
 
                 private final static Among a_2[] = {
-                    new Among ( "ll\u00E4", -1, -1, "", methodObject ),
-                    new Among ( "n\u00E4", -1, -1, "", methodObject ),
-                    new Among ( "ss\u00E4", -1, -1, "", methodObject ),
-                    new Among ( "t\u00E4", -1, -1, "", methodObject ),
-                    new Among ( "lt\u00E4", 3, -1, "", methodObject ),
-                    new Among ( "st\u00E4", 3, -1, "", methodObject )
+                    new Among ( "ll\u00E4", -1, -1, "", instance),
+                    new Among ( "n\u00E4", -1, -1, "", instance),
+                    new Among ( "ss\u00E4", -1, -1, "", instance),
+                    new Among ( "t\u00E4", -1, -1, "", instance),
+                    new Among ( "lt\u00E4", 3, -1, "", instance),
+                    new Among ( "st\u00E4", 3, -1, "", instance)
                 };
 
                 private final static Among a_3[] = {
-                    new Among ( "lle", -1, -1, "", methodObject ),
-                    new Among ( "ine", -1, -1, "", methodObject )
+                    new Among ( "lle", -1, -1, "", instance),
+                    new Among ( "ine", -1, -1, "", instance)
                 };
 
                 private final static Among a_4[] = {
-                    new Among ( "nsa", -1, 3, "", methodObject ),
-                    new Among ( "mme", -1, 3, "", methodObject ),
-                    new Among ( "nne", -1, 3, "", methodObject ),
-                    new Among ( "ni", -1, 2, "", methodObject ),
-                    new Among ( "si", -1, 1, "", methodObject ),
-                    new Among ( "an", -1, 4, "", methodObject ),
-                    new Among ( "en", -1, 6, "", methodObject ),
-                    new Among ( "\u00E4n", -1, 5, "", methodObject ),
-                    new Among ( "ns\u00E4", -1, 3, "", methodObject )
+                    new Among ( "nsa", -1, 3, "", instance),
+                    new Among ( "mme", -1, 3, "", instance),
+                    new Among ( "nne", -1, 3, "", instance),
+                    new Among ( "ni", -1, 2, "", instance),
+                    new Among ( "si", -1, 1, "", instance),
+                    new Among ( "an", -1, 4, "", instance),
+                    new Among ( "en", -1, 6, "", instance),
+                    new Among ( "\u00E4n", -1, 5, "", instance),
+                    new Among ( "ns\u00E4", -1, 3, "", instance)
                 };
 
                 private final static Among a_5[] = {
-                    new Among ( "aa", -1, -1, "", methodObject ),
-                    new Among ( "ee", -1, -1, "", methodObject ),
-                    new Among ( "ii", -1, -1, "", methodObject ),
-                    new Among ( "oo", -1, -1, "", methodObject ),
-                    new Among ( "uu", -1, -1, "", methodObject ),
-                    new Among ( "\u00E4\u00E4", -1, -1, "", methodObject ),
-                    new Among ( "\u00F6\u00F6", -1, -1, "", methodObject )
+                    new Among ( "aa", -1, -1, "", instance),
+                    new Among ( "ee", -1, -1, "", instance),
+                    new Among ( "ii", -1, -1, "", instance),
+                    new Among ( "oo", -1, -1, "", instance),
+                    new Among ( "uu", -1, -1, "", instance),
+                    new Among ( "\u00E4\u00E4", -1, -1, "", instance),
+                    new Among ( "\u00F6\u00F6", -1, -1, "", instance)
                 };
 
                 private final static Among a_6[] = {
-                    new Among ( "a", -1, 8, "", methodObject ),
-                    new Among ( "lla", 0, -1, "", methodObject ),
-                    new Among ( "na", 0, -1, "", methodObject ),
-                    new Among ( "ssa", 0, -1, "", methodObject ),
-                    new Among ( "ta", 0, -1, "", methodObject ),
-                    new Among ( "lta", 4, -1, "", methodObject ),
-                    new Among ( "sta", 4, -1, "", methodObject ),
-                    new Among ( "tta", 4, 9, "", methodObject ),
-                    new Among ( "lle", -1, -1, "", methodObject ),
-                    new Among ( "ine", -1, -1, "", methodObject ),
-                    new Among ( "ksi", -1, -1, "", methodObject ),
-                    new Among ( "n", -1, 7, "", methodObject ),
-                    new Among ( "han", 11, 1, "", methodObject ),
-                    new Among ( "den", 11, -1, "r_VI", methodObject ),
-                    new Among ( "seen", 11, -1, "r_LONG", methodObject ),
-                    new Among ( "hen", 11, 2, "", methodObject ),
-                    new Among ( "tten", 11, -1, "r_VI", methodObject ),
-                    new Among ( "hin", 11, 3, "", methodObject ),
-                    new Among ( "siin", 11, -1, "r_VI", methodObject ),
-                    new Among ( "hon", 11, 4, "", methodObject ),
-                    new Among ( "h\u00E4n", 11, 5, "", methodObject ),
-                    new Among ( "h\u00F6n", 11, 6, "", methodObject ),
-                    new Among ( "\u00E4", -1, 8, "", methodObject ),
-                    new Among ( "ll\u00E4", 22, -1, "", methodObject ),
-                    new Among ( "n\u00E4", 22, -1, "", methodObject ),
-                    new Among ( "ss\u00E4", 22, -1, "", methodObject ),
-                    new Among ( "t\u00E4", 22, -1, "", methodObject ),
-                    new Among ( "lt\u00E4", 26, -1, "", methodObject ),
-                    new Among ( "st\u00E4", 26, -1, "", methodObject ),
-                    new Among ( "tt\u00E4", 26, 9, "", methodObject )
+                    new Among ( "a", -1, 8, "", instance),
+                    new Among ( "lla", 0, -1, "", instance),
+                    new Among ( "na", 0, -1, "", instance),
+                    new Among ( "ssa", 0, -1, "", instance),
+                    new Among ( "ta", 0, -1, "", instance),
+                    new Among ( "lta", 4, -1, "", instance),
+                    new Among ( "sta", 4, -1, "", instance),
+                    new Among ( "tta", 4, 9, "", instance),
+                    new Among ( "lle", -1, -1, "", instance),
+                    new Among ( "ine", -1, -1, "", instance),
+                    new Among ( "ksi", -1, -1, "", instance),
+                    new Among ( "n", -1, 7, "", instance),
+                    new Among ( "han", 11, 1, "", instance),
+                    new Among ( "den", 11, -1, "r_VI", instance),
+                    new Among ( "seen", 11, -1, "r_LONG", instance),
+                    new Among ( "hen", 11, 2, "", instance),
+                    new Among ( "tten", 11, -1, "r_VI", instance),
+                    new Among ( "hin", 11, 3, "", instance),
+                    new Among ( "siin", 11, -1, "r_VI", instance),
+                    new Among ( "hon", 11, 4, "", instance),
+                    new Among ( "h\u00E4n", 11, 5, "", instance),
+                    new Among ( "h\u00F6n", 11, 6, "", instance),
+                    new Among ( "\u00E4", -1, 8, "", instance),
+                    new Among ( "ll\u00E4", 22, -1, "", instance),
+                    new Among ( "n\u00E4", 22, -1, "", instance),
+                    new Among ( "ss\u00E4", 22, -1, "", instance),
+                    new Among ( "t\u00E4", 22, -1, "", instance),
+                    new Among ( "lt\u00E4", 26, -1, "", instance),
+                    new Among ( "st\u00E4", 26, -1, "", instance),
+                    new Among ( "tt\u00E4", 26, 9, "", instance)
                 };
 
                 private final static Among a_7[] = {
-                    new Among ( "eja", -1, -1, "", methodObject ),
-                    new Among ( "mma", -1, 1, "", methodObject ),
-                    new Among ( "imma", 1, -1, "", methodObject ),
-                    new Among ( "mpa", -1, 1, "", methodObject ),
-                    new Among ( "impa", 3, -1, "", methodObject ),
-                    new Among ( "mmi", -1, 1, "", methodObject ),
-                    new Among ( "immi", 5, -1, "", methodObject ),
-                    new Among ( "mpi", -1, 1, "", methodObject ),
-                    new Among ( "impi", 7, -1, "", methodObject ),
-                    new Among ( "ej\u00E4", -1, -1, "", methodObject ),
-                    new Among ( "mm\u00E4", -1, 1, "", methodObject ),
-                    new Among ( "imm\u00E4", 10, -1, "", methodObject ),
-                    new Among ( "mp\u00E4", -1, 1, "", methodObject ),
-                    new Among ( "imp\u00E4", 12, -1, "", methodObject )
+                    new Among ( "eja", -1, -1, "", instance),
+                    new Among ( "mma", -1, 1, "", instance),
+                    new Among ( "imma", 1, -1, "", instance),
+                    new Among ( "mpa", -1, 1, "", instance),
+                    new Among ( "impa", 3, -1, "", instance),
+                    new Among ( "mmi", -1, 1, "", instance),
+                    new Among ( "immi", 5, -1, "", instance),
+                    new Among ( "mpi", -1, 1, "", instance),
+                    new Among ( "impi", 7, -1, "", instance),
+                    new Among ( "ej\u00E4", -1, -1, "", instance),
+                    new Among ( "mm\u00E4", -1, 1, "", instance),
+                    new Among ( "imm\u00E4", 10, -1, "", instance),
+                    new Among ( "mp\u00E4", -1, 1, "", instance),
+                    new Among ( "imp\u00E4", 12, -1, "", instance)
                 };
 
                 private final static Among a_8[] = {
-                    new Among ( "i", -1, -1, "", methodObject ),
-                    new Among ( "j", -1, -1, "", methodObject )
+                    new Among ( "i", -1, -1, "", instance),
+                    new Among ( "j", -1, -1, "", instance)
                 };
 
                 private final static Among a_9[] = {
-                    new Among ( "mma", -1, 1, "", methodObject ),
-                    new Among ( "imma", 0, -1, "", methodObject )
+                    new Among ( "mma", -1, 1, "", instance),
+                    new Among ( "imma", 0, -1, "", instance)
                 };
 
                 private static final char g_AEI[] = {17, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8 };
@@ -141,25 +141,19 @@ private static final long serialVersionUID = 1L;
 
                 private static final char g_particle_end[] = {17, 97, 24, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 8, 0, 32 };
 
-        private boolean B_ending_removed;
-        private java.lang.StringBuilder S_x = new java.lang.StringBuilder();
-        private int I_p2;
-        private int I_p1;
-
-                private void copy_from(finnishStemmer other) {
-                    B_ending_removed = other.B_ending_removed;
-                    S_x = other.S_x;
-                    I_p2 = other.I_p2;
-                    I_p1 = other.I_p1;
-                    super.copy_from(other);
+                private static class State {
+                    private boolean B_ending_removed;
+                    private java.lang.StringBuilder S_x = new java.lang.StringBuilder();
+                    private int I_p2;
+                    private int I_p1;
                 }
 
-                private boolean r_mark_regions() {
+                private boolean r_mark_regions(State s) {
             int v_1;
             int v_3;
                     // (, line 41
-                    I_p1 = limit;
-                    I_p2 = limit;
+                    s.I_p1 = limit;
+                    s.I_p2 = limit;
                     // goto, line 46
                     golab0: while(true)
                     {
@@ -196,7 +190,7 @@ private static final long serialVersionUID = 1L;
                         cursor++;
                     }
                     // setmark p1, line 46
-                    I_p1 = cursor;
+                    s.I_p1 = cursor;
                     // goto, line 47
                     golab4: while(true)
                     {
@@ -233,19 +227,19 @@ private static final long serialVersionUID = 1L;
                         cursor++;
                     }
                     // setmark p2, line 47
-                    I_p2 = cursor;
+                    s.I_p2 = cursor;
                     return true;
                 }
 
-                private boolean r_R2() {
-                    if (!(I_p2 <= cursor))
+                private boolean r_R2(State s) {
+                    if (!(s.I_p2 <= cursor))
                     {
                         return false;
                     }
                     return true;
                 }
 
-                private boolean r_particle_etc() {
+                private boolean r_particle_etc(State s) {
             int among_var;
             int v_1;
             int v_2;
@@ -253,11 +247,11 @@ private static final long serialVersionUID = 1L;
                     // setlimit, line 55
                     v_1 = limit - cursor;
                     // tomark, line 55
-                    if (cursor < I_p1)
+                    if (cursor < s.I_p1)
                     {
                         return false;
                     }
-                    cursor = I_p1;
+                    cursor = s.I_p1;
                     v_2 = limit_backward;
                     limit_backward = cursor;
                     cursor = limit - v_1;
@@ -287,7 +281,7 @@ private static final long serialVersionUID = 1L;
                         case 2:
                             // (, line 64
                             // call R2, line 64
-                            if (!r_R2())
+                            if (!r_R2(s))
                             {
                                 return false;
                             }
@@ -298,7 +292,7 @@ private static final long serialVersionUID = 1L;
                     return true;
                 }
 
-                private boolean r_possessive() {
+                private boolean r_possessive(State s) {
             int among_var;
             int v_1;
             int v_2;
@@ -307,11 +301,11 @@ private static final long serialVersionUID = 1L;
                     // setlimit, line 69
                     v_1 = limit - cursor;
                     // tomark, line 69
-                    if (cursor < I_p1)
+                    if (cursor < s.I_p1)
                     {
                         return false;
                     }
-                    cursor = I_p1;
+                    cursor = s.I_p1;
                     v_2 = limit_backward;
                     limit_backward = cursor;
                     cursor = limit - v_1;
@@ -427,7 +421,7 @@ private static final long serialVersionUID = 1L;
                     return true;
                 }
 
-                private boolean r_case_ending() {
+                private boolean r_case_ending(State s) {
             int among_var;
             int v_1;
             int v_2;
@@ -438,11 +432,11 @@ private static final long serialVersionUID = 1L;
                     // setlimit, line 96
                     v_1 = limit - cursor;
                     // tomark, line 96
-                    if (cursor < I_p1)
+                    if (cursor < s.I_p1)
                     {
                         return false;
                     }
-                    cursor = I_p1;
+                    cursor = s.I_p1;
                     v_2 = limit_backward;
                     limit_backward = cursor;
                     cursor = limit - v_1;
@@ -572,11 +566,11 @@ private static final long serialVersionUID = 1L;
                     // delete, line 138
                     slice_del();
                     // set ending_removed, line 139
-                    B_ending_removed = true;
+                    s.B_ending_removed = true;
                     return true;
                 }
 
-                private boolean r_other_endings() {
+                private boolean r_other_endings(State s) {
             int among_var;
             int v_1;
             int v_2;
@@ -585,11 +579,11 @@ private static final long serialVersionUID = 1L;
                     // setlimit, line 142
                     v_1 = limit - cursor;
                     // tomark, line 142
-                    if (cursor < I_p2)
+                    if (cursor < s.I_p2)
                     {
                         return false;
                     }
-                    cursor = I_p2;
+                    cursor = s.I_p2;
                     v_2 = limit_backward;
                     limit_backward = cursor;
                     cursor = limit - v_1;
@@ -631,18 +625,18 @@ private static final long serialVersionUID = 1L;
                     return true;
                 }
 
-                private boolean r_i_plural() {
+                private boolean r_i_plural(State s) {
             int v_1;
             int v_2;
                     // (, line 153
                     // setlimit, line 154
                     v_1 = limit - cursor;
                     // tomark, line 154
-                    if (cursor < I_p1)
+                    if (cursor < s.I_p1)
                     {
                         return false;
                     }
-                    cursor = I_p1;
+                    cursor = s.I_p1;
                     v_2 = limit_backward;
                     limit_backward = cursor;
                     cursor = limit - v_1;
@@ -663,7 +657,7 @@ private static final long serialVersionUID = 1L;
                     return true;
                 }
 
-                private boolean r_t_plural() {
+                private boolean r_t_plural(State s) {
             int among_var;
             int v_1;
             int v_2;
@@ -675,11 +669,11 @@ private static final long serialVersionUID = 1L;
                     // setlimit, line 161
                     v_1 = limit - cursor;
                     // tomark, line 161
-                    if (cursor < I_p1)
+                    if (cursor < s.I_p1)
                     {
                         return false;
                     }
-                    cursor = I_p1;
+                    cursor = s.I_p1;
                     v_2 = limit_backward;
                     limit_backward = cursor;
                     cursor = limit - v_1;
@@ -708,11 +702,11 @@ private static final long serialVersionUID = 1L;
                     // setlimit, line 165
                     v_4 = limit - cursor;
                     // tomark, line 165
-                    if (cursor < I_p2)
+                    if (cursor < s.I_p2)
                     {
                         return false;
                     }
-                    cursor = I_p2;
+                    cursor = s.I_p2;
                     v_5 = limit_backward;
                     limit_backward = cursor;
                     cursor = limit - v_4;
@@ -754,7 +748,7 @@ private static final long serialVersionUID = 1L;
                     return true;
                 }
 
-                private boolean r_tidy() {
+                private boolean r_tidy(State s) {
             int v_1;
             int v_2;
             int v_3;
@@ -768,11 +762,11 @@ private static final long serialVersionUID = 1L;
                     // setlimit, line 173
                     v_1 = limit - cursor;
                     // tomark, line 173
-                    if (cursor < I_p1)
+                    if (cursor < s.I_p1)
                     {
                         return false;
                     }
-                    cursor = I_p1;
+                    cursor = s.I_p1;
                     v_2 = limit_backward;
                     limit_backward = cursor;
                     cursor = limit - v_1;
@@ -912,9 +906,9 @@ private static final long serialVersionUID = 1L;
                     // ], line 179
                     bra = cursor;
                     // -> x, line 179
-                    S_x = slice_to(S_x);
+                    s.S_x = slice_to(s.S_x);
                     // name x, line 179
-                    if (!(eq_v_b(S_x)))
+                    if (!(eq_v_b(s.S_x)))
                     {
                         return false;
                     }
@@ -936,16 +930,17 @@ private static final long serialVersionUID = 1L;
                     // (, line 183
                     // do, line 185
                     v_1 = cursor;
+                    State s = new State();
                     lab0: do {
                         // call mark_regions, line 185
-                        if (!r_mark_regions())
+                        if (!r_mark_regions(s))
                         {
                             break lab0;
                         }
                     } while (false);
                     cursor = v_1;
                     // unset ending_removed, line 186
-                    B_ending_removed = false;
+                    s.B_ending_removed = false;
                     // backwards, line 187
                     limit_backward = cursor; cursor = limit;
                     // (, line 187
@@ -953,7 +948,7 @@ private static final long serialVersionUID = 1L;
                     v_2 = limit - cursor;
                     lab1: do {
                         // call particle_etc, line 188
-                        if (!r_particle_etc())
+                        if (!r_particle_etc(s))
                         {
                             break lab1;
                         }
@@ -963,7 +958,7 @@ private static final long serialVersionUID = 1L;
                     v_3 = limit - cursor;
                     lab2: do {
                         // call possessive, line 189
-                        if (!r_possessive())
+                        if (!r_possessive(s))
                         {
                             break lab2;
                         }
@@ -973,7 +968,7 @@ private static final long serialVersionUID = 1L;
                     v_4 = limit - cursor;
                     lab3: do {
                         // call case_ending, line 190
-                        if (!r_case_ending())
+                        if (!r_case_ending(s))
                         {
                             break lab3;
                         }
@@ -983,7 +978,7 @@ private static final long serialVersionUID = 1L;
                     v_5 = limit - cursor;
                     lab4: do {
                         // call other_endings, line 191
-                        if (!r_other_endings())
+                        if (!r_other_endings(s))
                         {
                             break lab4;
                         }
@@ -995,7 +990,7 @@ private static final long serialVersionUID = 1L;
                         lab6: do {
                             // (, line 192
                             // Boolean test ending_removed, line 192
-                            if (!(B_ending_removed))
+                            if (!(s.B_ending_removed))
                             {
                                 break lab6;
                             }
@@ -1003,7 +998,7 @@ private static final long serialVersionUID = 1L;
                             v_7 = limit - cursor;
                             lab7: do {
                                 // call i_plural, line 192
-                                if (!r_i_plural())
+                                if (!r_i_plural(s))
                                 {
                                     break lab7;
                                 }
@@ -1016,7 +1011,7 @@ private static final long serialVersionUID = 1L;
                         v_8 = limit - cursor;
                         lab8: do {
                             // call t_plural, line 192
-                            if (!r_t_plural())
+                            if (!r_t_plural(s))
                             {
                                 break lab8;
                             }
@@ -1027,7 +1022,7 @@ private static final long serialVersionUID = 1L;
                     v_9 = limit - cursor;
                     lab9: do {
                         // call tidy, line 193
-                        if (!r_tidy())
+                        if (!r_tidy(s))
                         {
                             break lab9;
                         }

@@ -150,7 +150,7 @@ private static final long serialVersionUID = 1L;
                 }
 
                 private boolean r_main_suffix() {
-            int MyAmong_var;
+            int among_var;
             int v_1;
             int v_2;
                     // (, line 40
@@ -169,8 +169,8 @@ private static final long serialVersionUID = 1L;
                     // [, line 41
                     ket = cursor;
                     // substring, line 41
-                    MyAmong_var = find_among_b(a_0, 32);
-                    if (MyAmong_var == 0)
+                    among_var = find_among_b(a_0, 32);
+                    if (among_var == 0)
                     {
                         limit_backward = v_2;
                         return false;
@@ -178,7 +178,7 @@ private static final long serialVersionUID = 1L;
                     // ], line 41
                     bra = cursor;
                     limit_backward = v_2;
-                    switch(MyAmong_var) {
+                    switch(among_var) {
                         case 0:
                             return false;
                         case 1:
@@ -245,7 +245,7 @@ private static final long serialVersionUID = 1L;
                 }
 
                 private boolean r_other_suffix() {
-            int MyAmong_var;
+            int among_var;
             int v_1;
             int v_2;
             int v_3;
@@ -288,8 +288,8 @@ private static final long serialVersionUID = 1L;
                     // [, line 67
                     ket = cursor;
                     // substring, line 67
-                    MyAmong_var = find_among_b(a_2, 5);
-                    if (MyAmong_var == 0)
+                    among_var = find_among_b(a_2, 5);
+                    if (among_var == 0)
                     {
                         limit_backward = v_3;
                         return false;
@@ -297,7 +297,7 @@ private static final long serialVersionUID = 1L;
                     // ], line 67
                     bra = cursor;
                     limit_backward = v_3;
-                    switch(MyAmong_var) {
+                    switch(among_var) {
                         case 0:
                             return false;
                         case 1:

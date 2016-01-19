@@ -379,11 +379,14 @@ class porterStemmerOriginal
     * forcing lower case must be done outside the Stemmer class.
     * Usage: Stemmer file-name file-name ...
     */
-   public static void main(String[] args)
-   {
-      System.out.println(new porterStemmerAlgo().getStem("communications"));
-      System.out.println(new porterStemmerAlgo().getStem("friendships"));
-      System.out.println(new porterStemmerAlgo().getStem("cannon"));
-   } 
+   // public static void main(String[] args)
+   // {  System.out.println(porterStemmerOriginal.getStem("communications"));
+   //    System.out.println(porterStemmerOriginal.getStem("friendships"));
+   //    System.out.println(porterStemmerOriginal.getStem("cannon"));
+   // } 
+
+   public static String getStem(String word)
+   {  return new porterStemmerAlgo().getStem(word);
+   }
 
 } // porterStemmerOriginal

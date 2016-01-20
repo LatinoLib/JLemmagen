@@ -13,7 +13,7 @@ public class finnishStemmer extends org.tartarus.snowball.SnowballStemmer {
 
 private static final long serialVersionUID = 1L;
 
-        private final static finnishStemmer instance = new finnishStemmer ();
+        public final static finnishStemmer instance = new finnishStemmer ();
 
                 private final static Among a_0[] = {
                     new Among ( "pa", -1, 1, "", instance),

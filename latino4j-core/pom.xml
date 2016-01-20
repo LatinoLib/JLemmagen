@@ -27,7 +27,7 @@
         </dependency>
 
         <dependency>
-            <groupId>org.latinolib.latino4j</groupId>
+            <groupId>org.tartarus.snowball</groupId>
             <artifactId>snowball4j</artifactId>
         </dependency>
     </dependencies>

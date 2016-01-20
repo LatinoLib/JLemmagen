@@ -32,16 +32,40 @@
 
     <dependencyManagement>
         <dependencies>
+
+            <!-- latino4j -->
             <dependency>
                 <groupId>eu.hlavki.text</groupId>
                 <artifactId>jlemmagen</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
             <dependency>
                 <groupId>eu.hlavki.text</groupId>
                 <artifactId>jlemmagen-lang</artifactId>
                 <version>${project.version}</version>
             </dependency>
+
+            <dependency>
+                <groupId>eu.hlavki.text</groupId>
+                <artifactId>jlemmagen-lucene</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.latinolib.latino4j</groupId>
+                <artifactId>snowball4j</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.latinolib.latino4j</groupId>
+                <artifactId>latino4j-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <!-- logging -->
+
             <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
@@ -52,11 +76,15 @@
                 <artifactId>slf4j-jdk14</artifactId>
                 <version>1.7.5</version>
             </dependency>
+
+            <!-- apache -->
+
             <dependency>
                 <groupId>org.apache.lucene</groupId>
                 <artifactId>lucene-analyzers-common</artifactId>
                 <version>4.5.1</version>
             </dependency>
+
             <dependency>
                 <groupId>org.apache.lucene</groupId>
                 <artifactId>lucene-test-framework</artifactId>

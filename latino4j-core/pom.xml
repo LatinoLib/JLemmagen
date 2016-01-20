@@ -21,6 +21,15 @@
     <name>LATINO4J-core</name>
 
     <dependencies>
+        <dependency>
+            <groupId>eu.hlavki.text</groupId>
+            <artifactId>jlemmagen</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.latinolib.latino4j</groupId>
+            <artifactId>snowball4j</artifactId>
+        </dependency>
     </dependencies>
 
 </project>

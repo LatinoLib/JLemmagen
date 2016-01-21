@@ -84,7 +84,7 @@ public class NGramProfiles
   public NGramProfiles(int mode)
     throws IOException
   {
-    InputStream ip = getClass().getResourceAsStream("profiles.lst");
+    InputStream ip = getClass().getResourceAsStream("/profiles.lst");
     BufferedReader br = new BufferedReader(new InputStreamReader(ip));
     this.mode = mode;
     init(br);
@@ -106,7 +106,7 @@ public class NGramProfiles
     {
       if ( line.charAt(0) == '#' )
         continue;
-      InputStream is = getClass().getResourceAsStream(line+"."+
+      InputStream is = getClass().getResourceAsStream("/"+line+"."+
           NGramProfile.NGRAM_PROFILE_EXTENSION);
       NGramProfileImpl np = new NGramProfileImpl(line);
       np.load(is);
@@ -174,7 +174,7 @@ public class NGramProfiles
     check(r, "Das ist cool men!");
     check(r, "Les Ordinateurs sont appeles a jouer un role");
     check(r, "Sein oder Nichtsein, das ist hier die Frage!");
-    check(r, "Zu Ihren Aufgaben zählen u. a. die Einführung und Erprobung neuer Technologien, die Erarbeitung von Rationalisierungslösungen für die Fertigung sowie die Erarbeitung und Durchführung von Technologieversuchen bei der Mustererstellung mit Hinblick auf die Serienfertigung. Desweiteren sind Sie für die Betreuung und Durchführung von Entwicklungsprojekten sowie die Erarbeitung und konstruktive Auslegung von Werkzeugen, Vorrichtungen und Automatisierungseinrichtungen zuständig. Sie sind Ansprechpartner für die Zusammenarbeit und Betreuung von externen Lieferanten bei der Konstruktion und der Herstellung von Maschinen und Vorrichtungen. Sie leiten qualitätsverbessernde Maßnahmen im Prozess und in der Fertigung ein und sind für die kostenbewusste und zukunftsweisende Planung des Bereiches verantwortlich. Zudem führen Sie Ihre Mitarbeiter zielgerichtet entsprechend der INA-Führungsleitlinien.");
+    check(r, "Zu Ihren Aufgaben zÃ¤hlen u. a. die EinfÃ¼hrung und Erprobung neuer Technologien, die Erarbeitung von RationalisierungslÃ¶sungen fÃ¼r die Fertigung sowie die Erarbeitung und DurchfÃ¼hrung von Technologieversuchen bei der Mustererstellung mit Hinblick auf die Serienfertigung. Desweiteren sind Sie fÃ¼r die Betreuung und DurchfÃ¼hrung von Entwicklungsprojekten sowie die Erarbeitung und konstruktive Auslegung von Werkzeugen, Vorrichtungen und Automatisierungseinrichtungen zustÃ¤ndig. Sie sind Ansprechpartner fÃ¼r die Zusammenarbeit und Betreuung von externen Lieferanten bei der Konstruktion und der Herstellung von Maschinen und Vorrichtungen. Sie leiten qualitÃ¤tsverbessernde MaÃŸnahmen im Prozess und in der Fertigung ein und sind fÃ¼r die kostenbewusste und zukunftsweisende Planung des Bereiches verantwortlich. Zudem fÃ¼hren Sie Ihre Mitarbeiter zielgerichtet entsprechend der INA-FÃ¼hrungsleitlinien.");
     check(r, "Sein oder Nichtsein, das ist hier die Frage! To be or not to be, that is the question!");
     check(r, "Sein oder Nichtsein, das ist hier die Frage! To be or not to be, that is the question! Sein oder Nichtsein, das ist hier die Frage! To be or not to be, that is the question!");
     check(r, "Marcel Andre Casasola Merkle");

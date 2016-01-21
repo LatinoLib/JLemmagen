@@ -10,11 +10,10 @@ import java.util.NoSuchElementException;
 
 import static org.junit.Assert.*;
 
-
 /**
  * Author saxo
  */
-public class SimpleTokenizerTest {
+public class RegexTokenizerTest {
 
     @Test
     public void testEmpty() {
@@ -31,18 +30,11 @@ public class SimpleTokenizerTest {
     }
 
     @Test
-    public void testSingle() {
-        String text = "Lorem";
-        Token[] tokens = Iterables.toArray(new SimpleTokenizer().getTokens(text), Token.class);
-        assertEquals(0, tokens[0].getStart());
-        assertEquals(5, tokens[0].getEnd());
-        assertEquals("Lorem", tokens[0].getText());
-    }
-
-    @Test
-    public void testMany() {
+    public void testGetTokens() throws Exception {
         String text = "Lorem ipsum   dolor sit amet.";
-        Token[] tokens = Iterables.toArray(new SimpleTokenizer().getTokens(text), Token.class);
+        Token[] tokens = Iterables.toArray(RegexTokenizers.LATIN.get().getTokens(text), Token.class);
+
+        assertEquals(5, tokens.length);
 
         // first
         assertEquals(0, tokens[0].getStart());
@@ -56,28 +48,8 @@ public class SimpleTokenizerTest {
 
         // last
         assertEquals(24, tokens[4].getStart());
-        assertEquals(29, tokens[4].getEnd());
-        assertEquals("amet.", tokens[4].getText());
-    }
-
-    @Test
-    public void testAlpha() {
-        String text = "Lorem123";
-        Token[] tokens = Iterables.toArray(
-                new SimpleTokenizer(SimpleTokenizerType.ALPHA_ONLY).getTokens(text), Token.class);
-        assertEquals(0, tokens[0].getStart());
-        assertEquals(5, tokens[0].getEnd());
-        assertEquals("Lorem", tokens[0].getText());
-    }
-
-    @Test
-    public void testAlphaNum() {
-        String text = "Lorem123";
-        Token[] tokens = Iterables.toArray(
-                new SimpleTokenizer(SimpleTokenizerType.ALPHANUM_ONLY).getTokens(text), Token.class);
-        assertEquals(0, tokens[0].getStart());
-        assertEquals(8, tokens[0].getEnd());
-        assertEquals("Lorem123", tokens[0].getText());
+        assertEquals(28, tokens[4].getEnd());
+        assertEquals("amet", tokens[4].getText());
     }
 
     @Rule
@@ -113,5 +85,4 @@ public class SimpleTokenizerTest {
         exception.expect(NoSuchElementException.class);
         iter.next();
     }
-
 }

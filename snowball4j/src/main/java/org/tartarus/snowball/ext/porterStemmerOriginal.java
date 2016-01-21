@@ -35,7 +35,7 @@
 
 package org.tartarus.snowball.ext;
 
-import java.io.*;
+//import java.io.*;
 
 /**
   * Stemmer, implementing the Porter Stemming Algorithm
@@ -45,7 +45,7 @@ import java.io.*;
   * by calling one of the various stem(something) methods.
   */
 
-class porterStemmerOriginal
+public class porterStemmerOriginal
 {  
    private static class porterStemmerAlgo 
    {

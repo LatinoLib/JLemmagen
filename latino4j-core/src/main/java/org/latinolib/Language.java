@@ -30,5 +30,18 @@ public enum Language {
     SLOVAK,
     TURKISH,
     VIETNAMESE,
-    ICELANDIC
+    ICELANDIC;
+
+    public Stemmer getStemmer() {
+        return null;
+    }
+    public Stemmer getLemmatizer() {
+        return null;
+    }
+    public Object getStopWords() {
+        return null;
+    }
+    public static Language detect(String text) {
+        return null;
+    }
 }

@@ -53,7 +53,7 @@
             </dependency>
 
             <dependency>
-                <groupId>org.latinolib.latino4j</groupId>
+                <groupId>org.tartarus.snowball</groupId>
                 <artifactId>snowball4j</artifactId>
                 <version>${project.version}</version>
             </dependency>
@@ -75,6 +75,20 @@
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-jdk14</artifactId>
                 <version>1.7.5</version>
+            </dependency>
+
+            <dependency>
+                <groupId>junit</groupId>
+                <artifactId>junit</artifactId>
+                <version>4.11</version>
+            </dependency>
+
+            <!-- google -->
+
+            <dependency>
+                <groupId>com.google.guava</groupId>
+                <artifactId>guava</artifactId>
+                <version>14.0.1</version>
             </dependency>
 
             <!-- apache -->

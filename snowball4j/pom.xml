@@ -13,7 +13,7 @@
         <version>1.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>org.latinolib.latino4j</groupId>
+    <groupId>org.tartarus.snowball</groupId>
     <artifactId>snowball4j</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>

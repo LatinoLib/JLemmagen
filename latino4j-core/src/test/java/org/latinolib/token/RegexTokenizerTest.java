@@ -58,7 +58,7 @@ public class RegexTokenizerTest {
     @Test
     public void testIteratorCallSequence() {
         String text = "Lorem ipsum   dolor sit amet.";
-        Iterator<Token> iter = new SimpleTokenizer().getTokens(text).iterator();
+        Iterator<Token> iter = RegexTokenizers.LATIN.get().getTokens(text).iterator();
 
         iter.next();
         boolean b = iter.hasNext();

@@ -1,4 +1,4 @@
-﻿// PRONOUNS FORMS
+// PRONOUNS FORMS
 // 1st person singular
 i              // subject, always in upper case of course
 me             // object

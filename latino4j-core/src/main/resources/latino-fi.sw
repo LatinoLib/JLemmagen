@@ -26,9 +26,9 @@ et
 ei
 emme
 ette
-eiv‰t
+eiv√§t
 // I
-min‰
+min√§
 minun
 minut
 minua
@@ -39,7 +39,7 @@ minulla
 minulta
 minulle
 // you
-sin‰
+sin√§
 sinun
 sinut
 sinua
@@ -50,65 +50,65 @@ sinulla
 sinulta
 sinulle
 // he she
-h‰n
-h‰nen
-h‰net
-h‰nt‰
-h‰ness‰
-h‰nest‰
-h‰neen
-h‰nell‰
-h‰nelt‰
-h‰nelle
+h√§n
+h√§nen
+h√§net
+h√§nt√§
+h√§ness√§
+h√§nest√§
+h√§neen
+h√§nell√§
+h√§nelt√§
+h√§nelle
 // we
 me
-meid‰n
-meid‰t
-meit‰
-meiss‰
-meist‰
+meid√§n
+meid√§t
+meit√§
+meiss√§
+meist√§
 meihin
-meill‰
-meilt‰
+meill√§
+meilt√§
 meille
 // you
 te
-teid‰n
-teid‰t
-teit‰
-teiss‰
-teist‰
+teid√§n
+teid√§t
+teit√§
+teiss√§
+teist√§
 teihin
-teill‰
-teilt‰
+teill√§
+teilt√§
 teille
 // they
 he
-heid‰n
-heid‰t
-heit‰
-heiss‰
-heist‰
+heid√§n
+heid√§t
+heit√§
+heiss√§
+heist√§
 heihin
-heill‰
-heilt‰
+heill√§
+heilt√§
 heille
 // this
-t‰m‰
-t‰m‰n
-t‰t‰
-t‰ss‰
-t‰st‰
-t‰h‰n
-tall‰
-t‰lt‰
-t‰lle
-t‰n‰
-t‰ksi
+t√§m√§
+t√§m√§n
+t√§t√§
+t√§ss√§
+t√§st√§
+t√§h√§n
+tall√§
+t√§lt√§
+t√§lle
+t√§n√§
+t√§ksi
 // that
 tuo
 tuon
-tuot‰
+tuot√§
 tuossa
 tuosta
 tuohon
@@ -120,27 +120,27 @@ tuoksi
 // it
 se
 sen
-sit‰
-siin‰
-siit‰
+sit√§
+siin√§
+siit√§
 siihen
-sill‰
-silt‰
+sill√§
+silt√§
 sille
-sin‰
+sin√§
 siksi
 // these
-n‰m‰
-n‰iden
-n‰it‰
-n‰iss‰
-n‰ist‰
-n‰ihin
-n‰ill‰
-n‰ilt‰
-n‰ille
-n‰in‰
-n‰iksi
+n√§m√§
+n√§iden
+n√§it√§
+n√§iss√§
+n√§ist√§
+n√§ihin
+n√§ill√§
+n√§ilt√§
+n√§ille
+n√§in√§
+n√§iksi
 // those
 nuo
 noiden
@@ -156,56 +156,56 @@ noiksi
 // they
 ne
 niiden
-niit‰
-niiss‰
-niist‰
+niit√§
+niiss√§
+niist√§
 niihin
-niill‰
-niilt‰
+niill√§
+niilt√§
 niille
-niin‰
+niin√§
 niiksi
 // who
 kuka
 kenen
 kenet
-ket‰
-keness‰
-kenest‰
+ket√§
+keness√§
+kenest√§
 keneen
-kenell‰
-kenelt‰
+kenell√§
+kenelt√§
 kenelle
-kenen‰
+kenen√§
 keneksi
 // who (pl)
-ketk‰
+ketk√§
 keiden
-ketk‰
-keit‰
-keiss‰
-keist‰
+ketk√§
+keit√§
+keiss√§
+keist√§
 keihin
-keill‰
-keilt‰
+keill√§
+keilt√§
 keille
-kein‰
+kein√§
 keiksi
 // which what
-mik‰
-mink‰
-mink‰
-mit‰
-miss‰
-mist‰
+mik√§
+mink√§
+mink√§
+mit√§
+miss√§
+mist√§
 mihin
-mill‰
-milt‰
+mill√§
+milt√§
 mille
-min‰
+min√§
 miksi
 // which what (pl)
-mitk‰
+mitk√§
 // who which
 joka
 jonka
@@ -231,15 +231,15 @@ joille
 joina
 joiksi
 // conjunctions
-ett‰   // that
+ett√§   // that
 ja     // and
 jos    // if
 koska  // because
 kuin   // than
 mutta  // but
 niin   // so
-sek‰   // and
-sill‰  // for
+sek√§   // and
+sill√§  // for
 tai    // or
 vaan   // but
 vai    // or

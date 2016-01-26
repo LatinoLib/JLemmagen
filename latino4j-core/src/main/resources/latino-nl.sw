@@ -1,4 +1,4 @@
-﻿de             //  the
+de             //  the
 en             //  and
 van            //  of, from
 ik             //  I, the ego

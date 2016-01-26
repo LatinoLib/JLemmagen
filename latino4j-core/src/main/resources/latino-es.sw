@@ -278,7 +278,7 @@ fueseis
 fuesen
 siendo
 sido
-//  sed       also means 'thirst'
+// sed       also means 'thirst'
 // forms of tener, to have (not including the infinitive):
 tengo
 tienes

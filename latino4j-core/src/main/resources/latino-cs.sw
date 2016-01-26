@@ -1,4 +1,4 @@
-﻿ačkoli
+ačkoli
 ahoj
 ale
 anebo

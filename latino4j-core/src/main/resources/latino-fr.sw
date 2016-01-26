@@ -20,7 +20,7 @@ lui            //  him
 ma             //  my (fem)
 mais           //  but
 me             //  me
-même           //  same; as in moi-même (myself) etc
+mÃªme           //  same; as in moi-mÃªme (myself) etc
 mes            //  me (pl)
 moi            //  me
 mon            //  my (masc)
@@ -57,26 +57,26 @@ c              //  c'
 d              //  d'
 j              //  j'
 l              //  l'
-à              //  to, at
+Ã               //  to, at
 m              //  m'
 n              //  n'
 s              //  s'
 t              //  t'
 y              //  there
-// forms of être (not including the infinitive):
-été
-étée
-étées
-étés
-étant
-étante
-étants
-étantes
+// forms of Ãªtre (not including the infinitive):
+Ã©tÃ©
+Ã©tÃ©e
+Ã©tÃ©es
+Ã©tÃ©s
+Ã©tant
+Ã©tante
+Ã©tants
+Ã©tantes
 suis
 es
 est
 sommes
-êtes
+Ãªtes
 sont
 serai
 seras
@@ -89,15 +89,15 @@ serait
 serions
 seriez
 seraient
-étais
-était
-étions
-étiez
-étaient
+Ã©tais
+Ã©tait
+Ã©tions
+Ã©tiez
+Ã©taient
 fus
 fut
-fûmes
-fûtes
+fÃ»mes
+fÃ»tes
 furent
 sois
 soit
@@ -106,7 +106,7 @@ soyez
 soient
 fusse
 fusses
-fût
+fÃ»t
 fussions
 fussiez
 fussent
@@ -141,8 +141,8 @@ avions
 aviez
 avaient
 eut
-eûmes
-eûtes
+eÃ»mes
+eÃ»tes
 eurent
 aie
 aies
@@ -152,7 +152,7 @@ ayez
 aient
 eusse
 eusses
-eût
+eÃ»t
 eussions
 eussiez
 eussent

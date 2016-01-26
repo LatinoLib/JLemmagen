@@ -1,4 +1,4 @@
-﻿og           // and
+og           // and
 i            // in
 jeg          // I
 det          // that (dem. pronoun)/it (pers. pronoun)

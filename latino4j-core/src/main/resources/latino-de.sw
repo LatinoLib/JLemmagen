@@ -34,7 +34,7 @@ des
 dem
 die
 das
-daß            //  that
+daÃŸ            //  that
 derselbe       //  the same
 derselben
 denselben
@@ -89,7 +89,7 @@ eurem
 euren
 eurer
 eures
-für            //  for
+fÃ¼r            //  for
 fuer
 gegen          //  towards
 gewesen        //  p.p. of sein
@@ -135,9 +135,9 @@ keinem
 keinen
 keiner
 keines
-können         //  can
+kÃ¶nnen         //  can
 koennen
-könnte         //  could
+kÃ¶nnte         //  could
 koennte
 machen         //  do
 man            //  one
@@ -186,7 +186,7 @@ soll           //  shall
 sollte         //  should
 sondern        //  but
 sonst          //  else
-über           //  over
+Ã¼ber           //  over
 ueber
 um             //  about, around
 und            //  and
@@ -201,7 +201,7 @@ viel           //  much
 vom            //  von + dem
 von            //  from
 vor            //  before
-während        //  while
+wÃ¤hrend        //  while
 waehrend
 war            //  was
 waren          //  were
@@ -227,9 +227,9 @@ wirst          //  willst
 wo             //  where
 wollen         //  want
 wollte         //  wanted
-würde          //  would
+wÃ¼rde          //  would
 wuerde
-würden         //  would
+wÃ¼rden         //  would
 wuerden
 zu             //  to
 zum            //  zu + dem

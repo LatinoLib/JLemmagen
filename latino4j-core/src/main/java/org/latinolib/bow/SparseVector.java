@@ -1,8 +1,10 @@
 package org.latinolib.bow;
 
+import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-import java.util.Collection;
+import java.io.Serializable;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
@@ -10,7 +12,9 @@ import java.util.List;
 /**
  * Author saxo
  */
-public class SparseVector implements Collection<VectorEntry> {
+public class SparseVector implements Iterable<VectorEntry>, Serializable {
+    private static final long serialVersionUID = 8136739630564499282L;
+
     private final List<VectorEntry> entries;
 
     public SparseVector() {
@@ -21,87 +25,74 @@ public class SparseVector implements Collection<VectorEntry> {
         entries = Lists.newArrayListWithCapacity(capacity);
     }
 
-    public void add(int index, double data) {
-        entries.add(new Entry(index, data));
+    public List<VectorEntry> innerEntries() {
+        return entries;
+    }
+
+    public int innerIndexOf(VectorEntry entry) {
+        return Collections.binarySearch(entries, entry);
+    }
+
+    public int innerIndexOf(int entryIndex) {
+        return innerIndexOf(new Entry(entryIndex, 0));
     }
 
     public void sort() {
         Collections.sort(entries);
     }
 
-    @Override
     public int size() {
         return entries.size();
     }
 
-    @Override
-    public boolean isEmpty() {
-        return entries.isEmpty();
+    public VectorEntry get(int index) {
+        int innerIndex = innerIndexOf(index);
+        return innerIndex >= 0 ? entries.get(innerIndex) : null;
     }
 
-    @Override
-    public boolean contains(Object o) {
-        return Collections.binarySearch(entries, (VectorEntry)o) >= 0;
+    public void add(VectorEntry entry) {
+        entries.add(Preconditions.checkNotNull(entry));
     }
 
-    @Override
-    public Iterator<VectorEntry> iterator() {
-        return entries.iterator();
+    public void add(int index, double data) {
+        entries.add(new Entry(index, data));
     }
 
-    @Override
+    public boolean contains(int index) {
+        return innerIndexOf(index) >= 0;
+    }
+
     public Object[] toArray() {
         return entries.toArray();
     }
 
-    @Override
     public <T> T[] toArray(T[] a) {
         return (T[]) entries.toArray();
     }
 
-    public boolean add(VectorEntry entry) {
-        return entries.add(entry);
-    }
-
     @Override
-    public boolean remove(Object o) {
-        return entries.remove(o);
-    }
+    public Iterator<VectorEntry> iterator() {
+        final Iterator<VectorEntry> iter = entries.iterator();
+        return new Iterator<VectorEntry>() {
+            @Override
+            public boolean hasNext() {
+                return iter.hasNext();
+            }
 
-    @Override
-    public boolean containsAll(Collection<?> c) {
-        return entries.containsAll(c);
-    }
+            @Override
+            public VectorEntry next() {
+                return iter.next();
+            }
 
-    @Override
-    public boolean addAll(Collection<? extends VectorEntry> c) {
-        return entries.addAll(c);
-    }
-
-    @Override
-    public boolean removeAll(Collection<?> c) {
-        return entries.removeAll(c);
-    }
-
-    @Override
-    public boolean retainAll(Collection<?> c) {
-        return entries.retainAll(c);
-    }
-
-    @Override
-    public void clear() {
-        entries.clear();
-    }
-
-    public void add(Collection<VectorEntry> entries) {
-        this.entries.addAll(entries);
-    }
-
-    public VectorEntry get(int index) {
-        return entries.get(index);
+            @Override
+            public void remove() {
+                throw new NotImplementedException();
+            }
+        };
     }
 
     public class Entry implements VectorEntry {
+        private static final long serialVersionUID = -3612083403200155767L;
         private int index;
         private double data;
 

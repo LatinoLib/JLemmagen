@@ -18,7 +18,8 @@ import java.util.*;
  * Author saxo
  */
 public class BowSpace implements Serializable {
-    private Logger logger = LoggerFactory.getLogger(BowSpace.class);
+    private static final long serialVersionUID = 7695534861034247430L;
+    private transient Logger logger = LoggerFactory.getLogger(BowSpace.class);
 
     private Tokenizer tokenizer = new SimpleTokenizer(SimpleTokenizerType.ALL_CHARS);
     private Set<String> stopWords = null;
@@ -31,7 +32,6 @@ public class BowSpace implements Serializable {
     private double cutLowWeightsPerc = 0.2;
     private boolean normalizeVectors = true;
     private boolean keepWordForms = false;
-
 
     public Tokenizer getTokenizer() {
         return tokenizer;
@@ -187,7 +187,7 @@ public class BowSpace implements Serializable {
         if (!largeScale) {
             for (String document : documents) {
                 docCount++;
-                logger.debug("Document %d ...", docCount);
+                logger.debug("Document {} ...", docCount);
                 Set<String> docWords = new HashSet<String>();
                 List<WordStem> nGrams = Lists.newArrayListWithCapacity(maxNGramLen);
                 for (Token token : tokenizer.getTokens(document)) {
@@ -219,15 +219,15 @@ public class BowSpace implements Serializable {
                     processNGramsPass1(nGrams, i, docWords);
                 }
             }
-            logger.debug("Document %s ...", docCount, docCount);
+            logger.debug("Document {} ...", docCount);
         } else // large-scale mode (needs less memory, slower)
         {
             for (int n = 1; n <= maxNGramLen; n++) {
                 docCount = 0;
-                logger.debug("Pass %d of %d ...", n, maxNGramLen);
+                logger.debug("Pass {} of {} ...", n, maxNGramLen);
                 for (String document : documents) {
                     docCount++;
-                    logger.debug("initialize", "Document %d ...", docCount);
+                    logger.debug("initialize", "Document {} ...", docCount);
                     List<WordStem> nGrams = Lists.newArrayListWithCapacity(n);
                     Set<String> docWords = new HashSet<String>();
                     for (Token token : tokenizer.getTokens(document)) {
@@ -295,7 +295,7 @@ public class BowSpace implements Serializable {
                         }
                     }
                 }
-                logger.debug("Document %d ...", docCount);
+                logger.debug("Document {} ...", docCount);
             }
         }
         // remove unfrequent words and n-grams, precompute IDF
@@ -329,7 +329,7 @@ public class BowSpace implements Serializable {
         logger.debug("Computing bag-of-words vectors ...");
         int docNum = 1;
         for (String document : documents) {
-            logger.debug("initialize", "Document %d / %d ...", docNum++, docCount);
+            logger.debug("initialize", "Document {} / {} ...", docNum++, docCount);
             Map<Integer, Integer> tfVec = new HashMap<Integer, Integer>();
             List<WordStem> nGrams = Lists.newArrayListWithCapacity(maxNGramLen);
             for (Token token : tokenizer.getTokens(document)) {

@@ -12,10 +12,12 @@ import java.util.Map;
  * Author saxo
  */
 public class Word implements Iterable<Map.Entry<String, Integer>>, Serializable {
+    private static final long serialVersionUID = 812213181817310413L;
+
     int idx = -1;
     final Map<String, Integer> forms = new HashMap<String, Integer>();
     String mostFrequentForm;
-    private String stem;
+    String stem;
     int docFreq = 1;
     int freq = 1;
     double idf = -1;

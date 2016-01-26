@@ -21,10 +21,6 @@
     <name>LATINO4J-core</name>
 
     <dependencies>
-        <dependency>
-            <groupId>eu.hlavki.text</groupId>
-            <artifactId>jlemmagen</artifactId>
-        </dependency>
 
         <dependency>
             <groupId>org.tartarus.snowball</groupId>
@@ -34,6 +30,11 @@
         <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-jdk14</artifactId>
         </dependency>
 
         <dependency>

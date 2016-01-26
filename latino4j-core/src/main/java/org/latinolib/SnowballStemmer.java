@@ -2,51 +2,52 @@ package org.latinolib;
 
 import org.tartarus.snowball.ext.*;
 
-public class SnowballStemmer {
+public class SnowballStemmer implements Stemmer {
     private Language language;
 
     public SnowballStemmer(Language language) {
         this.language = language;
+        createStemmer(); // throws exception if language not supported
     }
 
     private org.tartarus.snowball.SnowballStemmer createStemmer() {
         switch (language) {
-            case ENGLISH:
+            case EN:
                 return new englishStemmer();
-            case GERMAN:
+            case DE:
                 return new germanStemmer();
-            case FRENCH:
+            case FR:
                 return new frenchStemmer();
-            case SPANISH:
+            case ES:
                 return new spanishStemmer();
-            case ITALIAN:
+            case IT:
                 return new italianStemmer();
-            case PORTUGUESE:
+            case PT:
                 return new portugueseStemmer();
-            case DANISH:
+            case DA:
                 return new danishStemmer();
-            case DUTCH:
+            case NL:
                 return new dutchStemmer();
-            case FINNISH:
+            case FI:
                 return finnishStemmer.instance; // special case
-            case NORWEGIAN:
+            case NO:
                 return new norwegianStemmer();
-            case RUSSIAN:
+            case RU:
                 return new russianStemmer();
-            case SWEDISH:
+            case SV:
                 return new swedishStemmer();
             default:
-                return null;
+                throw new UnsupportedOperationException();
         }
     }
 
+    @Override
     public String getStem(String word) {
+        org.tartarus.snowball.SnowballStemmer stemmer = createStemmer();
         try {
-            org.tartarus.snowball.SnowballStemmer stemmer = createStemmer();
             stemmer.setCurrent(word);
             stemmer.stem();
             return stemmer.getCurrent();
-        }
-        catch (Exception e) { return word; }
+        } catch (Exception e) { return word; }
     }
 }

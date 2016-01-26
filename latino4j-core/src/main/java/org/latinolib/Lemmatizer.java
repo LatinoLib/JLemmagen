@@ -14,28 +14,34 @@ public class Lemmatizer implements Stemmer {
         switch (language) {
             case EN:
                 return LemmatizerFactory.getPrebuilt("mlteast-en");
-//            case DE:
-//                return new germanStemmer();
-//            case FR:
-//                return new frenchStemmer();
-//            case ES:
-//                return new spanishStemmer();
-//            case IT:
-//                return new italianStemmer();
-//            case PT:
-//                return new portugueseStemmer();
-//            case DA:
-//                return new danishStemmer();
-//            case NL:
-//                return new dutchStemmer();
-//            case FI:
-//                return finnishStemmer.instance; // special case
-//            case NO:
-//                return new norwegianStemmer();
-//            case RU:
-//                return new russianStemmer();
-//            case SV:
-//                return new swedishStemmer();
+            case BG:
+                return LemmatizerFactory.getPrebuilt("mlteast-bg");
+            case CS:
+                return LemmatizerFactory.getPrebuilt("mlteast-cs");
+            case ET:
+                return LemmatizerFactory.getPrebuilt("mlteast-et");
+            case FA:
+                return LemmatizerFactory.getPrebuilt("mlteast-fa");
+            case FR:
+                return LemmatizerFactory.getPrebuilt("mlteast-fr");
+            case HU:
+                return LemmatizerFactory.getPrebuilt("mlteast-hu");
+            case MK:
+                return LemmatizerFactory.getPrebuilt("mlteast-mk");
+            case PL:
+                return LemmatizerFactory.getPrebuilt("mlteast-pl");
+            case RO:
+                return LemmatizerFactory.getPrebuilt("mlteast-ro");
+            case RU:
+                return LemmatizerFactory.getPrebuilt("mlteast-ru");
+            case SK:
+                return LemmatizerFactory.getPrebuilt("mlteast-sk");
+            case SL:
+                return LemmatizerFactory.getPrebuilt("mlteast-sl");
+            case SR:
+                return LemmatizerFactory.getPrebuilt("mlteast-sr");
+            case UK:
+                return LemmatizerFactory.getPrebuilt("mlteast-uk");
             default:
                 throw new UnsupportedOperationException();
         }

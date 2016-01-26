@@ -30,7 +30,11 @@ public enum Language {
     SK,
     TR,
     VI,
-    IS;
+    IS,
+    FA,
+    MK,
+    SR,
+    UK;
 
     public Stemmer getStemmer() {
         return new SnowballStemmer(this);

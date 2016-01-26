@@ -1,5 +1,7 @@
 package org.latinolib;
 
+import java.io.IOException;
+
 public enum Language {
     UNSPECIFIED,
     EN,
@@ -34,8 +36,8 @@ public enum Language {
         return new SnowballStemmer(this);
     }
 
-    public Stemmer getLemmatizer() {
-        return null; // TODO
+    public Stemmer getLemmatizer() throws IOException {
+        return new Lemmatizer(this);
     }
 
     public Object getStopWords() {

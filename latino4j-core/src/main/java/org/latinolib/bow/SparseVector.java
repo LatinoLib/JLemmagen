@@ -2,9 +2,11 @@ package org.latinolib.bow;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
+import org.latinolib.model.LabeledExampleEntry;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.Serializable;
+import java.util.Collection;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
@@ -23,6 +25,26 @@ public class SparseVector implements Iterable<VectorEntry>, Serializable {
 
     public SparseVector(int capacity) {
         entries = Lists.newArrayListWithCapacity(capacity);
+    }
+
+    public SparseVector(Collection<? extends VectorEntry> entries) {
+        this.entries = Lists.newArrayList(entries);
+    }
+
+    public SparseVector(VectorEntry... entries) {
+        this.entries = Lists.newArrayList(entries);
+    }
+
+    public static SparseVector sorted(Collection<? extends VectorEntry> entries) {
+        SparseVector vec = new SparseVector(entries);
+        vec.sort();
+        return vec;
+    }
+
+    public static SparseVector sorted(VectorEntry... entries) {
+        SparseVector vec = new SparseVector(entries);
+        vec.sort();
+        return vec;
     }
 
     public List<VectorEntry> innerEntries() {
@@ -67,7 +89,7 @@ public class SparseVector implements Iterable<VectorEntry>, Serializable {
     }
 
     public <T> T[] toArray(T[] a) {
-        return (T[]) entries.toArray();
+        return entries.toArray(a);
     }
 
     @Override

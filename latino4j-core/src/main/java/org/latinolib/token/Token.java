@@ -5,17 +5,17 @@ package org.latinolib.token;
  * Author saxo
  */
 public class Token {
-    private final CharSequence text;
+    private final String text;
     private final int start;
     private final int end;
 
-    public Token(CharSequence text, int start, int end) {
+    public Token(String text, int start, int end) {
         this.text = text;
         this.start = start;
         this.end = end;
     }
 
-    public CharSequence getText() {
+    public String getText() {
         return text;
     }
 

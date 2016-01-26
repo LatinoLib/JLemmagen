@@ -67,6 +67,11 @@
             <!-- logging -->
 
             <dependency>
+                <groupId>ch.qos.logback</groupId>
+                <artifactId>logback-classic</artifactId>
+                <version>1.1.3</version>
+            </dependency>
+            <dependency>
                 <groupId>org.slf4j</groupId>
                 <artifactId>slf4j-api</artifactId>
                 <version>1.7.5</version>
@@ -105,6 +110,39 @@
                 <version>4.5.1</version>
                 <scope>test</scope>
             </dependency>
+
+            <!-- spark -->
+
+            <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-core_2.10</artifactId>
+                <version>1.3.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.apache.spark</groupId>
+                <artifactId>spark-mllib_2.10</artifactId>
+                <version>1.3.0</version>
+            </dependency>
+
+            <dependency>
+                <groupId>org.scalanlp</groupId>
+                <artifactId>breeze_2.10</artifactId> <!-- or 2.11 -->
+                <version>0.12</version>
+            </dependency>
+
+            <dependency>
+                <groupId>com.googlecode.matrix-toolkits-java</groupId>
+                <artifactId>mtj</artifactId>
+                <version>1.0.2</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.bwaldvogel</groupId>
+                <artifactId>liblinear</artifactId>
+                <version>1.95</version>
+            </dependency>
+
         </dependencies>
     </dependencyManagement>
     
@@ -142,7 +180,15 @@
                         </goals>
                     </execution>
                 </executions>
-            </plugin> 
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-resources-plugin</artifactId>
+                <version>2.5</version>
+                <configuration>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
         </plugins>
     </build>
 </project>

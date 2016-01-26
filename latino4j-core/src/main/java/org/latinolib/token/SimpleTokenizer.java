@@ -68,7 +68,7 @@ public class SimpleTokenizer implements Tokenizer {
         public Token next() {
             findNext();
             if (startIdx < text.length()) {
-                Token result = new Token(text.subSequence(startIdx, endIdx), startIdx, endIdx);
+                Token result = new Token(text.subSequence(startIdx, endIdx).toString(), startIdx, endIdx);
                 startIdx = endIdx;
                 return result;
             }

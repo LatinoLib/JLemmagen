@@ -2,8 +2,10 @@ package org.latinolib;
 
 import java.io.IOException;
 
+/**
+ * Author mIHA
+ */
 public enum Language {
-    UNSPECIFIED,
     EN,
     FR,
     DE,
@@ -44,8 +46,12 @@ public enum Language {
         return new Lemmatizer(this);
     }
 
-    public Object getStopWords() {
-        return null; // TODO
+    public StopWords getStopWords(boolean caseSensitive) throws IOException {
+        return new DefaultStopWords(this, caseSensitive);
+    }
+
+    public StopWords getStopWords() throws IOException {
+        return new DefaultStopWords(this, false);
     }
 
     public static Language detect(String text) {

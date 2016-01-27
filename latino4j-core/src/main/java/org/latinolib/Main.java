@@ -8,5 +8,7 @@ public class Main {
         System.out.println(new PorterStemmer().getStem("friendships"));
         System.out.println(EN.getLemmatizer().getStem("trilogies"));
         System.out.println(SL.getLemmatizer().getStem("trilogije"));
+        System.out.println(EN.getStopWords().isStopWord("him"));
+        System.out.println(EN.getStopWords().isStopWord("awesome"));
     }
 }

@@ -2,6 +2,9 @@ package org.latinolib;
 
 import org.tartarus.snowball.ext.*;
 
+/**
+ * Author mIHA
+ */
 public class SnowballStemmer implements Stemmer {
     private Language language;
 

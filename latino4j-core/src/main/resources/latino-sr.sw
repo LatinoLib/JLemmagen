@@ -1,4 +1,4 @@
-// Cyrillic
+# Cyrillic
 баш
 без
 биће
@@ -132,7 +132,7 @@
 желео
 жели
 знати
-// Latin
+# Latin
 baš
 bez
 biće

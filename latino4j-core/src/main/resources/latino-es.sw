@@ -1,139 +1,139 @@
-de             //  from, of
-la             //  the, her
-que            //  who, that
-el             //  the
-en             //  in
-y              //  and
-a              //  to
-los            //  the, them
-del            //  de + el
-se             //  himself, from him etc
-las            //  the, them
-por            //  for, by, etc
-un             //  a
-para           //  for
-con            //  with
-no             //  no
-una            //  a
-su             //  his, her
-al             //  a + el
-// es         from SER
-lo             //  him
-como           //  how
-más            //  more
-pero           //  pero
-sus            //  su plural
-le             //  to him, her
-ya             //  already
-o              //  or
-// fue        from SER
-este           //  this
-                  // ha         from HABER
-sí             //  himself etc
-porque         //  because
-esta           //  this
-// son        from SER
-entre          //  between
-                  // está       from ESTAR
-cuando         //  when
-muy            //  very
-sin            //  without
-sobre          //  on
-// ser        from SER
-// tiene      from TENER
-también        //  also
-me             //  me
-hasta          //  until
-hay            //  there is/are
-donde          //  where
-// han        from HABER
-quien          //  whom, that
-// están      from ESTAR
-// estado     from ESTAR
-desde          //  from
-todo           //  all
-nos            //  us
-durante        //  during
-// estados    from ESTAR
-todos          //  all
-uno            //  a
-les            //  to them
-ni             //  nor
-contra         //  against
-otros          //  other
-// fueron     from SER
-ese            //  that
-eso            //  that
-// había      from HABER
-ante           //  before
-ellos          //  they
-e              //  and (variant of y)
-esto           //  this
-mí             //  me
-antes          //  before
-algunos        //  some
-qué            //  what?
-unos           //  a
-yo             //  I
-otro           //  other
-otras          //  other
-otra           //  other
-él             //  he
-tanto          //  so much, many
-esa            //  that
-estos          //  these
-mucho          //  much, many
-quienes        //  who
-nada           //  nothing
-muchos         //  many
-cual           //  who
-// sea        from SER
-poco           //  few
-ella           //  she
-estar          //  to be
-// haber      from HABER
-estas          //  these
-// estaba     from ESTAR
-// estamos    from ESTAR
-algunas        //  some
-algo           //  something
-nosotros       //  we
-// other forms
-mi             //  me
-mis            //  mi plural
-tú             //  thou
-te             //  thee
-ti             //  thee
-tu             //  thy
-tus            //  tu plural
-ellas          //  they
-nosotras       //  we
-vosotros       //  you
-vosotras       //  you
-os             //  you
-mío            //  mine
-mía            //
-míos           //
-mías           //
-tuyo           //  thine
-tuya           //
-tuyos          //
-tuyas          //
-suyo           //  his, hers, theirs
-suya           //
-suyos          //
-suyas          //
-nuestro        //  ours
-nuestra        //
-nuestros       //
-nuestras       //
-vuestro        //  yours
-vuestra        //
-vuestros       //
-vuestras       //
-esos           //  those
-esas           //  those
-// forms of estar, to be (not including the infinitive):
+de             #  from, of
+la             #  the, her
+que            #  who, that
+el             #  the
+en             #  in
+y              #  and
+a              #  to
+los            #  the, them
+del            #  de + el
+se             #  himself, from him etc
+las            #  the, them
+por            #  for, by, etc
+un             #  a
+para           #  for
+con            #  with
+no             #  no
+una            #  a
+su             #  his, her
+al             #  a + el
+# es         from SER
+lo             #  him
+como           #  how
+más            #  more
+pero           #  pero
+sus            #  su plural
+le             #  to him, her
+ya             #  already
+o              #  or
+# fue        from SER
+este           #  this
+                  # ha         from HABER
+sí             #  himself etc
+porque         #  because
+esta           #  this
+# son        from SER
+entre          #  between
+                  # está       from ESTAR
+cuando         #  when
+muy            #  very
+sin            #  without
+sobre          #  on
+# ser        from SER
+# tiene      from TENER
+también        #  also
+me             #  me
+hasta          #  until
+hay            #  there is/are
+donde          #  where
+# han        from HABER
+quien          #  whom, that
+# están      from ESTAR
+# estado     from ESTAR
+desde          #  from
+todo           #  all
+nos            #  us
+durante        #  during
+# estados    from ESTAR
+todos          #  all
+uno            #  a
+les            #  to them
+ni             #  nor
+contra         #  against
+otros          #  other
+# fueron     from SER
+ese            #  that
+eso            #  that
+# había      from HABER
+ante           #  before
+ellos          #  they
+e              #  and (variant of y)
+esto           #  this
+mí             #  me
+antes          #  before
+algunos        #  some
+qué            #  what?
+unos           #  a
+yo             #  I
+otro           #  other
+otras          #  other
+otra           #  other
+él             #  he
+tanto          #  so much, many
+esa            #  that
+estos          #  these
+mucho          #  much, many
+quienes        #  who
+nada           #  nothing
+muchos         #  many
+cual           #  who
+# sea        from SER
+poco           #  few
+ella           #  she
+estar          #  to be
+# haber      from HABER
+estas          #  these
+# estaba     from ESTAR
+# estamos    from ESTAR
+algunas        #  some
+algo           #  something
+nosotros       #  we
+# other forms
+mi             #  me
+mis            #  mi plural
+tú             #  thou
+te             #  thee
+ti             #  thee
+tu             #  thy
+tus            #  tu plural
+ellas          #  they
+nosotras       #  we
+vosotros       #  you
+vosotras       #  you
+os             #  you
+mío            #  mine
+mía            #
+míos           #
+mías           #
+tuyo           #  thine
+tuya           #
+tuyos          #
+tuyas          #
+suyo           #  his, hers, theirs
+suya           #
+suyos          #
+suyas          #
+nuestro        #  ours
+nuestra        #
+nuestros       #
+nuestras       #
+vuestro        #  yours
+vuestra        #
+vuestros       #
+vuestras       #
+esos           #  those
+esas           #  those
+# forms of estar, to be (not including the infinitive):
 estoy
 estás
 está
@@ -183,7 +183,7 @@ estada
 estados
 estadas
 estad
-// forms of haber, to have (not including the infinitive):
+# forms of haber, to have (not including the infinitive):
 he
 has
 ha
@@ -232,7 +232,7 @@ habido
 habida
 habidos
 habidas
-// forms of ser, to be (not including the infinitive):
+# forms of ser, to be (not including the infinitive):
 soy
 eres
 es
@@ -278,8 +278,8 @@ fueseis
 fuesen
 siendo
 sido
-// sed       also means 'thirst'
-// forms of tener, to have (not including the infinitive):
+# sed       also means 'thirst'
+# forms of tener, to have (not including the infinitive):
 tengo
 tienes
 tiene

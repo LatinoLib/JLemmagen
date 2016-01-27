@@ -1,4 +1,4 @@
-// forms of BE
+# forms of BE
 olla
 olen
 olet
@@ -6,7 +6,7 @@ on
 olemme
 olette
 ovat
-ole // negative form
+ole # negative form
 oli
 olisi
 olisit
@@ -21,13 +21,13 @@ olitte
 olivat
 ollut
 olleet
-en // negation
+en # negation
 et
 ei
 emme
 ette
 eivät
-// I
+# I
 minä
 minun
 minut
@@ -38,7 +38,7 @@ minuun
 minulla
 minulta
 minulle
-// you
+# you
 sinä
 sinun
 sinut
@@ -49,7 +49,7 @@ sinuun
 sinulla
 sinulta
 sinulle
-// he she
+# he she
 hän
 hänen
 hänet
@@ -60,7 +60,7 @@ häneen
 hänellä
 häneltä
 hänelle
-// we
+# we
 me
 meidän
 meidät
@@ -71,7 +71,7 @@ meihin
 meillä
 meiltä
 meille
-// you
+# you
 te
 teidän
 teidät
@@ -82,7 +82,7 @@ teihin
 teillä
 teiltä
 teille
-// they
+# they
 he
 heidän
 heidät
@@ -93,7 +93,7 @@ heihin
 heillä
 heiltä
 heille
-// this
+# this
 tämä
 tämän
 tätä
@@ -105,7 +105,7 @@ tältä
 tälle
 tänä
 täksi
-// that
+# that
 tuo
 tuon
 tuotä
@@ -117,7 +117,7 @@ tuolta
 tuolle
 tuona
 tuoksi
-// it
+# it
 se
 sen
 sitä
@@ -129,7 +129,7 @@ siltä
 sille
 sinä
 siksi
-// these
+# these
 nämä
 näiden
 näitä
@@ -141,7 +141,7 @@ näiltä
 näille
 näinä
 näiksi
-// those
+# those
 nuo
 noiden
 noita
@@ -153,7 +153,7 @@ noilta
 noille
 noina
 noiksi
-// they
+# they
 ne
 niiden
 niitä
@@ -165,7 +165,7 @@ niiltä
 niille
 niinä
 niiksi
-// who
+# who
 kuka
 kenen
 kenet
@@ -178,7 +178,7 @@ keneltä
 kenelle
 kenenä
 keneksi
-// who (pl)
+# who (pl)
 ketkä
 keiden
 ketkä
@@ -191,7 +191,7 @@ keiltä
 keille
 keinä
 keiksi
-// which what
+# which what
 mikä
 minkä
 minkä
@@ -204,9 +204,9 @@ miltä
 mille
 minä
 miksi
-// which what (pl)
+# which what (pl)
 mitkä
-// who which
+# who which
 joka
 jonka
 jota
@@ -218,7 +218,7 @@ jolta
 jolle
 jona
 joksi
-// who which (pl)
+# who which (pl)
 jotka
 joiden
 joita
@@ -230,28 +230,28 @@ joilta
 joille
 joina
 joiksi
-// conjunctions
-että   // that
-ja     // and
-jos    // if
-koska  // because
-kuin   // than
-mutta  // but
-niin   // so
-sekä   // and
-sillä  // for
-tai    // or
-vaan   // but
-vai    // or
-vaikka // although
-// prepositions
-kanssa  // with
-mukaan  // according to
-noin    // about
-poikki  // across
-yli     // over, across
-// other
-kun    // when
-niin   // so
-nyt    // now
-itse   // self
+# conjunctions
+että   # that
+ja     # and
+jos    # if
+koska  # because
+kuin   # than
+mutta  # but
+niin   # so
+sekä   # and
+sillä  # for
+tai    # or
+vaan   # but
+vai    # or
+vaikka # although
+# prepositions
+kanssa  # with
+mukaan  # according to
+noin    # about
+poikki  # across
+yli     # over, across
+# other
+kun    # when
+niin   # so
+nyt    # now
+itse   # self

@@ -1,123 +1,123 @@
-de             //  of, from
-a              //  the; to, at; her
-o              //  the; him
-que            //  who, that
-e              //  and
-do             //  de + o
-da             //  de + a
-em             //  in
-um             //  a
-para           //  for
-// é          from SER
-com            //  with
-não            //  not, no
-uma            //  a
-os             //  the; them
-no             //  em + o
-se             //  himself etc
-na             //  em + a
-por            //  for
-mais           //  more
-as             //  the; them
-dos            //  de + os
-como           //  as, like
-mas            //  but
-// foi        from SER
-ao             //  a + o
-ele            //  he
-das            //  de + as
-// tem        from TER
-à              //  a + a
-seu            //  his
-sua            //  her
-ou             //  or
-// ser        from SER
-quando         //  when
-muito          //  much
-// há         from HAV
-nos            //  em + os; us
-já             //  already, now
-// está       from EST
-eu             //  I
-também         //  also
-só             //  only, just
-pelo           //  per + o
-pela           //  per + a
-até            //  up to
-isso           //  that
-ela            //  he
-entre          //  between
-// era        from SER
-depois         //  after
-sem            //  without
-mesmo          //  same
-aos            //  a + os
-// ter        from TER
-seus           //  his
-quem           //  whom
-nas            //  em + as
-me             //  me
-esse           //  that
-eles           //  they
-// estão      from EST
-você           //  you
-// tinha      from TER
-// foram      from SER
-essa           //  that
-num            //  em + um
-nem            //  nor
-suas           //  her
-meu            //  my
-às             //  a + as
-minha          //  my
-// têm        from TER
-numa           //  em + uma
-pelos          //  per + os
-elas           //  they
-// havia      from HAV
-// seja       from SER
-qual           //  which
-// será       from SER
-nós            //  we
-// tenho      from TER
-lhe            //  to him, her
-deles          //  of them
-essas          //  those
-esses          //  those
-pelas          //  per + as
-este           //  this
-// fosse      from SER
-dele           //  of him
-// other words. There are many contractions such as naquele = em+aquele,
-// mo = me+o, but they are rare.
-// Indefinite article plural forms are also rare.
-tu             //  thou
-te             //  thee
-vocês          //  you (plural)
-vos            //  you
-lhes           //  to them
-meus           //  my
+de             #  of, from
+a              #  the; to, at; her
+o              #  the; him
+que            #  who, that
+e              #  and
+do             #  de + o
+da             #  de + a
+em             #  in
+um             #  a
+para           #  for
+# é          from SER
+com            #  with
+não            #  not, no
+uma            #  a
+os             #  the; them
+no             #  em + o
+se             #  himself etc
+na             #  em + a
+por            #  for
+mais           #  more
+as             #  the; them
+dos            #  de + os
+como           #  as, like
+mas            #  but
+# foi        from SER
+ao             #  a + o
+ele            #  he
+das            #  de + as
+# tem        from TER
+à              #  a + a
+seu            #  his
+sua            #  her
+ou             #  or
+# ser        from SER
+quando         #  when
+muito          #  much
+# há         from HAV
+nos            #  em + os; us
+já             #  already, now
+# está       from EST
+eu             #  I
+também         #  also
+só             #  only, just
+pelo           #  per + o
+pela           #  per + a
+até            #  up to
+isso           #  that
+ela            #  he
+entre          #  between
+# era        from SER
+depois         #  after
+sem            #  without
+mesmo          #  same
+aos            #  a + os
+# ter        from TER
+seus           #  his
+quem           #  whom
+nas            #  em + as
+me             #  me
+esse           #  that
+eles           #  they
+# estão      from EST
+você           #  you
+# tinha      from TER
+# foram      from SER
+essa           #  that
+num            #  em + um
+nem            #  nor
+suas           #  her
+meu            #  my
+às             #  a + as
+minha          #  my
+# têm        from TER
+numa           #  em + uma
+pelos          #  per + os
+elas           #  they
+# havia      from HAV
+# seja       from SER
+qual           #  which
+# será       from SER
+nós            #  we
+# tenho      from TER
+lhe            #  to him, her
+deles          #  of them
+essas          #  those
+esses          #  those
+pelas          #  per + as
+este           #  this
+# fosse      from SER
+dele           #  of him
+# other words. There are many contractions such as naquele = em+aquele,
+# mo = me+o, but they are rare.
+# Indefinite article plural forms are also rare.
+tu             #  thou
+te             #  thee
+vocês          #  you (plural)
+vos            #  you
+lhes           #  to them
+meus           #  my
 minhas
-teu            //  thy
+teu            #  thy
 tua
 teus
 tuas
-nosso          // our
+nosso          # our
 nossa
 nossos
 nossas
-dela           //  of her
-delas          //  of them
-esta           //  this
-estes          //  these
-estas          //  these
-aquele         //  that
-aquela         //  that
-aqueles        //  those
-aquelas        //  those
-isto           //  this
-aquilo         //  that
-// forms of estar, to be (not including the infinitive):
+dela           #  of her
+delas          #  of them
+esta           #  this
+estes          #  these
+estas          #  these
+aquele         #  that
+aquela         #  that
+aqueles        #  those
+aquelas        #  those
+isto           #  this
+aquilo         #  that
+# forms of estar, to be (not including the infinitive):
 estou
 está
 estamos
@@ -140,7 +140,7 @@ estivessem
 estiver
 estivermos
 estiverem
-// forms of haver, to have (not including the infinitive):
+# forms of haver, to have (not including the infinitive):
 hei
 há
 havemos
@@ -166,7 +166,7 @@ houverão
 houveria
 houveríamos
 houveriam
-// forms of ser, to be (not including the infinitive):
+# forms of ser, to be (not including the infinitive):
 sou
 somos
 são
@@ -195,7 +195,7 @@ serão
 seria
 seríamos
 seriam
-// forms of ter, to have (not including the infinitive):
+# forms of ter, to have (not including the infinitive):
 tenho
 tem
 temos

@@ -1,7 +1,6 @@
 package org.latinolib;
 
 import java.io.*;
-import java.text.MessageFormat;
 import java.util.HashSet;
 
 /**
@@ -23,9 +22,7 @@ public class DefaultStopWords implements StopWords {
     }
 
     private void loadStopWords(Language language) throws IOException {
-        InputStream ip = getClass().getResourceAsStream(
-            MessageFormat.format("/latino-{0}.sw", language.toString().toLowerCase())
-        );
+        InputStream ip = getClass().getResourceAsStream("/latino-" + language.toString().toLowerCase() + ".sw");
         BufferedReader br = new BufferedReader(new InputStreamReader(ip));
         String line;
         while ((line = br.readLine()) != null) {

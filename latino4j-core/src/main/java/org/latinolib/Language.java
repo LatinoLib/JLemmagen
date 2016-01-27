@@ -51,7 +51,7 @@ public enum Language {
     }
 
     public StopWords getStopWords() throws IOException {
-        return new DefaultStopWords(this, false);
+        return getStopWords(false);
     }
 
     public static Language detect(String text) {

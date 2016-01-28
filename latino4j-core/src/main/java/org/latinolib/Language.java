@@ -64,7 +64,7 @@ public enum Language {
         return getStopWords(false);
     }
 
-    // TODO: public static KeyDat<double, Language>[] detectMany
+    // TODO: public static KeyDat<double, Language>[] detectMulti
 
     public static Language detect(String text) throws IOException {
         synchronized (Language.class) { // TODO: thread-safe ranker

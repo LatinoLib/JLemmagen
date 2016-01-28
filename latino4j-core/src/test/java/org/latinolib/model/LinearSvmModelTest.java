@@ -1,4 +1,4 @@
-package org.latinolib.model.linearsvm;
+package org.latinolib.model;
 
 import de.bwaldvogel.liblinear.Parameter;
 import de.bwaldvogel.liblinear.SolverType;

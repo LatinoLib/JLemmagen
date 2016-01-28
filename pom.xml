@@ -21,8 +21,9 @@
     </scm>
 
     <modules>
-        <module>snowball4j</module>
         <module>latino4j-core</module>
+        <module>snowball4j</module>
+        <module>jlemmagen</module>
     </modules>
 
     <properties>
@@ -35,24 +36,24 @@
             <!-- latino4j -->
 
             <dependency>
+                <groupId>org.latinolib.latino4j</groupId>
+                <artifactId>latino4j-core</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
                 <groupId>org.tartarus.snowball</groupId>
                 <artifactId>snowball4j</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.latinolib.latino4j</groupId>
-                <artifactId>latino4j-core</artifactId>
+                <groupId>eu.hlavki.text</groupId>
+                <artifactId>jlemmagen</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <!-- logging -->
-
-            <dependency>
-                <groupId>ch.qos.logback</groupId>
-                <artifactId>logback-classic</artifactId>
-                <version>1.1.3</version>
-            </dependency>
 
             <dependency>
                 <groupId>org.slf4j</groupId>
@@ -75,45 +76,6 @@
             </dependency>
 
             <!-- apache -->
-
-            <dependency>
-                <groupId>org.apache.lucene</groupId>
-                <artifactId>lucene-analyzers-common</artifactId>
-                <version>4.5.1</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.lucene</groupId>
-                <artifactId>lucene-test-framework</artifactId>
-                <version>4.5.1</version>
-                <scope>test</scope>
-            </dependency>
-
-            <!-- spark -->
-
-            <dependency>
-                <groupId>org.apache.spark</groupId>
-                <artifactId>spark-core_2.10</artifactId>
-                <version>1.3.0</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.apache.spark</groupId>
-                <artifactId>spark-mllib_2.10</artifactId>
-                <version>1.3.0</version>
-            </dependency>
-
-            <dependency>
-                <groupId>org.scalanlp</groupId>
-                <artifactId>breeze_2.10</artifactId> <!-- or 2.11 -->
-                <version>0.12</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.googlecode.matrix-toolkits-java</groupId>
-                <artifactId>mtj</artifactId>
-                <version>1.0.2</version>
-            </dependency>
 
             <dependency>
                 <groupId>de.bwaldvogel</groupId>

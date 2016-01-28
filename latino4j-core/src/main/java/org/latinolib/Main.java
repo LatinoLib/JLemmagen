@@ -10,5 +10,8 @@ public class Main {
         System.out.println(SL.getLemmatizer().getStem("trilogije"));
         System.out.println(EN.getStopWords().isStopWord("him"));
         System.out.println(EN.getStopWords().isStopWord("awesome"));
+        System.out.println(Language.detect("This is some English text."));
+        System.out.println(Language.detect("This is some English text."));
+        System.out.println(Language.detect("To je slovenski stavek."));
     }
 }

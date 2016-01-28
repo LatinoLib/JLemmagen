@@ -1,6 +1,8 @@
 package org.latinolib;
 
 import java.io.IOException;
+import de.spieleck.app.cngram.NGramProfiles;
+import de.spieleck.app.cngram.NGramProfiles.*;
 
 /**
  * Author mIHA
@@ -38,6 +40,9 @@ public enum Language {
     SR,
     UK;
 
+    private static Ranker languageDetector
+        = null;
+
     public Stemmer getStemmer() {
         return new SnowballStemmer(this);
     }
@@ -54,7 +59,20 @@ public enum Language {
         return getStopWords(false);
     }
 
-    public static Language detect(String text) {
-        return null; // TODO
+    // TODO: public static KeyDat<double, Language>[] detectMany
+
+    public static Language detect(String text) throws IOException {
+        synchronized (Language.class) { // TODO: thread-safe ranker
+            if (languageDetector == null) {
+                languageDetector = new NGramProfiles().getRanker();
+            }
+            languageDetector.reset();
+            languageDetector.account(text);
+            RankResult rr = languageDetector.getRankResult();
+            if (rr.getLength() > 0 && rr.getScore(0) > 0.0) {
+                return Language.valueOf(rr.getName(0).toUpperCase()); // TODO: check if we support all languages
+            }
+            return null;
+        }
     }
 }

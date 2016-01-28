@@ -33,6 +33,11 @@
         </dependency>
 
         <dependency>
+            <groupId>de.spieleck.app</groupId>
+            <artifactId>cngram</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>com.google.guava</groupId>
             <artifactId>guava</artifactId>
         </dependency>

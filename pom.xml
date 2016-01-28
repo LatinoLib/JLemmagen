@@ -24,6 +24,7 @@
         <module>latino4j-core</module>
         <module>snowball4j</module>
         <module>jlemmagen</module>
+        <module>cngram</module>
     </modules>
 
     <properties>
@@ -50,6 +51,12 @@
             <dependency>
                 <groupId>eu.hlavki.text</groupId>
                 <artifactId>jlemmagen</artifactId>
+                <version>${project.version}</version>
+            </dependency>
+
+            <dependency>
+                <groupId>de.spieleck.app</groupId>
+                <artifactId>cngram</artifactId>
                 <version>${project.version}</version>
             </dependency>
 

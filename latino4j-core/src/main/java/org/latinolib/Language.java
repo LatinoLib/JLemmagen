@@ -3,6 +3,11 @@ package org.latinolib;
 import java.io.IOException;
 import de.spieleck.app.cngram.NGramProfiles;
 import de.spieleck.app.cngram.NGramProfiles.*;
+import org.latinolib.stemmer.Lemmatizer;
+import org.latinolib.stemmer.SnowballStemmer;
+import org.latinolib.stemmer.Stemmer;
+import org.latinolib.stopwords.DefaultStopWords;
+import org.latinolib.stopwords.StopWords;
 
 /**
  * Author mIHA

@@ -1,4 +1,4 @@
-package org.latinolib;
+package org.latinolib.stopwords;
 
 /**
  * Author mIHA

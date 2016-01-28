@@ -5,8 +5,10 @@ import com.google.gson.reflect.TypeToken;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
-import org.latinolib.token.SimpleTokenizer;
-import org.latinolib.token.SimpleTokenizerType;
+import org.latinolib.SparseVector;
+import org.latinolib.VectorEntry;
+import org.latinolib.tokenizer.SimpleTokenizer;
+import org.latinolib.tokenizer.SimpleTokenizerType;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;

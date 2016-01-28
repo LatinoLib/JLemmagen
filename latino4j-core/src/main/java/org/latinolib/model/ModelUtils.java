@@ -1,9 +1,9 @@
-package org.latinolib;
+package org.latinolib.model;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
-import org.latinolib.bow.SparseVector;
-import org.latinolib.bow.VectorEntry;
+import org.latinolib.SparseVector;
+import org.latinolib.VectorEntry;
 
 import java.util.Collections;
 import java.util.List;

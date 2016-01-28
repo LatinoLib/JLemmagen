@@ -1,5 +1,7 @@
 package org.latinolib;
 
+import org.latinolib.stemmer.PorterStemmer;
+
 import java.io.IOException;
 import static org.latinolib.Language.*;
 

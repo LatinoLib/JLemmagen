@@ -1,8 +1,7 @@
-package org.latinolib.bow;
+package org.latinolib;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
-import org.latinolib.model.LabeledExampleEntry;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 import java.io.Serializable;

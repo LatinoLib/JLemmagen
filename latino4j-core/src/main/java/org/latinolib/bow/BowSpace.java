@@ -2,12 +2,14 @@ package org.latinolib.bow;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
-import org.latinolib.ModelUtils;
-import org.latinolib.Stemmer;
-import org.latinolib.token.SimpleTokenizer;
-import org.latinolib.token.SimpleTokenizerType;
-import org.latinolib.token.Token;
-import org.latinolib.token.Tokenizer;
+import org.latinolib.VectorEntry;
+import org.latinolib.model.ModelUtils;
+import org.latinolib.SparseVector;
+import org.latinolib.stemmer.Stemmer;
+import org.latinolib.tokenizer.SimpleTokenizer;
+import org.latinolib.tokenizer.SimpleTokenizerType;
+import org.latinolib.tokenizer.Token;
+import org.latinolib.tokenizer.Tokenizer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 

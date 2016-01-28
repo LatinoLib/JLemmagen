@@ -1,8 +1,8 @@
-package org.latinolib.model.linearsvm;
+package org.latinolib.model;
 
 import com.google.common.collect.Lists;
 import de.bwaldvogel.liblinear.FeatureNode;
-import org.latinolib.bow.VectorEntry;
+import org.latinolib.VectorEntry;
 
 import java.util.List;
 

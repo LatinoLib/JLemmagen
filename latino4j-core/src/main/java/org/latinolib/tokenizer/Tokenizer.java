@@ -1,4 +1,4 @@
-package org.latinolib.token;
+package org.latinolib.tokenizer;
 
 import java.io.Serializable;
 

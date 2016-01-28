@@ -1,6 +1,9 @@
-package org.latinolib;
+package org.latinolib.stemmer;
 
 import eu.hlavki.text.lemmagen.LemmatizerFactory;
+import org.latinolib.Language;
+import org.latinolib.stemmer.Stemmer;
+
 import java.io.IOException;
 
 /**

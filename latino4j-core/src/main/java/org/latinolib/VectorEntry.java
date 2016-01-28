@@ -1,4 +1,4 @@
-package org.latinolib.bow;
+package org.latinolib;
 
 import java.io.Serializable;
 

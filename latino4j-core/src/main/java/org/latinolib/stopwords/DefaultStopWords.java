@@ -1,4 +1,6 @@
-package org.latinolib;
+package org.latinolib.stopwords;
+
+import org.latinolib.Language;
 
 import java.io.*;
 import java.util.HashSet;

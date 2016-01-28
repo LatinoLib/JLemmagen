@@ -1,4 +1,4 @@
-package org.latinolib;
+package org.latinolib.stemmer;
 
 import org.tartarus.snowball.ext.porterStemmerOriginal;
 

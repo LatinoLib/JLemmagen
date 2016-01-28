@@ -3,10 +3,8 @@ package org.latinolib.model.linearsvm;
 import de.bwaldvogel.liblinear.Parameter;
 import de.bwaldvogel.liblinear.SolverType;
 import org.junit.Test;
-import org.latinolib.bow.SparseVector;
-import org.latinolib.model.LabeledDataset;
-import org.latinolib.model.LabeledExample;
-import org.latinolib.model.Prediction;
+import org.latinolib.SparseVector;
+import org.latinolib.model.*;
 
 import static org.junit.Assert.*;
 

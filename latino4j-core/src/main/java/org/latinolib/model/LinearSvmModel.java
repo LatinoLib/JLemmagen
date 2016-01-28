@@ -1,13 +1,8 @@
-package org.latinolib.model.linearsvm;
+package org.latinolib.model;
 
 import com.google.common.base.Preconditions;
 import de.bwaldvogel.liblinear.*;
-import org.latinolib.bow.SparseVector;
-import org.latinolib.bow.VectorEntry;
-import org.latinolib.model.LabeledExampleCollection;
-import org.latinolib.model.Model;
-import org.latinolib.model.Prediction;
-import org.latinolib.model.PredictionScore;
+import org.latinolib.SparseVector;
 
 import java.io.Serializable;
 

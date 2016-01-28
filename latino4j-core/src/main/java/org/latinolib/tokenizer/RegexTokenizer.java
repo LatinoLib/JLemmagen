@@ -1,4 +1,4 @@
-package org.latinolib.token;
+package org.latinolib.tokenizer;
 
 import com.google.common.base.Preconditions;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;

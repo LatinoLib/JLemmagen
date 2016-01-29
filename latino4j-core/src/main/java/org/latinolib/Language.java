@@ -47,11 +47,6 @@ public enum Language
     EE,
     TH;
 
-    public static class CC
-    {
-
-    }
-
     private static Ranker languageDetector
         = null;
 

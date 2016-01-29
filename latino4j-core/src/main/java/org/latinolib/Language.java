@@ -44,7 +44,6 @@ public enum Language
     MK,
     SR,
     UK,
-    EE,
     TH;
 
     private static Ranker languageDetector

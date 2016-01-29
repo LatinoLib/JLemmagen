@@ -16,5 +16,6 @@ public class Main
         System.out.println(Language.detect("This is some English text."));
         System.out.println(Language.detect("This is some English text."));
         System.out.println(Language.detect("To je slovenski stavek."));
+        System.out.println(Language.detect("Eesti keel (varasem nimetus: maakeel) on läänemeresoome lõunarühma kuuluv keel. Selle lähemad sugulased on läänemeresoome keeled vadja ja liivi keel."));
     }
 }

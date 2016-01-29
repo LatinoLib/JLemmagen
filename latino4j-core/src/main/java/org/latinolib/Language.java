@@ -58,6 +58,11 @@ public enum Language
         return new Lemmatizer(this);
     }
 
+    public Stemmer getStemmerOrLemmatizer() throws IOException {
+        try { return getStemmer(); }
+        catch (Exception e) { return getLemmatizer(); }
+    }
+
     public StopWords getStopWords(boolean caseSensitive) throws IOException {
         return new DefaultStopWords(this, caseSensitive);
     }

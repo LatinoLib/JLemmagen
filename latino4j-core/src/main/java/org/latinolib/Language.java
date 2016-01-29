@@ -38,12 +38,13 @@ public enum Language {
     PL,
     SK,
     TR,
-    VI,
     IS,
     FA,
     MK,
     SR,
-    UK;
+    UK,
+    EE,
+    TH;
 
     private static Ranker languageDetector
         = null;
@@ -75,7 +76,7 @@ public enum Language {
             languageDetector.account(text);
             RankResult rr = languageDetector.getRankResult();
             if (rr.getLength() > 0 && rr.getScore(0) > 0.0) {
-                return Language.valueOf(rr.getName(0).toUpperCase()); // TODO: check if we support all languages
+                return Language.valueOf(rr.getName(0).toUpperCase());
             }
             return null;
         }

@@ -2,13 +2,12 @@ package org.latinolib;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 import de.spieleck.app.cngram.NGramProfiles;
 import de.spieleck.app.cngram.NGramProfiles.*;
 import org.latinolib.stemmer.Lemmatizer;
-import org.latinolib.stemmer.SnowballStemmer;
+import org.latinolib.stemmer.DefaultStemmer;
 import org.latinolib.stemmer.Stemmer;
 import org.latinolib.stopwords.DefaultStopWords;
 import org.latinolib.stopwords.StopWords;
@@ -57,7 +56,7 @@ public enum Language
         = null;
 
     public Stemmer getStemmer() {
-        return new SnowballStemmer(this);
+        return new DefaultStemmer(this);
     }
 
     public Stemmer getLemmatizer() throws IOException {

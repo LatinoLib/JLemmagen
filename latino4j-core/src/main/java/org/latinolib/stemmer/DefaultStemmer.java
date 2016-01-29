@@ -6,10 +6,10 @@ import org.tartarus.snowball.ext.*;
 /**
  * Author mIHA
  */
-public class SnowballStemmer implements Stemmer {
+public class DefaultStemmer implements Stemmer {
     private Language language;
 
-    public SnowballStemmer(Language language) {
+    public DefaultStemmer(Language language) {
         this.language = language;
         createStemmer(); // throws exception if language not supported
     }

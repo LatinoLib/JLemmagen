@@ -1,6 +1,10 @@
 package org.latinolib;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
 import de.spieleck.app.cngram.NGramProfiles;
 import de.spieleck.app.cngram.NGramProfiles.*;
 import org.latinolib.stemmer.Lemmatizer;
@@ -12,7 +16,8 @@ import org.latinolib.stopwords.StopWords;
 /**
  * Author mIHA
  */
-public enum Language {
+public enum Language
+{
     EN,
     FR,
     DE,
@@ -43,6 +48,11 @@ public enum Language {
     EE,
     TH;
 
+    public static class CC
+    {
+
+    }
+
     private static Ranker languageDetector
         = null;
 
@@ -62,9 +72,7 @@ public enum Language {
         return getStopWords(false);
     }
 
-    // TODO: public static KeyDat<double, Language>[] detectMulti
-
-    public static Language detect(String text) throws IOException {
+    public static List<DetectedLanguage> detectMulti(String text) throws IOException {
         synchronized (Language.class) { // TODO: thread-safe ranker
             if (languageDetector == null) {
                 languageDetector = new NGramProfiles().getRanker();
@@ -72,10 +80,19 @@ public enum Language {
             languageDetector.reset();
             languageDetector.account(text);
             RankResult rr = languageDetector.getRankResult();
-            if (rr.getLength() > 0 && rr.getScore(0) > 0.0) {
-                return Language.valueOf(rr.getName(0).toUpperCase());
+            List<DetectedLanguage> list = new ArrayList<DetectedLanguage>();
+            for (int i = 0; i < rr.getLength(); i++) {
+                if (rr.getScore(i) > 0.0) {
+                    list.add(new DetectedLanguage(rr.getScore(i), Language.valueOf(rr.getName(i).toUpperCase())));
+                }
             }
-            return null;
+            Collections.sort(list, Collections.<DetectedLanguage>reverseOrder());
+            return list;
         }
+    }
+
+    public static Language detect(String text) throws IOException {
+        List<DetectedLanguage> list = detectMulti(text);
+        return list.size() > 0 ? list.get(0).getLanguage() : null;
     }
 }

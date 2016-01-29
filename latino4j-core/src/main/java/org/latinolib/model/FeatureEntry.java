@@ -9,7 +9,8 @@ import java.util.List;
 /**
  * Author saxo
  */
-public class FeatureEntry extends FeatureNode implements VectorEntry {
+public class FeatureEntry extends FeatureNode implements VectorEntry
+{
     private static final long serialVersionUID = -6131690993299851888L;
 
     public FeatureEntry(int index, double value) {

@@ -5,5 +5,6 @@ import java.util.List;
 /**
  * Author saxo
  */
-public interface LabeledExampleCollection<T, U> extends List<LabeledExampleEntry<T, U>> {
+public interface LabeledExampleCollection<T, U> extends List<LabeledExampleEntry<T, U>>
+{
 }

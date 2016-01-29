@@ -13,7 +13,8 @@ import java.util.List;
 /**
  * Author saxo
  */
-public class SparseVector implements Iterable<VectorEntry>, Serializable {
+public class SparseVector implements Iterable<VectorEntry>, Serializable
+{
     private static final long serialVersionUID = 8136739630564499282L;
 
     private final List<VectorEntry> entries;
@@ -112,7 +113,8 @@ public class SparseVector implements Iterable<VectorEntry>, Serializable {
         };
     }
 
-    public class Entry implements VectorEntry {
+    public class Entry implements VectorEntry
+    {
         private static final long serialVersionUID = -3612083403200155767L;
         private int index;
         private double data;

@@ -8,7 +8,8 @@ import java.util.HashSet;
 /**
  * Author mIHA
  */
-public class DefaultStopWords implements StopWords {
+public class DefaultStopWords implements StopWords
+{
     private boolean caseSensitive;
     private HashSet<String> stopWords
         = new HashSet<String>();

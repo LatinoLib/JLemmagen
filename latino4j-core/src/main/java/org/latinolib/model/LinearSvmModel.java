@@ -9,7 +9,8 @@ import java.io.Serializable;
 /**
  * Author saxo
  */
-public class LinearSvmModel implements Model<Double, SparseVector>, Serializable {
+public class LinearSvmModel implements Model<Double, SparseVector>, Serializable
+{
     private static final long serialVersionUID = -6556601514629098712L;
 
     private final Parameter parameter;

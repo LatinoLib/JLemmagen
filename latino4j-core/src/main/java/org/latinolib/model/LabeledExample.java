@@ -6,7 +6,8 @@ import java.io.Serializable;
  * Author saxo
  */
 public class LabeledExample<T extends Serializable, U extends Serializable>
-        implements LabeledExampleEntry<T, U>, Serializable {
+        implements LabeledExampleEntry<T, U>, Serializable
+{
     private static final long serialVersionUID = 820725723590267520L;
 
     private final T label;

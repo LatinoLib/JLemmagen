@@ -19,7 +19,8 @@ import java.util.*;
 /**
  * Author saxo
  */
-public class BowSpace implements Serializable {
+public class BowSpace implements Serializable
+{
     private static final long serialVersionUID = 7695534861034247430L;
     private transient Logger logger = LoggerFactory.getLogger(BowSpace.class);
 
@@ -515,12 +516,14 @@ public class BowSpace implements Serializable {
         return keywordsStr;
     }
 
-    private static class WordStem {
+    private static class WordStem
+    {
         public String word;
         public String stem;
     }
 
-    public static class Keyword implements Comparable<Keyword> {
+    public static class Keyword implements Comparable<Keyword>
+    {
         private final double factor;
         private final Word word;
 

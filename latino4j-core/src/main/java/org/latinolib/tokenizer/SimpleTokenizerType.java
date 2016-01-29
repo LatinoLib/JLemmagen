@@ -3,8 +3,8 @@ package org.latinolib.tokenizer;
 /**
  * author saxo
  */
-public enum SimpleTokenizerType {
-
+public enum SimpleTokenizerType
+{
     ALL_CHARS {
         @Override
         public boolean isTokenChar(char ch) {

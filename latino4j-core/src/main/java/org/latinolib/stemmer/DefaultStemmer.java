@@ -6,7 +6,8 @@ import org.tartarus.snowball.ext.*;
 /**
  * Author mIHA
  */
-public class DefaultStemmer implements Stemmer {
+public class DefaultStemmer implements Stemmer
+{
     private Language language;
 
     public DefaultStemmer(Language language) {

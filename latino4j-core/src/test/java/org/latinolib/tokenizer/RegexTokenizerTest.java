@@ -13,8 +13,8 @@ import static org.junit.Assert.*;
 /**
  * Author saxo
  */
-public class RegexTokenizerTest {
-
+public class RegexTokenizerTest
+{
     @Test
     public void testEmpty() {
         String text = "";

@@ -3,7 +3,8 @@ package org.latinolib.model;
 /**
  * Author saxo
  */
-public class PredictionScore<T> implements Comparable<PredictionScore> {
+public class PredictionScore<T> implements Comparable<PredictionScore>
+{
     private final double score;
     private final T label;
 

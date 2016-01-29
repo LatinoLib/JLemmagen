@@ -10,7 +10,8 @@ import java.util.List;
 /**
  * Author saxo
  */
-public class Prediction<T> {
+public class Prediction<T>
+{
     private final List<PredictionScore<T>> scores = Lists.newArrayList();
     private boolean sorted = false;
 

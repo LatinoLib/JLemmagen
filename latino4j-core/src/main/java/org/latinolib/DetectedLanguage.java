@@ -5,7 +5,7 @@ import com.google.common.base.Preconditions;
 /**
  * Author mIHA
  */
-public class DetectedLanguage implements Comparable<DetectedLanguage>
+public class DetectedLanguage
 {
     private final double score;
     private final Language language;
@@ -21,10 +21,5 @@ public class DetectedLanguage implements Comparable<DetectedLanguage>
 
     public double getScore() {
         return score;
-    }
-
-    @Override
-    public int compareTo(DetectedLanguage o) {
-        return Double.compare(score, Preconditions.checkNotNull(o.score));
     }
 }

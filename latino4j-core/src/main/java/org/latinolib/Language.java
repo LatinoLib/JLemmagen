@@ -86,7 +86,6 @@ public enum Language
                     list.add(new DetectedLanguage(rr.getScore(i), Language.valueOf(rr.getName(i).toUpperCase())));
                 }
             }
-            Collections.sort(list, Collections.<DetectedLanguage>reverseOrder());
             return list;
         }
     }

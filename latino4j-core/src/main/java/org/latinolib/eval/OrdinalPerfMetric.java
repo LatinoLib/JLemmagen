@@ -1,0 +1,17 @@
+package org.latinolib.eval;
+
+/**
+ * Author saxo
+ */
+public enum OrdinalPerfMetric
+{
+    MEAN_ABSOLUTE_ERROR,
+    MEAN_SQUARED_ERROR,
+    ERROR_TOLERANCE_1,
+    MEAN_SQUARED_ERROR_NORMALIZED_1,
+    MEAN_ABSOLUTE_ERROR_NORMALIZED_1,
+    K_ALPHA_LINEAR,
+    K_ALPHA_INTERVAL,
+    F1_AVG_EXTREME_CLASSES,
+    ACCURACY_TOLERANCE_1
+}

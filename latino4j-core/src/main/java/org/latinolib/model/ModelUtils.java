@@ -11,7 +11,8 @@ import java.util.List;
 /**
  * Author saxo
  */
-public class ModelUtils {
+public class ModelUtils
+{
     private ModelUtils() {
     }
 
@@ -68,7 +69,8 @@ public class ModelUtils {
         return true;
     }
 
-    private static class WeightIndex implements Comparable<WeightIndex> {
+    private static class WeightIndex implements Comparable<WeightIndex>
+    {
         public final double weight;
         public final int index;
 

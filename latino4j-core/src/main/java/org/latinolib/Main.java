@@ -5,7 +5,8 @@ import org.latinolib.stemmer.PorterStemmer;
 import java.io.IOException;
 import static org.latinolib.Language.*;
 
-public class Main {
+public class Main
+{
     public static void main(String[] args) throws IOException {
         System.out.println(new PorterStemmer().getStem("friendships"));
         System.out.println(EN.getLemmatizer().getStem("trilogies"));
@@ -15,5 +16,6 @@ public class Main {
         System.out.println(Language.detect("This is some English text."));
         System.out.println(Language.detect("This is some English text."));
         System.out.println(Language.detect("To je slovenski stavek."));
+        System.out.println(Language.detect("Eesti keel (varasem nimetus: maakeel) on läänemeresoome lõunarühma kuuluv keel. Selle lähemad sugulased on läänemeresoome keeled vadja ja liivi keel."));
     }
 }

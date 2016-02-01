@@ -9,7 +9,8 @@ import java.io.IOException;
 /**
  * Author mIHA
  */
-public class Lemmatizer implements Stemmer {
+public class Lemmatizer implements Stemmer
+{
     private eu.hlavki.text.lemmagen.api.Lemmatizer lemmatizer;
 
     public Lemmatizer(Language language) throws IOException {

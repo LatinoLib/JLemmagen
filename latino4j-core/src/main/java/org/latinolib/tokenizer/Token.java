@@ -4,7 +4,8 @@ package org.latinolib.tokenizer;
 /**
  * Author saxo
  */
-public class Token {
+public class Token
+{
     private final String text;
     private final int start;
     private final int end;

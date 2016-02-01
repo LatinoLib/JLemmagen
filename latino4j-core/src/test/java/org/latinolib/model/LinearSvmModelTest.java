@@ -11,8 +11,8 @@ import static org.junit.Assert.*;
 /**
  * Author saxo
  */
-public class LinearSvmModelTest {
-
+public class LinearSvmModelTest
+{
     @Test
     public void testTrain() throws Exception {
 

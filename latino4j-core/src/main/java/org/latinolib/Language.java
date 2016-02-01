@@ -1,10 +1,13 @@
 package org.latinolib;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+
 import de.spieleck.app.cngram.NGramProfiles;
 import de.spieleck.app.cngram.NGramProfiles.*;
 import org.latinolib.stemmer.Lemmatizer;
-import org.latinolib.stemmer.SnowballStemmer;
+import org.latinolib.stemmer.DefaultStemmer;
 import org.latinolib.stemmer.Stemmer;
 import org.latinolib.stopwords.DefaultStopWords;
 import org.latinolib.stopwords.StopWords;
@@ -12,7 +15,8 @@ import org.latinolib.stopwords.StopWords;
 /**
  * Author mIHA
  */
-public enum Language {
+public enum Language
+{
     EN,
     FR,
     DE,
@@ -32,28 +36,31 @@ public enum Language {
     CS,
     RU,
     EL,
-    LT,
-    LV,
-    MT,
     PL,
     SK,
     TR,
-    VI,
     IS,
     FA,
     MK,
     SR,
-    UK;
+    UK,
+    EE,
+    TH;
 
     private static Ranker languageDetector
         = null;
 
     public Stemmer getStemmer() {
-        return new SnowballStemmer(this);
+        return new DefaultStemmer(this);
     }
 
     public Stemmer getLemmatizer() throws IOException {
         return new Lemmatizer(this);
+    }
+
+    public Stemmer getStemmerOrLemmatizer() throws IOException {
+        try { return getStemmer(); }
+        catch (Exception e) { return getLemmatizer(); }
     }
 
     public StopWords getStopWords(boolean caseSensitive) throws IOException {
@@ -64,9 +71,7 @@ public enum Language {
         return getStopWords(false);
     }
 
-    // TODO: public static KeyDat<double, Language>[] detectMulti
-
-    public static Language detect(String text) throws IOException {
+    public static List<DetectedLanguage> detectMulti(String text) throws IOException {
         synchronized (Language.class) { // TODO: thread-safe ranker
             if (languageDetector == null) {
                 languageDetector = new NGramProfiles().getRanker();
@@ -74,10 +79,18 @@ public enum Language {
             languageDetector.reset();
             languageDetector.account(text);
             RankResult rr = languageDetector.getRankResult();
-            if (rr.getLength() > 0 && rr.getScore(0) > 0.0) {
-                return Language.valueOf(rr.getName(0).toUpperCase()); // TODO: check if we support all languages
+            List<DetectedLanguage> list = new ArrayList<DetectedLanguage>();
+            for (int i = 0; i < rr.getLength(); i++) {
+                if (rr.getScore(i) > 0.0) {
+                    list.add(new DetectedLanguage(rr.getScore(i), Language.valueOf(rr.getName(i).toUpperCase())));
+                }
             }
-            return null;
+            return list;
         }
+    }
+
+    public static Language detect(String text) throws IOException {
+        List<DetectedLanguage> list = detectMulti(text);
+        return list.size() > 0 ? list.get(0).getLanguage() : null;
     }
 }

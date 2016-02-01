@@ -14,8 +14,8 @@ import static org.junit.Assert.*;
 /**
  * Author saxo
  */
-public class SimpleTokenizerTest {
-
+public class SimpleTokenizerTest
+{
     @Test
     public void testEmpty() {
         String text = "";

@@ -11,8 +11,8 @@ import java.util.regex.Pattern;
 /**
  * Author saxo
  */
-public class RegexTokenizer implements Tokenizer {
-
+public class RegexTokenizer implements Tokenizer
+{
     private final Pattern pattern;
 
     public RegexTokenizer() {
@@ -28,8 +28,9 @@ public class RegexTokenizer implements Tokenizer {
     }
 
     @Override
-    public Iterable<Token> getTokens(final CharSequence text) {
-        return new Iterable<Token>() {
+    public Iterable<Token> getTokens(final String text) {
+        return new Iterable<Token>()
+        {
             @Override
             public Iterator<Token> iterator() {
                 return new TokenIterator(pattern.matcher(text));
@@ -37,7 +38,8 @@ public class RegexTokenizer implements Tokenizer {
         };
     }
 
-    private class TokenIterator implements Iterator<Token> {
+    private class TokenIterator implements Iterator<Token>
+    {
         private final Matcher matcher;
         private int startIdx = 0;
 

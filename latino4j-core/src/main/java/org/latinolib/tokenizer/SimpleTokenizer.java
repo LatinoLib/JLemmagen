@@ -9,8 +9,8 @@ import java.util.NoSuchElementException;
 /**
  * author saxo
  */
-public class SimpleTokenizer implements Tokenizer {
-
+public class SimpleTokenizer implements Tokenizer
+{
     private final SimpleTokenizerType type;
     private final int minTokenLen;
 
@@ -39,9 +39,9 @@ public class SimpleTokenizer implements Tokenizer {
     }
 
     @Override
-    public Iterable<Token> getTokens(final CharSequence text) {
-        return new Iterable<Token>() {
-
+    public Iterable<Token> getTokens(final String text) {
+        return new Iterable<Token>()
+        {
             @Override
             public Iterator<Token> iterator() {
                 return new TokenIterator(text);
@@ -49,7 +49,8 @@ public class SimpleTokenizer implements Tokenizer {
         };
     }
 
-    private class TokenIterator implements Iterator<Token> {
+    private class TokenIterator implements Iterator<Token>
+    {
         private final CharSequence text;
         private int startIdx = 0;
         private int endIdx = 0;

@@ -11,7 +11,8 @@ import java.util.Map;
 /**
  * Author saxo
  */
-public class Word implements Iterable<Map.Entry<String, Integer>>, Serializable {
+public class Word implements Iterable<Map.Entry<String, Integer>>, Serializable
+{
     private static final long serialVersionUID = 812213181817310413L;
 
     int idx = -1;

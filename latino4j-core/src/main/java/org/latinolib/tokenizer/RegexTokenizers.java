@@ -5,7 +5,8 @@ import java.util.regex.Pattern;
 /**
  * Author saxo
  */
-public enum RegexTokenizers {
+public enum RegexTokenizers
+{
     LATIN {
         private final Pattern pattern = Pattern.compile(
             "[#@$]?([\\d_]*[\\p{InBasicLatin}\\p{InLatin-1Supplement}\\p{InLatinExtended-A}\\p{InLatinExtended-B}\\p{InLatinExtendedAdditional}&&[\\p{L}]][\\d_]*){2,}");

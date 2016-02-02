@@ -126,8 +126,6 @@ public class LemmatizerTest
                 public Object call() throws IOException {
                     for (int i = 0; i < 50; i++) {
                         EN.getLemmatizer();
-                        FR.getLemmatizer();
-                        UK.getLemmatizer();
                     }
                     return null;
                 }

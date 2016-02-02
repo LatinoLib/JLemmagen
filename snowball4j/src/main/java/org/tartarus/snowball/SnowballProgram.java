@@ -372,6 +372,8 @@ public class SnowballProgram {
 		cursor = c + w.s_size;
 		return w.result;
 	    }
+		i = w.substring_i;
+		if (i < 0) return 0;
 	}
     }
 
@@ -424,6 +426,8 @@ public class SnowballProgram {
 		cursor = c - w.s_size;
 		return w.result;
 	    }
+		i = w.substring_i;
+		if (i < 0) return 0;
 	}
     }
 

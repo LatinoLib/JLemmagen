@@ -1,6 +1,7 @@
 package org.latinolib.stopwords;
 
 import org.junit.Test;
+import org.latinolib.Language;
 import org.latinolib.tokenizer.SimpleTokenizer;
 import org.latinolib.tokenizer.SimpleTokenizerType;
 import org.latinolib.tokenizer.Token;
@@ -18,6 +19,15 @@ import static org.latinolib.Language.*;
  */
 public class StopWordsTest
 {
+    @Test
+    public void testEmpty() {
+        for (Language lang : Language.values()) {
+            try {
+                assertEquals(lang.getStopWords().isStopWord(""), false);
+            } catch (IOException e) { }
+        }
+    }
+
     @Test
     public void testExamples() throws IOException {
         Iterable<Token> tokens = new SimpleTokenizer(SimpleTokenizerType.ALPHA_ONLY).getTokens(

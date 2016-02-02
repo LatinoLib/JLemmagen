@@ -114,4 +114,25 @@ public class LemmatizerTest
         }
         for (Future<?> f : futures) { f.get(); }
     }
+
+    @Test
+    public void testMultithreadingConstructor() throws InterruptedException, ExecutionException {
+        ExecutorService es = Executors.newCachedThreadPool();
+        List<Future<?>> futures = new ArrayList<Future<?>>();
+        for (int t = 0; t < 4; t++) {
+            futures.add(es.submit(new Callable<Object>()
+            {
+                @Override
+                public Object call() throws IOException {
+                    for (int i = 0; i < 50; i++) {
+                        EN.getLemmatizer();
+                        FR.getLemmatizer();
+                        UK.getLemmatizer();
+                    }
+                    return null;
+                }
+            }));
+        }
+        for (Future<?> f : futures) { f.get(); }
+    }
 }

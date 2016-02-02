@@ -75,7 +75,7 @@
                 <version>1.7.5</version>
             </dependency>
 
-            <!-- testing -->
+            <!-- testSet -->
 
             <dependency>
                 <groupId>junit</groupId>

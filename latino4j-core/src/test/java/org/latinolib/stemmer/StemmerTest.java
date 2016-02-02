@@ -6,9 +6,9 @@ import org.latinolib.tokenizer.SimpleTokenizer;
 import org.latinolib.tokenizer.SimpleTokenizerType;
 import org.latinolib.tokenizer.Token;
 
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.*;
 
 import static org.junit.Assert.*;
 import static org.latinolib.Language.*;
@@ -68,18 +68,19 @@ public class StemmerTest
     }
 
     @Test
-    public void testMultithreadingEn() throws InterruptedException {
+    public void testMultithreadingEn() throws InterruptedException, ExecutionException {
         final Iterable<Token> tokens = new SimpleTokenizer(SimpleTokenizerType.ALPHA_ONLY).getTokens(
             "In grammar, inflection or inflexion is the modification of a word to express different grammatical categories such as tense, case, voice, aspect, person, number, gender and on rare occasion the mood. The inflection of verbs is also called conjugation, and the inflection of nouns, adjectives and pronouns is also called declension.");
         final String[] stems = new String[] {
             "In", "grammar", "inflect", "or", "inflexion", "is", "the", "modif", "of", "a", "word", "to", "express", "differ", "grammat", "categori", "such", "as", "tens", "case", "voic", "aspect", "person", "number", "gender", "and", "on", "rare", "occas", "the", "mood", "The", "inflect", "of", "verb", "is", "also", "call", "conjug", "and", "the", "inflect", "of", "noun", "adject", "and", "pronoun", "is", "also", "call", "declens"};
         final Stemmer stemmer = EN.getStemmer();
         ExecutorService es = Executors.newCachedThreadPool();
+        List<Future<?>> futures = new ArrayList<Future<?>>();
         for (int t = 0; t < 4; t++) {
-            es.execute(new Runnable()
+            futures.add(es.submit(new Callable<Object>()
             {
                 @Override
-                public void run() {
+                public Object call() {
                     for (int i = 0; i < 50000; i++) {
                         int j = 0;
                         for (Token token : tokens) {
@@ -87,26 +88,27 @@ public class StemmerTest
                             assertEquals(stems[j++], stem);
                         }
                     }
+                    return null;
                 }
-            });
+            }));
         }
-        es.shutdown();
-        es.awaitTermination(1, TimeUnit.MINUTES);
+        for (Future<?> f : futures) { f.get(); }
     }
 
     @Test
-    public void testMultithreadingFi() throws InterruptedException {
+    public void testMultithreadingFi() throws InterruptedException, ExecutionException {
         final Iterable<Token> tokens = new SimpleTokenizer(SimpleTokenizerType.ALPHA_ONLY).getTokens(
             "Taivutus tarkoittaa kieliopissa sanan muokkaamista tai merkitsemistä ilmaisemaan kieliopillista tietoa kuten sijaa, sukua, aikamuotoa, lukua ja persoonaa. Kielet, joissa esiintyy paljon taivutusta, luokitellaan synteettisiksi kieliksi.");
         final String[] stems = new String[] {
             "Taivutus", "tarkoit", "kieliop", "sana", "muokkaam", "tai", "merkitsem", "ilmaisem", "kieliopil", "tieto", "kute", "sija", "suku", "aikamuoto", "luku", "ja", "persoon", "Kiele", "jois", "esiintyy", "palj", "taivutu", "luokit", "synteettis", "kiel"};
         final Stemmer stemmer = FI.getStemmer();
         ExecutorService es = Executors.newCachedThreadPool();
+        List<Future<?>> futures = new ArrayList<Future<?>>();
         for (int t = 0; t < 4; t++) {
-            es.execute(new Runnable()
+            futures.add(es.submit(new Callable<Object>()
             {
                 @Override
-                public void run() {
+                public Object call() {
                     for (int i = 0; i < 50000; i++) {
                         int j = 0;
                         for (Token token : tokens) {
@@ -114,10 +116,10 @@ public class StemmerTest
                             assertEquals(stems[j++], stem);
                         }
                     }
+                    return null;
                 }
-            });
+            }));
         }
-        es.shutdown();
-        es.awaitTermination(1, TimeUnit.MINUTES);
+        for (Future<?> f : futures) { f.get(); }
     }
 }

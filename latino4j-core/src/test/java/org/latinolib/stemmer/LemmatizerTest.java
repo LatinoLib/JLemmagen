@@ -7,9 +7,9 @@ import org.latinolib.tokenizer.SimpleTokenizerType;
 import org.latinolib.tokenizer.Token;
 
 import java.io.IOException;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.TimeUnit;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.*;
 
 import static org.junit.Assert.*;
 import static org.latinolib.Language.*;
@@ -60,18 +60,19 @@ public class LemmatizerTest
     }
 
     @Test
-    public void testMultithreadingEn() throws InterruptedException, IOException {
+    public void testMultithreadingEn() throws InterruptedException, IOException, ExecutionException {
         final Iterable<Token> tokens = new SimpleTokenizer(SimpleTokenizerType.ALPHA_ONLY).getTokens(
             "In grammar, inflection or inflexion is the modification of a word to express different grammatical categories such as tense, case, voice, aspect, person, number, gender and on rare occasion the mood. The inflection of verbs is also called conjugation, and the inflection of nouns, adjectives and pronouns is also called declension.");
         final String[] stems = new String[] {
             "In", "grammar", "inflection", "or", "inflexion", "be", "the", "modification", "of", "a", "word", "to", "express", "different", "grammatical", "category", "such", "as", "tense", "case", "voice", "aspect", "person", "number", "gender", "and", "on", "rare", "occasion", "the", "mood", "The", "inflection", "of", "verb", "be", "also", "call", "conjugation", "and", "the", "inflection", "of", "noun", "adjective", "and", "pronoun", "be", "also", "call", "declension"};
         final Stemmer stemmer = EN.getLemmatizer();
         ExecutorService es = Executors.newCachedThreadPool();
+        List<Future<?>> futures = new ArrayList<Future<?>>();
         for (int t = 0; t < 4; t++) {
-            es.execute(new Runnable()
+            futures.add(es.submit(new Callable<Object>()
             {
                 @Override
-                public void run() {
+                public Object call() {
                     for (int i = 0; i < 50000; i++) {
                         int j = 0;
                         for (Token token : tokens) {
@@ -79,26 +80,27 @@ public class LemmatizerTest
                             assertEquals(stems[j++], stem);
                         }
                     }
+                    return null;
                 }
-            });
+            }));
         }
-        es.shutdown();
-        es.awaitTermination(1, TimeUnit.MINUTES);
+        for (Future<?> f : futures) { f.get(); }
     }
 
     @Test
-    public void testMultithreadingUk() throws InterruptedException, IOException {
+    public void testMultithreadingUk() throws InterruptedException, IOException, ExecutionException {
         final Iterable<Token> tokens = new SimpleTokenizer(SimpleTokenizerType.ALPHA_ONLY).getTokens(
             "Словозміна (також флексія), системне творення різних форм того самого слова відповідно до його синтаксичних пов'язань з ін.");
         final String[] stems = new String[] {
             "Словозміна", "також", "флексія", "системний", "творення", "різний", "форма", "той", "самий", "слово", "відповідно", "до", "він", "синтаксичний", "пов", "язання", "з", "ін"};
         final Stemmer stemmer = UK.getLemmatizer();
         ExecutorService es = Executors.newCachedThreadPool();
+        List<Future<?>> futures = new ArrayList<Future<?>>();
         for (int t = 0; t < 4; t++) {
-            es.execute(new Runnable()
+            futures.add(es.submit(new Callable<Object>()
             {
                 @Override
-                public void run() {
+                public Object call() {
                     for (int i = 0; i < 50000; i++) {
                         int j = 0;
                         for (Token token : tokens) {
@@ -106,10 +108,10 @@ public class LemmatizerTest
                             assertEquals(stems[j++], stem);
                         }
                     }
+                    return null;
                 }
-            });
+            }));
         }
-        es.shutdown();
-        es.awaitTermination(1, TimeUnit.MINUTES);
+        for (Future<?> f : futures) { f.get(); }
     }
 }

@@ -4,6 +4,7 @@ import org.latinolib.Language;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.concurrent.*;
 
@@ -33,7 +34,7 @@ public class LanguageDetectorTest
         List<Language> detectedLanguages = new ArrayList<Language>();
         for (DetectedLanguage dl : Language.detectMulti(text)) { detectedLanguages.add(dl.getLanguage()); }
         assertEquals(detectedLanguages.size(), 2);
-        assert(detectedLanguages.contains(FI) && detectedLanguages.contains(FR));
+        assertTrue(detectedLanguages.containsAll(Arrays.asList(FI, FR)));
     }
 
     @Test

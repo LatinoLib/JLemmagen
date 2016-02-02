@@ -241,8 +241,7 @@ public class SnowballProgram {
 		if (w.methodname.length() == 0) return w.result;
 		boolean res;
 		try {
-		    Object resobj = getMethod(w.methodname).invoke(this,
-						    new Object[0]);
+		    Object resobj = getMethod(w.methodname).invoke(this);
 		    res = resobj.toString().equals("true");
 		} catch (InvocationTargetException e) {
 		    res = false;
@@ -310,8 +309,7 @@ public class SnowballProgram {
 
 		boolean res;
 		try {
-		    Object resobj = getMethod(w.methodname).invoke(this,
-						    new Object[0]);
+		    Object resobj = getMethod(w.methodname).invoke(this);
 		    res = resobj.toString().equals("true");
 		} catch (InvocationTargetException e) {
 		    res = false;

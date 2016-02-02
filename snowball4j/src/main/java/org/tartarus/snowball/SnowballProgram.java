@@ -1,6 +1,7 @@
 
 package org.tartarus.snowball;
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 public class SnowballProgram {
     protected SnowballProgram()
@@ -158,6 +159,14 @@ public class SnowballProgram {
 	return true;
     }
 
+	private Method getMethod(String methodname) {
+		try {
+			return this.getClass().getDeclaredMethod(methodname);
+		} catch (NoSuchMethodException e) {
+			throw new RuntimeException(e);
+	    }
+	}
+
     protected boolean eq_s_b(int s_size, String s)
     {
 	if (cursor - limit_backward < s_size) return false;
@@ -229,11 +238,10 @@ public class SnowballProgram {
 	    Among w = v[i];
 	    if (common_i >= w.s_size) {
 		cursor = c + w.s_size;
-		if (w.method == null) return w.result;
+		if (w.methodname.length() == 0) return w.result;
 		boolean res;
 		try {
-		    Object resobj = w.method.invoke(w.methodobject,
-						    new Object[0]);
+		    Object resobj = getMethod(w.methodname).invoke(this);
 		    res = resobj.toString().equals("true");
 		} catch (InvocationTargetException e) {
 		    res = false;
@@ -297,12 +305,11 @@ public class SnowballProgram {
 	    Among w = v[i];
 	    if (common_i >= w.s_size) {
 		cursor = c - w.s_size;
-		if (w.method == null) return w.result;
+		if (w.methodname.length() == 0) return w.result;
 
 		boolean res;
 		try {
-		    Object resobj = w.method.invoke(w.methodobject,
-						    new Object[0]);
+		    Object resobj = getMethod(w.methodname).invoke(this);
 		    res = resobj.toString().equals("true");
 		} catch (InvocationTargetException e) {
 		    res = false;
@@ -316,114 +323,6 @@ public class SnowballProgram {
 	    }
 	    i = w.substring_i;
 	    if (i < 0) return 0;
-	}
-    }
-
-    protected int find_among(MyAmong v[], int v_size)
-    {
-	int i = 0;
-	int j = v_size;
-
-	int c = cursor;
-	int l = limit;
-
-	int common_i = 0;
-	int common_j = 0;
-
-	boolean first_key_inspected = false;
-
-	while(true) {
-	    int k = i + ((j - i) >> 1);
-	    int diff = 0;
-	    int common = common_i < common_j ? common_i : common_j; // smaller
-	    MyAmong w = v[k];
-	    int i2;
-	    for (i2 = common; i2 < w.s_size; i2++) {
-		if (c + common == l) {
-		    diff = -1;
-		    break;
-		}
-		diff = current.charAt(c + common) - w.s[i2];
-		if (diff != 0) break;
-		common++;
-	    }
-	    if (diff < 0) {
-		j = k;
-		common_j = common;
-	    } else {
-		i = k;
-		common_i = common;
-	    }
-	    if (j - i <= 1) {
-		if (i > 0) break; // v->s has been inspected
-		if (j == i) break; // only one item in v
-
-		// - but now we need to go round once more to get
-		// v->s inspected. This looks messy, but is actually
-		// the optimal approach.
-
-		if (first_key_inspected) break;
-		first_key_inspected = true;
-	    }
-	}
-	while(true) {
-	    MyAmong w = v[i];
-	    if (common_i >= w.s_size) {
-		cursor = c + w.s_size;
-		return w.result;
-	    }
-	}
-    }
-
-    // find_among_b is for backwards processing. Same comments apply
-    protected int find_among_b(MyAmong v[], int v_size)
-    {
-	int i = 0;
-	int j = v_size;
-
-	int c = cursor;
-	int lb = limit_backward;
-
-	int common_i = 0;
-	int common_j = 0;
-
-	boolean first_key_inspected = false;
-
-	while(true) {
-	    int k = i + ((j - i) >> 1);
-	    int diff = 0;
-	    int common = common_i < common_j ? common_i : common_j;
-	    MyAmong w = v[k];
-	    int i2;
-	    for (i2 = w.s_size - 1 - common; i2 >= 0; i2--) {
-		if (c - common == lb) {
-		    diff = -1;
-		    break;
-		}
-		diff = current.charAt(c - 1 - common) - w.s[i2];
-		if (diff != 0) break;
-		common++;
-	    }
-	    if (diff < 0) {
-		j = k;
-		common_j = common;
-	    } else {
-		i = k;
-		common_i = common;
-	    }
-	    if (j - i <= 1) {
-		if (i > 0) break;
-		if (j == i) break;
-		if (first_key_inspected) break;
-		first_key_inspected = true;
-	    }
-	}
-	while(true) {
-	    MyAmong w = v[i];
-	    if (common_i >= w.s_size) {
-		cursor = c - w.s_size;
-		return w.result;
-	    }
 	}
     }
 

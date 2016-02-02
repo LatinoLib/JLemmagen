@@ -51,7 +51,7 @@ public final class LemmatizerFactory {
         if (in != null) {
             result = read(in);
         } else {
-            throw new IOException("Cannot found resource " + resource);
+            throw new IOException("Cannot find resource " + resource);
         }
         return result;
     }

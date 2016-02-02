@@ -34,7 +34,7 @@ public class DefaultStemmer implements Stemmer
             case NL:
                 return new dutchStemmer();
             case FI:
-                return finnishStemmer.instance; // special case
+                return new finnishStemmer();
             case NO:
                 return new norwegianStemmer();
             case RU:

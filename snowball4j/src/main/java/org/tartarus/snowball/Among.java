@@ -2,12 +2,20 @@ package org.tartarus.snowball;
 
 public class Among {
     public Among (String s, int substring_i, int result,
-		  String methodname) {
+          String methodname) {
         this.s_size = s.length();
         this.s = s.toCharArray();
         this.substring_i = substring_i;
-	this.result = result;
-	this.methodname = methodname;
+        this.result = result;
+        this.methodname = methodname;
+    }
+
+    public Among (String s, int substring_i, int result) {
+        this.s_size = s.length();
+        this.s = s.toCharArray();
+        this.substring_i = substring_i;
+        this.result = result;
+        this.methodname = "";
     }
 
     public final int s_size; /* search string */

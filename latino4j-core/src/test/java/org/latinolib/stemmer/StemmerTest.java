@@ -122,4 +122,32 @@ public class StemmerTest
         }
         for (Future<?> f : futures) { f.get(); }
     }
+
+    @Test
+    public void testMultithreadingPorter() throws InterruptedException, ExecutionException {
+        final Iterable<Token> tokens = new SimpleTokenizer(SimpleTokenizerType.ALPHA_ONLY).getTokens(
+            "In grammar, inflection or inflexion is the modification of a word to express different grammatical categories such as tense, case, voice, aspect, person, number, gender and on rare occasion the mood. The inflection of verbs is also called conjugation, and the inflection of nouns, adjectives and pronouns is also called declension.");
+        final String[] stems = new String[]{
+            "In", "grammar", "inflect", "or", "inflexion", "is", "the", "modif", "of", "a", "word", "to", "express", "differ", "grammat", "categori", "such", "as", "tens", "case", "voic", "aspect", "person", "number", "gender", "and", "on", "rare", "occas", "the", "mood", "The", "inflect", "of", "verb", "is", "also", "call", "conjug", "and", "the", "inflect", "of", "noun", "adject", "and", "pronoun", "is", "also", "call", "declens"};
+        final Stemmer stemmer = new PorterStemmer();
+        ExecutorService es = Executors.newCachedThreadPool();
+        List<Future<?>> futures = new ArrayList<Future<?>>();
+        for (int t = 0; t < 4; t++) {
+            futures.add(es.submit(new Callable<Object>()
+            {
+                @Override
+                public Object call() {
+                    for (int i = 0; i < 50000; i++) {
+                        int j = 0;
+                        for (Token token : tokens) {
+                            String stem = stemmer.getStem(token.getText());
+                            assertEquals(stems[j++], stem);
+                        }
+                    }
+                    return null;
+                }
+            }));
+        }
+        for (Future<?> f : futures) { f.get(); }
+    }
 }

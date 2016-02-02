@@ -1,6 +1,7 @@
 
 package org.tartarus.snowball;
 import java.lang.reflect.InvocationTargetException;
+import java.lang.reflect.Method;
 
 public class SnowballProgram {
     protected SnowballProgram()
@@ -158,6 +159,14 @@ public class SnowballProgram {
 	return true;
     }
 
+	private Method getMethod(String methodname) {
+		try {
+			return this.getClass().getDeclaredMethod(methodname);
+		} catch (NoSuchMethodException e) {
+			throw new RuntimeException(e);
+	    }
+	}
+
     protected boolean eq_s_b(int s_size, String s)
     {
 	if (cursor - limit_backward < s_size) return false;
@@ -229,10 +238,10 @@ public class SnowballProgram {
 	    Among w = v[i];
 	    if (common_i >= w.s_size) {
 		cursor = c + w.s_size;
-		if (w.method == null) return w.result;
+		if (w.methodname.length() == 0) return w.result;
 		boolean res;
 		try {
-		    Object resobj = w.method.invoke(w.methodobject,
+		    Object resobj = getMethod(w.methodname).invoke(this,
 						    new Object[0]);
 		    res = resobj.toString().equals("true");
 		} catch (InvocationTargetException e) {
@@ -297,11 +306,11 @@ public class SnowballProgram {
 	    Among w = v[i];
 	    if (common_i >= w.s_size) {
 		cursor = c - w.s_size;
-		if (w.method == null) return w.result;
+		if (w.methodname.length() == 0) return w.result;
 
 		boolean res;
 		try {
-		    Object resobj = w.method.invoke(w.methodobject,
+		    Object resobj = getMethod(w.methodname).invoke(this,
 						    new Object[0]);
 		    res = resobj.toString().equals("true");
 		} catch (InvocationTargetException e) {

@@ -126,6 +126,6 @@ public class LinearModelTest
             mae += Math.abs(value - le.getLabel());
         }
         mae /= (double)ds.size();
-        assertTrue(mae <= 35.0 && mae >= 25.0);
+        assertTrue(mae >= 25.0 && mae <= 35.0);
     }
 }

@@ -30,7 +30,7 @@ public class LinearModelTest
         while ((line = reader.readLine()) != null) {
             SparseVector vec = new SparseVector();
             Pattern labelPattern = Pattern.compile("^(?<label>[+-]?\\d+([.]\\d+)?)(\\s|$)");
-            Pattern featurePattern = Pattern.compile("(?i)(?<feature>(\\d+|qid)):(?<weight>[-]?[\\d\\.]+)");
+            Pattern featurePattern = Pattern.compile("(?<feature>\\d+):(?<weight>[-]?[\\d\\.]+)");
             if (!line.startsWith("#")) {
                 Matcher labelMatch = labelPattern.matcher(line);
                 labelMatch.find();

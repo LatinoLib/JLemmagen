@@ -9,14 +9,14 @@ import java.io.Serializable;
 /**
  * Author saxo
  */
-public class LinearSvmModel implements Model<Double, SparseVector>, Serializable
+public class LinearModel implements Model<Double, SparseVector>, Serializable
 {
     private static final long serialVersionUID = -6556601514629098712L;
 
     private final Parameter parameter;
     private de.bwaldvogel.liblinear.Model model;
 
-    public LinearSvmModel(Parameter parameter) {
+    public LinearModel(Parameter parameter) {
         this.parameter = Preconditions.checkNotNull(parameter);
     }
 
@@ -61,5 +61,4 @@ public class LinearSvmModel implements Model<Double, SparseVector>, Serializable
         double prediction = Linear.predict(model, example.toArray(new Feature[0]));
         return new Prediction<Double>(new PredictionScore<Double>(prediction, prediction));
     }
-
 }

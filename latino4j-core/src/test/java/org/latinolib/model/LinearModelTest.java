@@ -1,7 +1,6 @@
 package org.latinolib.model;
 
 import de.bwaldvogel.liblinear.Parameter;
-import de.bwaldvogel.liblinear.SolverType;
 
 import org.junit.Test;
 import org.latinolib.SparseVector;
@@ -18,11 +17,12 @@ import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 import static org.junit.Assert.*;
+import static org.latinolib.model.LinearModels.*;
 
 /**
  * Author mIHA
  */
-public class LinearSvmModelTest
+public class LinearModelTest
 {
     private static LabeledDataset<Double, SparseVector> readDataset(BufferedReader reader) throws IOException, ParseException {
         String line;
@@ -48,9 +48,8 @@ public class LinearSvmModelTest
         return ds;
     }
 
-    @Test
-    public void testInduction() throws IOException, ParseException {
-        InputStream is = LinearSvmModelTest.class.getResourceAsStream("inductive/train.dat");
+    private void testInduction(String folder, Parameter parameter, Double accuracyMin, Double accuracyMax) throws IOException, ParseException {
+        InputStream is = LinearModelTest.class.getResourceAsStream(folder + "/train.dat");
         BufferedReader reader = new BufferedReader(new InputStreamReader(is));
         LabeledDataset<Double, SparseVector> ds = readDataset(reader);
         reader.close();
@@ -61,9 +60,9 @@ public class LinearSvmModelTest
 //            }
 //            System.out.println();
 //        }
-        LinearSvmModel model = new LinearSvmModel(new Parameter(SolverType.L1R_L2LOSS_SVC, 1.0, 0.01));
+        LinearModel model = new LinearModel(parameter);
         model.train(ds); // WARNME: this should work with standard sparse vectors not just vectors that contain FeatureEntries
-        is = LinearSvmModelTest.class.getResourceAsStream("inductive/test.dat");
+        is = LinearModelTest.class.getResourceAsStream(folder + "/test.dat");
         reader = new BufferedReader(new InputStreamReader(is));
         ds = readDataset(reader);
         reader.close();
@@ -74,18 +73,48 @@ public class LinearSvmModelTest
             if (bestLabel.equals(le.getLabel())) { correct++; }
         }
         double accuracy = (double)correct / (double)ds.size();
-        assertTrue(accuracy >= 0.97 && accuracy <= 0.98);
+        assertTrue(accuracy >= accuracyMin && accuracy <= accuracyMax);
+    }
+
+    @Test
+    public void testInductionSvmClassifier() throws IOException, ParseException {
+        testInduction("inductive", SVM_CLASSIFIER.getDefaultParameter(), 0.97, 0.98);
+    }
+
+    @Test
+    public void testInductionLogisticRegression() throws IOException, ParseException {
+        testInduction("inductive", LOGISTIC_REGRESSION.getDefaultParameter(), 0.97, 0.98);
+    }
+
+    @Test
+    public void testInductionCrammerSinger() throws IOException, ParseException {
+        testInduction("inductive", SVM_MULTICLASS.getDefaultParameter(), 0.97, 0.98);
+    }
+
+    @Test
+    public void testMulticlassSvmClassifier() throws IOException, ParseException {
+        testInduction("multiclass", SVM_CLASSIFIER.getDefaultParameter(), 0.6, 0.7);
+    }
+
+    @Test
+    public void testMulticlassLogisticRegression() throws IOException, ParseException {
+        testInduction("multiclass", LOGISTIC_REGRESSION.getDefaultParameter(), 0.6, 0.7);
+    }
+
+    @Test
+    public void testMulticlassCrammerSinger() throws IOException, ParseException {
+        testInduction("multiclass", SVM_MULTICLASS.getDefaultParameter(), 0.6, 0.7);
     }
 
     @Test
     public void testRegression() throws IOException, ParseException {
-        InputStream is = LinearSvmModelTest.class.getResourceAsStream("regression/train.dat");
+        InputStream is = LinearModelTest.class.getResourceAsStream("regression/train.dat");
         BufferedReader reader = new BufferedReader(new InputStreamReader(is));
         LabeledDataset<Double, SparseVector> ds = readDataset(reader);
         reader.close();
-        LinearSvmModel model = new LinearSvmModel(new Parameter(SolverType.L2R_L2LOSS_SVR, 1.0, 0.01));
+        LinearModel model = new LinearModel(SVM_REGRESSION.getDefaultParameter());
         model.train(ds);
-        is = LinearSvmModelTest.class.getResourceAsStream("regression/test.dat");
+        is = LinearModelTest.class.getResourceAsStream("regression/test.dat");
         reader = new BufferedReader(new InputStreamReader(is));
         ds = readDataset(reader);
         reader.close();
@@ -93,9 +122,10 @@ public class LinearSvmModelTest
         for (LabeledExampleEntry<Double, SparseVector> le : ds) {
             Prediction<Double> p = model.predict(le.getExample());
             Double value = p.getBest().getLabel();
+            System.out.println(value);
             mae += Math.abs(value - le.getLabel());
         }
         mae /= (double)ds.size();
-        assertTrue(mae <= 40.0 && mae >= 30.0);
+        assertTrue(mae <= 35.0 && mae >= 25.0);
     }
 }

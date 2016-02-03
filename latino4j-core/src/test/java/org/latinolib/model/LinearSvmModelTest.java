@@ -39,7 +39,8 @@ public class LinearSvmModelTest
                 while (match.find()) {
                     int feature = Integer.parseInt(match.group("feature"));
                     double weight = NumberFormat.getInstance(Locale.US).parse(match.group("weight")).doubleValue();
-                    vec.add(feature, weight);
+                    //vec.add(feature, weight);
+                    vec.add(new FeatureEntry(feature, weight));
                 }
                 ds.add(label, vec);
             }
@@ -52,47 +53,32 @@ public class LinearSvmModelTest
         InputStream is = LinearSvmModelTest.class.getResourceAsStream("inductive/train.dat");
         BufferedReader reader = new BufferedReader(new InputStreamReader(is));
         LabeledDataset<Double, SparseVector> ds = readDataset(reader);
-        // debug code
-        for (LabeledExampleEntry<Double, SparseVector> le : ds) {
-            System.out.print(le.getLabel() + " ");
-            for (VectorEntry item : le.getExample()) {
-                System.out.print(item.getIndex() + ":" + item.getData() + " ");
-            }
-            System.out.println();
-        }
-        // end of debug code
-        // ...
         reader.close();
+//        for (LabeledExampleEntry<Double, SparseVector> le : ds) {
+//            System.out.print(le.getLabel() + " ");
+//            for (VectorEntry item : le.getExample()) {
+//                System.out.print(item.getIndex() + ":" + item.getData() + " ");
+//            }
+//            System.out.println();
+//        }
+        LinearSvmModel model = new LinearSvmModel(new Parameter(SolverType.L1R_L2LOSS_SVC, 1.0, 0.01));
+        model.train(ds); // WARNME: this should work with standard sparse vectors not just vectors that contain FeatureEntries
+        is = LinearSvmModelTest.class.getResourceAsStream("inductive/test.dat");
+        reader = new BufferedReader(new InputStreamReader(is));
+        ds = readDataset(reader);
+        reader.close();
+        int correct = 0;
+        for (LabeledExampleEntry<Double, SparseVector> le : ds) { // WARNME: why is this not simply LabeledExample?
+            Prediction<Double> p = model.predict(le.getExample());
+            Double bestLabel = p.getBest().getLabel();
+            if (bestLabel.equals(le.getLabel())) { correct++; }
+        }
+        double accuracy = (double)correct / (double)ds.size();
+        assertTrue(accuracy >= 0.97 && accuracy <= 0.98);
     }
 
     @Test
-    public void testTrain() throws Exception {
-
-        LabeledDataset<Double, SparseVector> data = new LabeledDataset<Double, SparseVector>();
-        data.add(new LabeledExample<Double, SparseVector>(1d, new SparseVector(FeatureEntry
-                .newEntries(new Object[][]{ {2,0.1}, {3,0.2}, {6,1.0} }))));
-        data.add(new LabeledExample<Double, SparseVector>(2d, new SparseVector(FeatureEntry
-                .newEntries(new Object[][]{ {2,0.1}, {3,0.3}, {4,-1.2}, {6,1.0} }))));
-        data.add(new LabeledExample<Double, SparseVector>(1d, new SparseVector(FeatureEntry
-                .newEntries(new Object[][]{ {1,0.4}, {6,1.0} }))));
-        data.add(new LabeledExample<Double, SparseVector>(2d, new SparseVector(FeatureEntry
-                .newEntries(new Object[][]{ {2,0.1}, {4,1.4}, {5,0.5}, {6,1.0} }))));
-        data.add(new LabeledExample<Double, SparseVector>(3d, new SparseVector(FeatureEntry
-                .newEntries(new Object[][]{ {1,-0.1}, {2,-0.2}, {3,0.1}, {4,1.1}, {5,0.1}, {6,1.0} }))));
-
-        Parameter parameter = new Parameter(SolverType.L1R_L2LOSS_SVC, 1, 0.001);
-        LinearSvmModel model = new LinearSvmModel(parameter);
-
-        model.train(data);
-
-        Prediction<Double> prediction = model.predict(new SparseVector(FeatureEntry
-                .newEntries(new Object[][]{{1, -0.1}, {2, -0.2}, {3, 0.1}, {4, 1.1}, {5, 0.1}, {6, 1.0}})));
-
-        assertEquals(2d, prediction.getBest().getScore(), 0);
-    }
-
-    @Test
-    public void testPredict() throws Exception {
+    public void testRegression() throws IOException, ParseException {
 
     }
 }

@@ -5,7 +5,7 @@ import de.bwaldvogel.liblinear.SolverType;
 
 import org.junit.Test;
 import org.latinolib.SparseVector;
-import org.latinolib.VectorEntry;
+//import org.latinolib.VectorEntry;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,7 +20,7 @@ import java.util.regex.Pattern;
 import static org.junit.Assert.*;
 
 /**
- * Author saxo, mIHA
+ * Author mIHA
  */
 public class LinearSvmModelTest
 {
@@ -79,6 +79,23 @@ public class LinearSvmModelTest
 
     @Test
     public void testRegression() throws IOException, ParseException {
-
+        InputStream is = LinearSvmModelTest.class.getResourceAsStream("regression/train.dat");
+        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+        LabeledDataset<Double, SparseVector> ds = readDataset(reader);
+        reader.close();
+        LinearSvmModel model = new LinearSvmModel(new Parameter(SolverType.L2R_L2LOSS_SVR, 1.0, 0.01));
+        model.train(ds);
+        is = LinearSvmModelTest.class.getResourceAsStream("regression/test.dat");
+        reader = new BufferedReader(new InputStreamReader(is));
+        ds = readDataset(reader);
+        reader.close();
+        double mae = 0;
+        for (LabeledExampleEntry<Double, SparseVector> le : ds) {
+            Prediction<Double> p = model.predict(le.getExample());
+            Double value = p.getBest().getLabel();
+            mae += Math.abs(value - le.getLabel());
+        }
+        mae /= (double)ds.size();
+        assertTrue(mae <= 40.0 && mae >= 30.0);
     }
 }

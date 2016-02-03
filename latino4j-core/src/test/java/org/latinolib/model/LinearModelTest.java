@@ -122,7 +122,6 @@ public class LinearModelTest
         for (LabeledExampleEntry<Double, SparseVector> le : ds) {
             Prediction<Double> p = model.predict(le.getExample());
             Double value = p.getBest().getLabel();
-            System.out.println(value);
             mae += Math.abs(value - le.getLabel());
         }
         mae /= (double)ds.size();

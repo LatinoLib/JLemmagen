@@ -30,10 +30,10 @@ public class LinearModelTest
     private static LabeledDataset<Double, SparseVector> readDataset(BufferedReader reader) throws IOException, ParseException {
         String line;
         LabeledDataset<Double, SparseVector> ds = new LabeledDataset<Double, SparseVector>();
+        Pattern labelPattern = Pattern.compile("^(?<label>[+-]?\\d+([.]\\d+)?)(\\s|$)");
+        Pattern featurePattern = Pattern.compile("(?<feature>\\d+):(?<weight>[-]?[\\d\\.]+)");
         while ((line = reader.readLine()) != null) {
             SparseVector vec = new SparseVector();
-            Pattern labelPattern = Pattern.compile("^(?<label>[+-]?\\d+([.]\\d+)?)(\\s|$)");
-            Pattern featurePattern = Pattern.compile("(?<feature>\\d+):(?<weight>[-]?[\\d\\.]+)");
             if (!line.startsWith("#")) {
                 Matcher labelMatch = labelPattern.matcher(line);
                 labelMatch.find();

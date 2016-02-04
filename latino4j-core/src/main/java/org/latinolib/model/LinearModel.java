@@ -58,7 +58,7 @@ public class LinearModel implements Model<Double, SparseVector>, Serializable
     public Prediction<Double> predict(SparseVector example) {
         Preconditions.checkState(model != null);
 
-        double prediction = Linear.predict(model, example.toArray(new Feature[0]));
+        double prediction = Linear.predict(model, example.toArray(new Feature[0])); // TODO: support for predictProbability
         return new Prediction<Double>(new PredictionScore<Double>(prediction, prediction));
     }
 }

@@ -172,7 +172,7 @@ public class CrossValidationTest
     }
 
     private static void assertSetEquality(Iterable<LabeledExampleEntry<Integer, Integer>> le1,
-            Iterable<LabeledExampleEntry<Integer, Integer>> le2) {
+                                          Iterable<LabeledExampleEntry<Integer, Integer>> le2) {
         List<String> set1 = Lists.newArrayList();
         for (LabeledExampleEntry<Integer, Integer> le : le1) {
             set1.add(Integer.toString(le.getLabel()) + " " + Integer.toString(le.getExample()));

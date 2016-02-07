@@ -2,10 +2,12 @@ package org.latinolib.bow;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
+import org.latinolib.Language;
 import org.latinolib.VectorEntry;
 import org.latinolib.model.ModelUtils;
 import org.latinolib.SparseVector;
 import org.latinolib.stemmer.Stemmer;
+import org.latinolib.stopwords.StopWords;
 import org.latinolib.tokenizer.SimpleTokenizer;
 import org.latinolib.tokenizer.SimpleTokenizerType;
 import org.latinolib.tokenizer.Token;
@@ -13,6 +15,9 @@ import org.latinolib.tokenizer.Tokenizer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.*;
 
@@ -25,8 +30,10 @@ public class BowSpace implements Serializable
     private transient Logger logger = LoggerFactory.getLogger(BowSpace.class);
 
     private Tokenizer tokenizer = new SimpleTokenizer(SimpleTokenizerType.ALL_CHARS);
-    private Set<String> stopWords = null;
-    private Stemmer stemmer = null;
+    private StopWords stopWords = null;
+    private transient Stemmer stemmer = null;
+    private transient Language lemmatizerByLanguage = null;
+    private transient Language stemmerByLanguage = null;
     private Map<String, Word> wordInfo = new HashMap<String, Word>();
     private List<Word> idxInfo = Lists.newArrayList();
     private int maxNGramLen = 2;
@@ -44,11 +51,11 @@ public class BowSpace implements Serializable
         this.tokenizer = Preconditions.checkNotNull(tokenizer);
     }
 
-    public Set<String> getStopWords() {
+    public StopWords getStopWords() {
         return stopWords;
     }
 
-    public void setStopWords(Set<String> stopWords) {
+    public void setStopWords(StopWords stopWords) {
         this.stopWords = stopWords;
     }
 
@@ -58,6 +65,31 @@ public class BowSpace implements Serializable
 
     public void setStemmer(Stemmer stemmer) {
         this.stemmer = stemmer;
+        stemmerByLanguage = null;
+    }
+
+    public Language getLemmatizerByLanguage() {
+        return lemmatizerByLanguage;
+    }
+
+    public void setLemmatizerByLanguage(Language lemmatizerByLanguage) throws IOException {
+        this.lemmatizerByLanguage = lemmatizerByLanguage;
+        if (lemmatizerByLanguage != null) {
+            stemmerByLanguage = null;
+            stemmer = lemmatizerByLanguage.getLemmatizer();
+        }
+    }
+
+    public Language getStemmerByLanguage() {
+        return stemmerByLanguage;
+    }
+
+    public void setStemmerByLanguage(Language stemmerByLanguage) throws IOException {
+        this.stemmerByLanguage = stemmerByLanguage;
+        if (stemmerByLanguage != null) {
+            lemmatizerByLanguage = null;
+            stemmer = stemmerByLanguage.getStemmer();
+        }
     }
 
     public Map<String, Word> getWordInfo() {
@@ -195,7 +227,7 @@ public class BowSpace implements Serializable
                 List<WordStem> nGrams = Lists.newArrayListWithCapacity(maxNGramLen);
                 for (Token token : tokenizer.getTokens(document)) {
                     String word = normalizeText(token.getText(), normalizeTokens);
-                    if (stopWords == null || !stopWords.contains(word)) {
+                    if (stopWords == null || !stopWords.isStopWord(word)) {
                         String stem = stemmer == null ? word : normalizeText(stemmer.getStem(word), normalizeTokens);
                         if (nGrams.size() < maxNGramLen) {
                             WordStem wordStem = new WordStem();
@@ -235,7 +267,7 @@ public class BowSpace implements Serializable
                     Set<String> docWords = new HashSet<String>();
                     for (Token token : tokenizer.getTokens(document)) {
                         String word = normalizeText(token.getText(), normalizeTokens);
-                        if (stopWords == null || !stopWords.contains(word)) {
+                        if (stopWords == null || !stopWords.isStopWord(word)) {
                             String stem = stemmer == null ? word : normalizeText(stemmer.getStem(word), normalizeTokens);
                             if (nGrams.size() < n) {
                                 WordStem wordStem = new WordStem();
@@ -337,7 +369,7 @@ public class BowSpace implements Serializable
             List<WordStem> nGrams = Lists.newArrayListWithCapacity(maxNGramLen);
             for (Token token : tokenizer.getTokens(document)) {
                 String word = normalizeText(token.getText(), normalizeTokens);
-                if (stopWords == null || !stopWords.contains(word)) {
+                if (stopWords == null || !stopWords.isStopWord(word)) {
                     String stem = stemmer == null ? word : normalizeText(stemmer.getStem(word), normalizeTokens);
                     if (nGrams.size() < maxNGramLen) {
                         WordStem wordStem = new WordStem();
@@ -424,7 +456,7 @@ public class BowSpace implements Serializable
         List<WordStem> nGrams = Lists.newArrayListWithCapacity(maxNGramLen);
         for (Token token : tokenizer.getTokens(document)) {
             String word = normalizeText(token.getText(), normalizeTokens);
-            if (stopWords == null || !stopWords.contains(word)) {
+            if (stopWords == null || !stopWords.isStopWord(word)) {
                 String stem = stemmer == null ? word : normalizeText(stemmer.getStem(word), normalizeTokens);
                 if (nGrams.size() < maxNGramLen) {
                     WordStem wordStem = new WordStem();
@@ -514,6 +546,27 @@ public class BowSpace implements Serializable
             keywordsStr += ", " + keywords.get(i).mostFrequentForm;
         }
         return keywordsStr;
+    }
+
+    private void writeObject(ObjectOutputStream out) throws IOException {
+        Preconditions.checkState((stemmerByLanguage != null || lemmatizerByLanguage != null) || stemmer == null,
+            "Stemmer must be instantiated via set(Stemmer|Lemmatizer)ByLanguage in order to be serializable.");
+
+        out.defaultWriteObject();
+        out.writeUTF(lemmatizerByLanguage == null ? "" : lemmatizerByLanguage.toString());
+        out.writeUTF(stemmerByLanguage == null ? "" : stemmerByLanguage.toString());
+    }
+
+    private void readObject(ObjectInputStream in) throws ClassNotFoundException, IOException {
+        in.defaultReadObject();
+        String s = in.readUTF();
+        if (!"".equals(s)) {
+            setLemmatizerByLanguage(Language.valueOf(s));
+        }
+        s = in.readUTF();
+        if (!"".equals(s)) {
+            setStemmerByLanguage(Language.valueOf(s));
+        }
     }
 
     private static class WordStem

@@ -6,10 +6,7 @@ import org.junit.Test;
 import org.latinolib.SparseVector;
 //import org.latinolib.VectorEntry;
 
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.text.NumberFormat;
 import java.text.ParseException;
 import java.util.ArrayList;
@@ -167,5 +164,60 @@ public class LinearModelTest
             }));
         }
         for (Future<?> f : futures) { f.get(); }
+    }
+
+    @Test
+    public void testParameterSerialization() throws IOException, ClassNotFoundException {
+        Parameter outPm = SVM_REGRESSION.getDefaultParameter();
+        outPm.setWeights(new double[] { 0.1, 0.2 }, new int[] { 1, 2 });
+
+        ByteArrayOutputStream bout = new ByteArrayOutputStream();
+        ObjectOutputStream oout = new ObjectOutputStream(bout);
+        LinearModel model = new LinearModel(outPm);
+        oout.writeObject(model);
+
+        ByteArrayInputStream bin = new ByteArrayInputStream(bout.toByteArray());
+        ObjectInputStream oin = new ObjectInputStream(bin);
+        model = (LinearModel)oin.readObject();
+        Parameter inPm = model.getParameter();
+
+        assertEquals(inPm.getC(), outPm.getC(), 0.e-10);
+        assertEquals(inPm.getEps(), outPm.getEps(), 0.e-10);
+        assertEquals(inPm.getMaxIters(), outPm.getMaxIters());
+        assertEquals(inPm.getP(), outPm.getP(), 0.e-10);
+        assertEquals(inPm.getSolverType(), outPm.getSolverType());
+        assertArrayEquals(inPm.getWeights(), outPm.getWeights(), 0.e-10);
+        assertArrayEquals(inPm.getWeightLabels(), outPm.getWeightLabels());
+    }
+
+    @Test
+    public void testSerialization() throws IOException, ClassNotFoundException, ParseException {
+        InputStream is = LinearModelTest.class.getResourceAsStream("regression/train.dat");
+        BufferedReader reader = new BufferedReader(new InputStreamReader(is));
+        LabeledDataset<Double, SparseVector> ds = readDataset(reader);
+        reader.close();
+        LinearModel model = new LinearModel(SVM_REGRESSION.getDefaultParameter());
+        model.train(ds);
+
+        ByteArrayOutputStream bout = new ByteArrayOutputStream();
+        ObjectOutputStream oout = new ObjectOutputStream(bout);
+        oout.writeObject(model);
+
+        ByteArrayInputStream bin = new ByteArrayInputStream(bout.toByteArray());
+        ObjectInputStream oin = new ObjectInputStream(bin);
+        model = (LinearModel)oin.readObject();
+
+        is = LinearModelTest.class.getResourceAsStream("regression/test.dat");
+        reader = new BufferedReader(new InputStreamReader(is));
+        ds = readDataset(reader);
+        reader.close();
+        double mae = 0;
+        for (LabeledExampleEntry<Double, SparseVector> le : ds) {
+            Prediction<Double> p = model.predict(le.getExample());
+            Double value = p.getBest().getLabel();
+            mae += Math.abs(value - le.getLabel());
+        }
+        mae /= (double)ds.size();
+        assertTrue(mae >= 25.0 && mae <= 35.0);
     }
 }

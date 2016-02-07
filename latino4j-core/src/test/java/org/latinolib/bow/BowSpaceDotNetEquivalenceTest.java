@@ -5,13 +5,14 @@ import com.google.gson.reflect.TypeToken;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.TestName;
+import org.latinolib.Language;
 import org.latinolib.SparseVector;
 import org.latinolib.VectorEntry;
+import org.latinolib.stemmer.Lemmatizer;
 import org.latinolib.tokenizer.SimpleTokenizer;
 import org.latinolib.tokenizer.SimpleTokenizerType;
 
-import java.io.InputStream;
-import java.io.InputStreamReader;
+import java.io.*;
 import java.lang.reflect.Type;
 import java.util.Arrays;
 import java.util.Map;
@@ -49,11 +50,11 @@ public class BowSpaceDotNetEquivalenceTest
         bow.setWordWeightType(WordWeightType.TERM_FREQ);
         bow.setNormalizeVectors(true);
         bow.setKeepWordForms(false);
+
         bow.initialize(Arrays.asList(CORPUS), true, false);
+
         SparseVector vector = bow.processDocument(DOCUMENT, true);
-
         DotNetIdxDat[] expected = DOT_NET_RESULTS.get(testName.getMethodName());
-
         assertArrayEquals(expected, vector.toArray());
     }
 
@@ -68,11 +69,11 @@ public class BowSpaceDotNetEquivalenceTest
         bow.setWordWeightType(WordWeightType.TF_IDF);
         bow.setNormalizeVectors(true);
         bow.setKeepWordForms(false);
+
         bow.initialize(Arrays.asList(CORPUS), true, false);
+
         SparseVector vector = bow.processDocument(DOCUMENT, true);
-
         DotNetIdxDat[] expected = DOT_NET_RESULTS.get(testName.getMethodName());
-
         assertArrayEquals(expected, vector.toArray());
     }
 
@@ -87,11 +88,11 @@ public class BowSpaceDotNetEquivalenceTest
         bow.setWordWeightType(WordWeightType.LOG_DF_TF_IDF);
         bow.setNormalizeVectors(true);
         bow.setKeepWordForms(false);
+
         bow.initialize(Arrays.asList(CORPUS), true, false);
+
         SparseVector vector = bow.processDocument(DOCUMENT, true);
-
         DotNetIdxDat[] expected = DOT_NET_RESULTS.get(testName.getMethodName());
-
         assertArrayEquals(expected, vector.toArray());
     }
 
@@ -106,11 +107,11 @@ public class BowSpaceDotNetEquivalenceTest
         bow.setWordWeightType(WordWeightType.TERM_FREQ);
         bow.setNormalizeVectors(true);
         bow.setKeepWordForms(false);
+
         bow.initialize(Arrays.asList(CORPUS), true, false);
+
         SparseVector vector = bow.processDocument(DOCUMENT, true);
-
         DotNetIdxDat[] expected = DOT_NET_RESULTS.get(testName.getMethodName());
-
         assertArrayEquals(expected, vector.toArray());
     }
 
@@ -125,11 +126,11 @@ public class BowSpaceDotNetEquivalenceTest
         bow.setWordWeightType(WordWeightType.TERM_FREQ);
         bow.setNormalizeVectors(true);
         bow.setKeepWordForms(false);
+
         bow.initialize(Arrays.asList(CORPUS), true, false);
+
         SparseVector vector = bow.processDocument(DOCUMENT, true);
-
         DotNetIdxDat[] expected = DOT_NET_RESULTS.get(testName.getMethodName());
-
         assertArrayEquals(expected, vector.toArray());
     }
 
@@ -144,11 +145,11 @@ public class BowSpaceDotNetEquivalenceTest
         bow.setWordWeightType(WordWeightType.TERM_FREQ);
         bow.setNormalizeVectors(false);
         bow.setKeepWordForms(false);
+
         bow.initialize(Arrays.asList(CORPUS), true, false);
+
         SparseVector vector = bow.processDocument(DOCUMENT, true);
-
         DotNetIdxDat[] expected = DOT_NET_RESULTS.get(testName.getMethodName());
-
         assertArrayEquals(expected, vector.toArray());
     }
 
@@ -163,11 +164,49 @@ public class BowSpaceDotNetEquivalenceTest
         bow.setWordWeightType(WordWeightType.TERM_FREQ);
         bow.setNormalizeVectors(true);
         bow.setKeepWordForms(true);
+
         bow.initialize(Arrays.asList(CORPUS), true, false);
+
         SparseVector vector = bow.processDocument(DOCUMENT, true);
-
         DotNetIdxDat[] expected = DOT_NET_RESULTS.get(testName.getMethodName());
+        assertArrayEquals(expected, vector.toArray());
+    }
 
+    @Test
+    public void testLemmatizer() throws IOException {
+        BowSpace bow = new BowSpace();
+        bow.setTokenizer(new SimpleTokenizer(SimpleTokenizerType.ALL_CHARS, 2));
+        bow.setStopWords(null);
+        bow.setMaxNGramLen(2);
+        bow.setMinWordFreq(1);
+        bow.setWordWeightType(WordWeightType.TERM_FREQ);
+        bow.setNormalizeVectors(true);
+        bow.setKeepWordForms(false);
+        bow.setStemmer(new Lemmatizer(Language.EN));
+
+        bow.initialize(Arrays.asList(CORPUS), true, false);
+
+        SparseVector vector = bow.processDocument(DOCUMENT, true);
+        DotNetIdxDat[] expected = DOT_NET_RESULTS.get(testName.getMethodName());
+        assertArrayEquals(expected, vector.toArray());
+    }
+
+    @Test
+    public void testStopWords() throws IOException {
+        BowSpace bow = new BowSpace();
+        bow.setTokenizer(new SimpleTokenizer(SimpleTokenizerType.ALL_CHARS, 2));
+        bow.setMaxNGramLen(2);
+        bow.setMinWordFreq(1);
+        bow.setWordWeightType(WordWeightType.TERM_FREQ);
+        bow.setNormalizeVectors(true);
+        bow.setKeepWordForms(false);
+        bow.setStemmer(new Lemmatizer(Language.EN));
+        bow.setStopWords(Language.EN.getStopWords());
+
+        bow.initialize(Arrays.asList(CORPUS), true, false);
+
+        SparseVector vector = bow.processDocument(DOCUMENT, true);
+        DotNetIdxDat[] expected = DOT_NET_RESULTS.get(testName.getMethodName());
         assertArrayEquals(expected, vector.toArray());
     }
 
@@ -182,11 +221,38 @@ public class BowSpaceDotNetEquivalenceTest
         bow.setWordWeightType(WordWeightType.TERM_FREQ);
         bow.setNormalizeVectors(true);
         bow.setKeepWordForms(false);
+
         bow.initialize(Arrays.asList(CORPUS), true, true);
+
         SparseVector vector = bow.processDocument(DOCUMENT, true);
-
         DotNetIdxDat[] expected = DOT_NET_RESULTS.get(testName.getMethodName());
+        assertArrayEquals(expected, vector.toArray());
+    }
 
+    @Test
+    public void testSerialization() throws IOException, ClassNotFoundException {
+        BowSpace bow = new BowSpace();
+        bow.setTokenizer(new SimpleTokenizer(SimpleTokenizerType.ALL_CHARS, 2));
+        bow.setMaxNGramLen(2);
+        bow.setMinWordFreq(1);
+        bow.setWordWeightType(WordWeightType.TERM_FREQ);
+        bow.setNormalizeVectors(true);
+        bow.setKeepWordForms(false);
+        bow.setLemmatizerByLanguage(Language.EN);
+        bow.setStopWords(Language.EN.getStopWords());
+
+        bow.initialize(Arrays.asList(CORPUS), true, false);
+
+        // serialize + deserialize
+        ByteArrayOutputStream bout = new ByteArrayOutputStream();
+        ObjectOutputStream oout = new ObjectOutputStream(bout);
+        oout.writeObject(bow);
+        ByteArrayInputStream bin = new ByteArrayInputStream(bout.toByteArray());
+        ObjectInputStream oin = new ObjectInputStream(bin);
+        bow = (BowSpace) oin.readObject();
+
+        SparseVector vector = bow.processDocument(DOCUMENT, true);
+        DotNetIdxDat[] expected = DOT_NET_RESULTS.get("testStopWords");
         assertArrayEquals(expected, vector.toArray());
     }
 

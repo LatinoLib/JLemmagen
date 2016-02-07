@@ -27,7 +27,9 @@ namespace LatinoTester
             testMinWordFreq,
             testNormalizeVectors,
             testKeepWordForms,
-            testInitializeLargeScale
+            testInitializeLargeScale,
+            testLemmatizer,
+            testStopWords
         }
         // ReSharper restore InconsistentNaming
 
@@ -73,6 +75,13 @@ namespace LatinoTester
                         break;
                     case TestCase.testKeepWordForms:
                         bow.KeepWordForms = true;
+                        break;
+                    case TestCase.testLemmatizer:
+                        bow.Stemmer = new Lemmatizer(Language.English);
+                        break;
+                    case TestCase.testStopWords:
+                        bow.Stemmer = new Lemmatizer(Language.English);
+                        bow.StopWords = StopWords.EnglishStopWords;
                         break;
                 }
                 bow.Initialize(documents, testCase == TestCase.testInitializeLargeScale);

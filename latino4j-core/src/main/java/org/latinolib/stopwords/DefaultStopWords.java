@@ -8,8 +8,10 @@ import java.util.HashSet;
 /**
  * Author mIHA
  */
-public class DefaultStopWords implements StopWords
+public class DefaultStopWords implements StopWords, Serializable
 {
+    private static final long serialVersionUID = 5614057816875363839L;
+
     private boolean caseSensitive;
     private HashSet<String> stopWords
         = new HashSet<String>();
@@ -20,7 +22,7 @@ public class DefaultStopWords implements StopWords
     }
 
     @Override
-    public Boolean isStopWord(String word) {
+    public boolean isStopWord(String word) {
         return stopWords.contains(caseSensitive ? word : word.toLowerCase());
     }
 

@@ -18,8 +18,12 @@ public class Prediction<T>
     public Prediction() {
     }
 
-    public Prediction(PredictionScore<T>... scores) {
-        this.scores.addAll(Arrays.asList(Preconditions.checkNotNull(scores)));
+    @SafeVarargs
+    public Prediction(PredictionScore<T> score, PredictionScore<T>... scores) {
+        this.scores.add(Preconditions.checkNotNull(score));
+        if (scores != null && scores.length > 0) {
+            this.scores.addAll(Arrays.asList(scores));
+        }
     }
 
     public void add(double score, T label) {

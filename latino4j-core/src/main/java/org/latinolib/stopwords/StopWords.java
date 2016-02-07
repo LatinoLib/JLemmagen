@@ -5,5 +5,5 @@ package org.latinolib.stopwords;
  */
 public interface StopWords
 {
-    Boolean isStopWord(String word);
+    boolean isStopWord(String word);
 }

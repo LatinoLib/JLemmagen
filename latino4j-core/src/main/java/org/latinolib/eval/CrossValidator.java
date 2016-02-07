@@ -22,7 +22,7 @@ public class CrossValidator<T, U>
     private final List<FoldData<T, U>> folds;
 
     public CrossValidator(int numFolds, LabeledDataset<T, U> data, Random rnd,
-            boolean prepareData, boolean stratified, boolean shuffleStratified) {
+                          boolean prepareData, boolean stratified, boolean shuffleStratified) {
         Preconditions.checkArgument(data.size() >= 2);
         Preconditions.checkArgument(numFolds >= 2 && numFolds <= data.size());
 
@@ -134,7 +134,7 @@ public class CrossValidator<T, U>
     }
 
     public PerfData<T> runModel(final Model<T, U> model, final String expName, final String algName,
-            ExecutorService executor) throws ExecutionException, InterruptedException {
+                                ExecutorService executor) throws ExecutionException, InterruptedException {
         Preconditions.checkNotNull(model);
 
         final PerfData<T> perfData = new PerfData<T>();

@@ -27,10 +27,10 @@ public class LinearModelTest
     private static LabeledDataset<Double, SparseVector> readDataset(BufferedReader reader) throws IOException, ParseException {
         String line;
         LabeledDataset<Double, SparseVector> ds = new LabeledDataset<Double, SparseVector>();
+        Pattern labelPattern = Pattern.compile("^(?<label>[+-]?\\d+([.]\\d+)?)(\\s|$)");
+        Pattern featurePattern = Pattern.compile("(?<feature>\\d+):(?<weight>[-]?[\\d\\.]+)");
         while ((line = reader.readLine()) != null) {
             SparseVector vec = new SparseVector();
-            Pattern labelPattern = Pattern.compile("^(?<label>[+-]?\\d+([.]\\d+)?)(\\s|$)");
-            Pattern featurePattern = Pattern.compile("(?<feature>\\d+):(?<weight>[-]?[\\d\\.]+)");
             if (!line.startsWith("#")) {
                 Matcher labelMatch = labelPattern.matcher(line);
                 labelMatch.find();
@@ -48,7 +48,7 @@ public class LinearModelTest
         return ds;
     }
 
-    private void testInduction(String folder, Parameter parameter, Double accuracyMin, Double accuracyMax) throws IOException, ParseException {
+    private void testInduction(String folder, Parameter parameter, double accuracyMin, double accuracyMax) throws IOException, ParseException {
         InputStream is = LinearModelTest.class.getResourceAsStream(folder + "/train.dat");
         BufferedReader reader = new BufferedReader(new InputStreamReader(is));
         LabeledDataset<Double, SparseVector> ds = readDataset(reader);
@@ -69,8 +69,8 @@ public class LinearModelTest
         int correct = 0;
         for (LabeledExampleEntry<Double, SparseVector> le : ds) { // WARNME: why is this not simply LabeledExample?
             Prediction<Double> p = model.predict(le.getExample());
-            Double bestLabel = p.getBest().getLabel();
-            if (bestLabel.equals(le.getLabel())) { correct++; }
+            double bestLabel = p.getBest().getLabel();
+            if (le.getLabel().equals(bestLabel)) { correct++; }
         }
         double accuracy = (double)correct / (double)ds.size();
         assertTrue(accuracy >= accuracyMin && accuracy <= accuracyMax);
@@ -121,7 +121,7 @@ public class LinearModelTest
         double mae = 0;
         for (LabeledExampleEntry<Double, SparseVector> le : ds) {
             Prediction<Double> p = model.predict(le.getExample());
-            Double value = p.getBest().getLabel();
+            double value = p.getBest().getLabel();
             mae += Math.abs(value - le.getLabel());
         }
         mae /= (double)ds.size();

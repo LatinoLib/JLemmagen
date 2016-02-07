@@ -43,5 +43,4 @@ public class Prediction<T>
             sorted = true;
         }
     }
-
 }

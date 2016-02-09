@@ -1,9 +1,12 @@
 package de.bwaldvogel.liblinear;
 
+import java.io.Serializable;
+
 import static de.bwaldvogel.liblinear.Linear.copyOf;
 
-
-public final class Parameter {
+public final class Parameter implements Serializable
+{
+    private static final long serialVersionUID = -1680236585468632190L;
 
     double     C;
 

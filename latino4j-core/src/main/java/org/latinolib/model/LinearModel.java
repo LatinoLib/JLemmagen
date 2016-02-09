@@ -4,15 +4,12 @@ import com.google.common.base.Preconditions;
 import de.bwaldvogel.liblinear.*;
 import org.latinolib.SparseVector;
 
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
 
 /**
  * Author saxo
  */
-public class LinearModel implements Model<Double, SparseVector>
+public class LinearModel implements Model<Double, SparseVector>, Serializable
 {
     private static final long serialVersionUID = -6556601514629098712L;
 

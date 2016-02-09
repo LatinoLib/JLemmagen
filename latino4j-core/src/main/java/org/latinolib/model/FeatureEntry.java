@@ -11,8 +11,6 @@ import java.util.List;
  */
 public class FeatureEntry extends FeatureNode implements VectorEntry
 {
-    private static final long serialVersionUID = -6131690993299851888L;
-
     public FeatureEntry(int index, double value) {
         super(index, value);
     }

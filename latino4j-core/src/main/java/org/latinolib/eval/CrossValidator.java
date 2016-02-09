@@ -134,7 +134,7 @@ public class CrossValidator<T, U>
     }
 
     public PerfData<T> runModel(final Model<T, U> model, final String expName, final String algName,
-                                ExecutorService executor) throws ExecutionException, InterruptedException {
+            ExecutorService executor) throws ExecutionException, InterruptedException {
         Preconditions.checkNotNull(model);
 
         final PerfData<T> perfData = new PerfData<T>();
@@ -162,6 +162,7 @@ public class CrossValidator<T, U>
     }
 
     public static <T, U> Map<T, List<LabeledExampleEntry<T, U>>> getLabelGroups(LabeledDataset<T, U> data) {
+        Preconditions.checkNotNull(data);
         Map<T, List<LabeledExampleEntry<T, U>>> groups = new HashMap<T, List<LabeledExampleEntry<T, U>>>();
         for (LabeledExampleEntry<T, U> le : data) {
             List<LabeledExampleEntry<T, U>> examples = groups.get(le.getLabel());
@@ -190,6 +191,7 @@ public class CrossValidator<T, U>
     }
 
     public static <T, U> FoldData<T, U> splitStratified(int numFolds, int fold, LabeledDataset<T, U> data) {
+        Preconditions.checkNotNull(data);
         Preconditions.checkArgument(data.size() >= 2);
         Preconditions.checkArgument(numFolds >= 2 && numFolds <= data.size());
         Preconditions.checkArgument(fold >= 1 && fold <= numFolds);
@@ -245,6 +247,7 @@ public class CrossValidator<T, U>
     }
 
     public static <T, U> FoldData<T, U> split(int numFolds, int fold, LabeledDataset<T, U> data) {
+        Preconditions.checkNotNull(data);
         Preconditions.checkArgument(data.size() >= 2);
         Preconditions.checkArgument(numFolds >= 2 && numFolds <= data.size());
         Preconditions.checkArgument(fold >= 1 && fold <= numFolds);

@@ -70,4 +70,28 @@ public class LinearModel implements Model<Double, SparseVector>, Serializable
         double prediction = Linear.predict(model, vec); // TODO: support for predictProbability
         return new Prediction<Double>(new PredictionScore<Double>(prediction, prediction));
     }
+
+    private static class LinearModelFeature implements Feature
+    {
+        private final VectorEntry vecEntry;
+
+        public LinearModelFeature(VectorEntry entry) {
+            vecEntry = entry;
+        }
+
+        @Override
+        public int getIndex() {
+            return vecEntry.getIndex();
+        }
+
+        @Override
+        public double getValue() {
+            return vecEntry.getData();
+        }
+
+        @Override
+        public void setValue(double value) {
+            vecEntry.setData(value);
+        }
+    }
 }

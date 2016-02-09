@@ -66,7 +66,7 @@ public class LinearModelTest
         ds = readDataset(reader);
         reader.close();
         int correct = 0;
-        for (LabeledExampleEntry<Double, SparseVector> le : ds) { // WARNME: why is this not simply LabeledExample?
+        for (LabeledExampleEntry<Double, SparseVector> le : ds) {
             Prediction<Double> p = model.predict(le.getExample());
             double bestLabel = p.getBest().getLabel();
             if (le.getLabel().equals(bestLabel)) { correct++; }

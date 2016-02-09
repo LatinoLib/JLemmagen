@@ -112,7 +112,6 @@ public class SparseVector implements Iterable<VectorEntry>
 
     public class Entry implements VectorEntry
     {
-        private static final long serialVersionUID = -3612083403200155767L;
         private int index;
         private double data;
 

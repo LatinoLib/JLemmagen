@@ -3,14 +3,17 @@ package org.latinolib.tokenizer;
 import com.google.common.base.Preconditions;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
+import java.io.Serializable;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
 /**
  * author saxo
  */
-public class SimpleTokenizer implements Tokenizer
+public class SimpleTokenizer implements Tokenizer, Serializable
 {
+    private static final long serialVersionUID = 2460649040242465196L;
+
     private final SimpleTokenizerType type;
     private final int minTokenLen;
 

@@ -27,13 +27,12 @@ import java.util.*;
 public class BowSpace implements Serializable
 {
     private static final long serialVersionUID = 7695534861034247430L;
+
     private transient Logger logger = LoggerFactory.getLogger(BowSpace.class);
 
     private Tokenizer tokenizer = new SimpleTokenizer(SimpleTokenizerType.ALL_CHARS);
     private StopWords stopWords = null;
-    private transient Stemmer stemmer = null;
-    private transient Language lemmatizerByLanguage = null;
-    private transient Language stemmerByLanguage = null;
+    private Stemmer stemmer = null;
     private Map<String, Word> wordInfo = new HashMap<String, Word>();
     private List<Word> idxInfo = Lists.newArrayList();
     private int maxNGramLen = 2;
@@ -65,31 +64,6 @@ public class BowSpace implements Serializable
 
     public void setStemmer(Stemmer stemmer) {
         this.stemmer = stemmer;
-        stemmerByLanguage = null;
-    }
-
-    public Language getLemmatizerByLanguage() {
-        return lemmatizerByLanguage;
-    }
-
-    public void setLemmatizerByLanguage(Language lemmatizerByLanguage) throws IOException {
-        this.lemmatizerByLanguage = lemmatizerByLanguage;
-        if (lemmatizerByLanguage != null) {
-            stemmerByLanguage = null;
-            stemmer = lemmatizerByLanguage.getLemmatizer();
-        }
-    }
-
-    public Language getStemmerByLanguage() {
-        return stemmerByLanguage;
-    }
-
-    public void setStemmerByLanguage(Language stemmerByLanguage) throws IOException {
-        this.stemmerByLanguage = stemmerByLanguage;
-        if (stemmerByLanguage != null) {
-            lemmatizerByLanguage = null;
-            stemmer = stemmerByLanguage.getStemmer();
-        }
     }
 
     public Map<String, Word> getWordInfo() {
@@ -546,27 +520,6 @@ public class BowSpace implements Serializable
             keywordsStr += ", " + keywords.get(i).mostFrequentForm;
         }
         return keywordsStr;
-    }
-
-    private void writeObject(ObjectOutputStream out) throws IOException {
-        Preconditions.checkState((stemmerByLanguage != null || lemmatizerByLanguage != null) || stemmer == null,
-            "Stemmer must be instantiated via set(Stemmer|Lemmatizer)ByLanguage in order to be serializable.");
-
-        out.defaultWriteObject();
-        out.writeUTF(lemmatizerByLanguage == null ? "" : lemmatizerByLanguage.toString());
-        out.writeUTF(stemmerByLanguage == null ? "" : stemmerByLanguage.toString());
-    }
-
-    private void readObject(ObjectInputStream in) throws ClassNotFoundException, IOException {
-        in.defaultReadObject();
-        String s = in.readUTF();
-        if (!"".equals(s)) {
-            setLemmatizerByLanguage(Language.valueOf(s));
-        }
-        s = in.readUTF();
-        if (!"".equals(s)) {
-            setStemmerByLanguage(Language.valueOf(s));
-        }
     }
 
     private static class WordStem

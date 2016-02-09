@@ -5,7 +5,7 @@ import java.io.Serializable;
 /**
  * Author saxo
  */
-public interface Tokenizer extends Serializable
+public interface Tokenizer
 {
     Iterable<Token> getTokens(String text);
 }

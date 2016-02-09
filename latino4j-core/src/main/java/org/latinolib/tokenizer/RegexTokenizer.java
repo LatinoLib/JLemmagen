@@ -3,6 +3,7 @@ package org.latinolib.tokenizer;
 import com.google.common.base.Preconditions;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
+import java.io.Serializable;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 import java.util.regex.Matcher;
@@ -11,8 +12,10 @@ import java.util.regex.Pattern;
 /**
  * Author saxo
  */
-public class RegexTokenizer implements Tokenizer
+public class RegexTokenizer implements Tokenizer, Serializable
 {
+    private static final long serialVersionUID = -742906136170767936L;
+
     private final Pattern pattern;
 
     public RegexTokenizer() {
@@ -70,5 +73,4 @@ public class RegexTokenizer implements Tokenizer
             throw new NotImplementedException();
         }
     }
-
 }

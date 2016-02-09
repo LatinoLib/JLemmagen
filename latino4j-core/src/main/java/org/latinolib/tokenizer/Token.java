@@ -1,6 +1,5 @@
 package org.latinolib.tokenizer;
 
-
 /**
  * Author saxo
  */

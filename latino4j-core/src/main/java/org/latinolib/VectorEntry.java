@@ -1,7 +1,5 @@
 package org.latinolib;
 
-import java.io.Serializable;
-
 /**
  * Author saxo
  */

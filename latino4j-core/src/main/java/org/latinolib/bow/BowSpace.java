@@ -2,7 +2,6 @@ package org.latinolib.bow;
 
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
-import org.latinolib.Language;
 import org.latinolib.VectorEntry;
 import org.latinolib.model.ModelUtils;
 import org.latinolib.SparseVector;
@@ -15,9 +14,6 @@ import org.latinolib.tokenizer.Tokenizer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.*;
 

@@ -1,7 +1,5 @@
 package org.latinolib.tokenizer;
 
-import java.io.Serializable;
-
 /**
  * Author saxo
  */

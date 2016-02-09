@@ -143,5 +143,19 @@ public class SparseVector implements Iterable<VectorEntry>, Serializable
         public int compareTo(VectorEntry o) {
             return Integer.compare(index, o.getIndex());
         }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) { return true; }
+            if (o == null || getClass() != o.getClass()) { return false; }
+            Entry entry = (Entry)o;
+            return index == entry.index && data == entry.data;
+        }
+
+        @Override
+        public int hashCode() {
+            long temp = Double.doubleToLongBits(data);
+            return 31 * index + (int)(temp ^ (temp >>> 32));
+        }
     }
 }

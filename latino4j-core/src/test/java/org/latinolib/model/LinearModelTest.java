@@ -39,8 +39,7 @@ public class LinearModelTest
                 while (match.find()) {
                     int feature = Integer.parseInt(match.group("feature"));
                     double weight = NumberFormat.getInstance(Locale.US).parse(match.group("weight")).doubleValue();
-                    //vec.add(feature, weight);
-                    vec.add(new FeatureEntry(feature, weight));
+                    vec.add(feature, weight);
                 }
                 ds.add(label, vec);
             }
@@ -61,7 +60,7 @@ public class LinearModelTest
 //            System.out.println();
 //        }
         LinearModel model = new LinearModel(parameter);
-        model.train(ds); // WARNME: this should work with standard sparse vectors not just vectors that contain FeatureEntries
+        model.train(ds);
         is = LinearModelTest.class.getResourceAsStream(folder + "/test.dat");
         reader = new BufferedReader(new InputStreamReader(is));
         ds = readDataset(reader);

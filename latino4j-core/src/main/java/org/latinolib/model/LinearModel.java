@@ -3,6 +3,7 @@ package org.latinolib.model;
 import com.google.common.base.Preconditions;
 import de.bwaldvogel.liblinear.*;
 import org.latinolib.SparseVector;
+import org.latinolib.VectorEntry;
 
 import java.io.Serializable;
 
@@ -36,8 +37,13 @@ public class LinearModel implements Model<Double, SparseVector>, Serializable
         double[] labels = new double[dataset.size()];
         int maxIndex = 0;
         for (int i = 0; i < examples.length; i++) {
-            examples[i] = dataset.get(i).getExample().toArray(new Feature[0]);
-            for (int j = 0; j < examples[i].length; j++) {
+            SparseVector labeledExample = dataset.get(i).getExample();
+            examples[i] = new Feature[labeledExample.size()];
+            int j = 0;
+            for (VectorEntry item : labeledExample) {
+                examples[i][j++] = new LinearModelFeature(item);
+            }
+            for (j = 0; j < examples[i].length; j++) {
                 if (examples[i][j].getIndex() > maxIndex) {
                     maxIndex = examples[i][j].getIndex();
                 }
@@ -58,7 +64,10 @@ public class LinearModel implements Model<Double, SparseVector>, Serializable
     public Prediction<Double> predict(SparseVector example) {
         Preconditions.checkState(model != null);
 
-        double prediction = Linear.predict(model, example.toArray(new Feature[0])); // TODO: support for predictProbability
+        Feature[] vec = new Feature[example.size()];
+        int i = 0;
+        for (VectorEntry item : example) { vec[i++] = new LinearModelFeature(item); }
+        double prediction = Linear.predict(model, vec); // TODO: support for predictProbability
         return new Prediction<Double>(new PredictionScore<Double>(prediction, prediction));
     }
 }

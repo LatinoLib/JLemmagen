@@ -21,7 +21,7 @@ public class PredictTest {
 
     @Before
     public void setUp() {
-        System.setOut(mock(PrintStream.class)); // dev/null
+        //System.setOut(mock(PrintStream.class)); // dev/null
         assertThat(testModel.getNrClass()).isGreaterThanOrEqualTo(2);
         assertThat(testModel.getNrFeature()).isGreaterThanOrEqualTo(10);
     }

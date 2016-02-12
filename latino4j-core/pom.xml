@@ -10,12 +10,12 @@
     <parent>
         <groupId>org.latinolib</groupId>
         <artifactId>latino4j</artifactId>
-        <version>0.1.2</version>
+        <version>0.2-SNAPSHOT</version>
     </parent>
 
     <groupId>org.latinolib.latino4j</groupId>
     <artifactId>latino4j-core</artifactId>
-    <version>0.1.2</version>
+    <version>0.2-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>LATINO4J-core</name>

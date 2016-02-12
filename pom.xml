@@ -9,7 +9,7 @@
 
     <groupId>org.latinolib</groupId>
     <artifactId>latino4j</artifactId>
-    <version>0.1.2</version>
+    <version>0.2-SNAPSHOT</version>
     <packaging>pom</packaging>
     <name>latino4j</name>
     <description>latino4j is a light-weight library for building text mining applications in Java</description>

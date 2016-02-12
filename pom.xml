@@ -9,7 +9,7 @@
 
     <groupId>org.latinolib</groupId>
     <artifactId>latino4j</artifactId>
-    <version>0.1</version>
+    <version>0.1.2</version>
     <packaging>pom</packaging>
     <name>latino4j</name>
     <description>latino4j is a light-weight library for building text mining applications in Java</description>
@@ -67,32 +67,32 @@
             <!-- latino4j -->
 
             <dependency>
-                <groupId>org.latinolib</groupId>
+                <groupId>org.latinolib.latino4j</groupId>
                 <artifactId>latino4j-core</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>org.tartarus.snowball</groupId>
-                <artifactId>snowball4j</artifactId>
+                <groupId>org.latinolib.latino4j</groupId>
+                <artifactId>latino4j-snowball4j</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>eu.hlavki.text</groupId>
-                <artifactId>jlemmagen</artifactId>
+                <groupId>org.latinolib.latino4j</groupId>
+                <artifactId>latino4j-jlemmagen</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>de.spieleck.app</groupId>
-                <artifactId>cngram</artifactId>
+                <groupId>org.latinolib.latino4j</groupId>
+                <artifactId>latino4j-cngram</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
             <dependency>
-                <groupId>de.bwaldvogel</groupId>
-                <artifactId>liblinear</artifactId>
+                <groupId>org.latinolib.latino4j</groupId>
+                <artifactId>latino4j-liblinear</artifactId>
                 <version>${project.version}</version>
             </dependency>
 
@@ -203,12 +203,6 @@
             </plugin>
 
 
-            <plugin>
-                <artifactId>maven-deploy-plugin</artifactId>
-                <configuration>
-                    <skip>true</skip>
-                </configuration>
-            </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-gpg-plugin</artifactId>

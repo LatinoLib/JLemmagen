@@ -10,12 +10,12 @@
     <parent>
         <groupId>org.latinolib</groupId>
         <artifactId>latino4j</artifactId>
-        <version>0.1</version>
+        <version>0.1.2</version>
     </parent>
 
-    <groupId>de.bwaldvogel</groupId>
-    <artifactId>liblinear</artifactId>
-    <version>0.1</version>
+    <groupId>org.latinolib.latino4j</groupId>
+    <artifactId>latino4j-liblinear</artifactId>
+    <version>0.1.2</version>
     <packaging>jar</packaging>
 
     <name>Liblinear</name>

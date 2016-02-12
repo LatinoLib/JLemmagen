@@ -8,8 +8,8 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.latinolib</groupId>
-        <artifactId>latino4j</artifactId>
+        <groupId>org.latinolib.latino4j</groupId>
+        <artifactId>latino4j-parent</artifactId>
         <version>0.2-SNAPSHOT</version>
     </parent>
 

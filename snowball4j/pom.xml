@@ -10,12 +10,12 @@
     <parent>
         <groupId>org.latinolib</groupId>
         <artifactId>latino4j</artifactId>
-        <version>0.1-SNAPSHOT</version>
+        <version>0.1</version>
     </parent>
 
     <groupId>org.tartarus.snowball</groupId>
     <artifactId>snowball4j</artifactId>
-    <version>0.1-SNAPSHOT</version>
+    <version>0.1</version>
     <packaging>jar</packaging>
 
     <name>Snowball4J</name>

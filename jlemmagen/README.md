@@ -33,7 +33,7 @@ Dependency:
     <dependency>
         <groupId>eu.hlavki.text</groupId>
         <artifactId>lemmagen-lang</groupId>
-        <version>1.0-SNAPSHOT</version>
+        <version>0.1</version>
     </dependency>
 
 ### Lucene (Solr)

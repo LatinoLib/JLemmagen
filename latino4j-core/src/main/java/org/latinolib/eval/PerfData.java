@@ -26,9 +26,9 @@ public class PerfData<T>
             }
         }
 
-        public void put(int foldNum, PerfMatrix<T> mtx) {
-            resize(foldNum);
-            super.add(foldNum - 1, mtx);
+        public void put(int index, PerfMatrix<T> mtx) {
+            resize(index + 1);
+            super.add(index, mtx);
         }
     }
 
@@ -291,7 +291,7 @@ public class PerfData<T>
                 for (PerfMatrix<T> foldMtx : foldData) {
                     if (foldMtx != null) {
                         Double result = scoreFunc.apply(foldMtx);
-                        if (result != null && result.isNaN() && result.isInfinite()) {
+                        if (result != null && !result.isNaN() && !result.isInfinite()) {
                             sum += result;
                             values.add(result);
                         }

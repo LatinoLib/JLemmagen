@@ -325,6 +325,7 @@ public class PerfMatrix<T>
         str.append(Strings.padStart("%", len, ' '));
         str.append('\n');
         str.append(new String(new char[(labels.size() + 3) * len + 8]).replace("\0", "-"));
+        str.append('\n');
 
         for (T actual : labels) {
             str.append(Strings.padStart(actual.toString(), len, ' '));
@@ -339,6 +340,7 @@ public class PerfMatrix<T>
         }
 
         str.append(new String(new char[(labels.size() + 3) * len + 8]).replace("\0", "-"));
+        str.append("\n");
         str.append(Strings.padStart("sum predicted", len, ' '));
         str.append(Strings.padStart("|", 4, ' '));
         for (T predicted : labels) {
@@ -346,6 +348,7 @@ public class PerfMatrix<T>
         }
         str.append(Strings.padStart("|", 4, ' '));
         str.append(Strings.padStart(Integer.toString(all), len, ' '));
+        str.append("\n");
 
         str.append(Strings.padStart("%", len, ' '));
         str.append(Strings.padStart("|", 4, ' '));

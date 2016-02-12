@@ -14,9 +14,12 @@ public class LinearModel implements Model<Double, SparseVector>, Serializable
 {
     private static final long serialVersionUID = -6556601514629098712L;
 
+    static {
+        Linear.setDebugOutput(null); // disable debug output by default
+    }
+
     private Parameter parameter;
     private de.bwaldvogel.liblinear.Model model;
-
     public LinearModel(Parameter parameter) {
         this.parameter = Preconditions.checkNotNull(parameter);
     }
@@ -81,7 +84,7 @@ public class LinearModel implements Model<Double, SparseVector>, Serializable
 
         @Override
         public int getIndex() {
-            return vecEntry.getIndex();
+            return vecEntry.getIndex() + 1;
         }
 
         @Override

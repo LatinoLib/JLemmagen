@@ -1,0 +1,499 @@
+Id	Date	Query	User	Text	Label
+3	2009-05-11 03:17:40	kindle2	tpryan	@stellargirl I loooooooovvvvvveee my Kindle2. Not that the DX is cool, but the 2 is fantastic in its own right.	Positive
+4	2009-05-11 03:18:03	kindle2	vcu451	Reading my kindle2...  Love it... Lee childs is good read.	Positive
+5	2009-05-11 03:18:54	kindle2	chadfu	Ok, first assesment of the #kindle2 ...it fucking rocks!!!	Positive
+6	2009-05-11 03:19:04	kindle2	SIX15	@kenburbary You'll love your Kindle2. I've had mine for a few months and never looked back. The new big one is huge! No need for remorse! :)	Positive
+7	2009-05-11 03:21:41	kindle2	yamarama	@mikefish  Fair enough. But i have the Kindle2 and I think it's perfect  :)	Positive
+8	2009-05-11 03:22:00	kindle2	GeorgeVHulme	@richardebaker no. it is too big. I'm quite happy with the Kindle2.	Positive
+9	2009-05-11 03:22:30	aig	Seth937	Fuck this economy. I hate aig and their non loan given asses.	Negative
+10	2009-05-11 03:26:10	jquery	dcostalis	Jquery is my new best friend.	Positive
+11	2009-05-11 03:27:15	twitter	PJ_King	Loves twitter	Positive
+12	2009-05-11 03:29:20	obama	mandanicole	how can you not love Obama? he makes jokes about himself.	Positive
+13	2009-05-11 03:32:42	obama	jpeb	Check this video out -- President Obama at the White House Correspondents' Dinner http://bit.ly/IMXUM	Neutral
+14	2009-05-11 03:32:48	obama	kylesellers	@Karoli I firmly believe that Obama/Pelosi have ZERO desire to be civil.  It's a charade and a slogan, but they want to destroy conservatism	Negative
+15	2009-05-11 03:33:38	obama	theviewfans	House Correspondents dinner was last night whoopi, barbara &amp; sherri went, Obama got a standing ovation	Positive
+16	2009-05-11 05:05:58	nike	MumsFP	Watchin Espn..Jus seen this new Nike Commerical with a Puppet Lebron..sh*t was hilarious...LMAO!!!	Positive
+17	2009-05-11 05:06:22	nike	vincentx24x	dear nike, stop with the flywire. that shit is a waste of science. and ugly. love, @vincentx24x	Negative
+18	2009-05-11 05:20:15	lebron	cameronwylie	#lebron best athlete of our generation, if not all time (basketball related) I don't want to get into inter-sport debates about   __1/2	Positive
+19	2009-05-11 05:20:28	lebron	luv8242	I was talking to this guy last night and he was telling me that he is a die hard Spurs fan.  He also told me that he hates LeBron James.	Negative
+20	2009-05-11 05:21:04	lebron	mtgillikin	i love lebron. http://bit.ly/PdHur	Positive
+21	2009-05-11 05:21:37	lebron	ursecretdezire	@ludajuice Lebron is a Beast, but I'm still cheering 4 the A..til the end.	Negative
+22	2009-05-11 05:21:45	lebron	Native_01	@Pmillzz lebron IS THE BOSS	Positive
+23	2009-05-11 05:22:03	lebron	princezzcutz	@sketchbug Lebron is a hometown hero to me, lol I love the Lakers but let's go Cavs, lol	Positive
+24	2009-05-11 05:22:12	lebron	peterlikewhat	lebron and zydrunas are such an awesome duo	Positive
+25	2009-05-11 05:22:37	lebron	emceet	@wordwhizkid Lebron is a beast... nobody in the NBA comes even close.	Positive
+26	2009-05-11 06:02:24	iphone app	CocoSavanna	downloading apps for my iphone! So much fun :-) There literally is an app for just about anything.	Positive
+33	2009-05-11 07:47:29	visa	DreambigRadio	good news, just had a call from the Visa office, saying everything is fine.....what a relief! I am sick of scams out there! Stealing!	Positive
+34	2009-05-11 07:49:21	fredwilson	andrewwatson	http://twurl.nl/epkr4b - awesome come back from @biz (via @fredwilson)	Positive
+35	2009-05-11 07:50:07	fredwilson	fredwilson	In montreal for a long weekend of R&amp;R. Much needed.	Positive
+46	2009-05-14 02:58:07	"booz allen"	JoeSchueller	Booz Allen Hamilton has a bad ass homegrown social collaboration platform. Way cool!  #ttiv	Positive
+47	2009-05-14 02:58:23	"booz allen"	scottabel	[#MLUC09] Customer Innovation Award Winner: Booz Allen Hamilton -- http://ping.fm/c2hPP	Positive
+49	2009-05-14 05:24:50	40d	JustMe_D	@SoChi2 I current use the Nikon D90 and love it, but not as much as the Canon 40D/50D. I chose the D90 for the  video feature. My mistake.	Positive
+50	2009-05-14 05:25:04	40d	hiteshbagai	need suggestions for a good IR filter for my canon 40D ... got some? pls DM	Neutral
+117	2009-05-16 04:18:36	google	Annimallover	@surfit: I just checked my google for my business- blip shows up as the second entry! Huh. Is that a good or ba... ? http://blip.fm/~6emhv	Neutral
+118	2009-05-16 04:19:04	google	J_Holl	@phyreman9 Google is always a good place to look. Should've mentioned I worked on the Mustang w/ my Dad, @KimbleT.	Positive
+119	2009-05-16 04:19:24	google	vamsmack	Played with an android google phone. The slide out screen scares me I would break that fucker so fast. Still prefer my iPhone.	Negative
+120	2009-05-16 04:25:41	aig	schroncd	US planning to resume the military tribunals at Guantanamo Bay... only this time those on trial will be AIG execs and Chrysler debt holders	Negative
+121	2009-05-16 10:42:07	itchy	MarissaLeeD	omg so bored &amp; my tattoooos are so itchy!!  help! aha =)	Negative
+122	2009-05-16 10:42:25	itchy	robloposky	I'm itchy and miserable!	Negative
+123	2009-05-16 10:42:44	itchy	EdwinLValencia	@sekseemess no. I'm not itchy for now. Maybe later, lol.	Negative
+124	2009-05-16 11:48:15	stanford	imusicmash	RT @jessverr I love the nerdy Stanford human biology videos - makes me miss school. http://bit.ly/13t7NR	Positive
+125	2009-05-16 11:58:34	lyx	drewloewe	@spinuzzi: Has been a bit crazy, with steep learning curve, but LyX is really good for long docs. For anything shorter, it would be insane.	Positive
+131	2009-05-17 03:05:03	Danny Gokey	VickyTigger	I'm listening to "P.Y.T" by Danny Gokey &lt;3 &lt;3 &lt;3 Aww, he's so amazing. I &lt;3 him so much :)	Positive
+132	2009-05-17 05:27:45	sleep	babblyabbie	is going to sleep then on a bike ride:]	Positive
+133	2009-05-17 05:27:49	sleep	kisjoaquin	cant sleep... my tooth is aching.	Negative
+134	2009-05-17 05:28:02	sleep	Whacktackular	Blah, blah, blah same old same old. No plans today, going back to sleep I guess.	Negative
+135	2009-05-17 05:29:50	san francisco	Adrigonzo	glad i didnt do Bay to Breakers today, it's 1000 freaking degrees in San Francisco wtf	Negative
+136	2009-05-17 05:30:19	san francisco	sulu34	is in San Francisco at Bay to Breakers.	Neutral
+137	2009-05-17 05:30:23	san francisco	schuyler	just landed at San Francisco	Neutral
+138	2009-05-17 05:30:56	san francisco	MattBragoni	San Francisco today.  Any suggestions?	Neutral
+139	2009-05-17 05:32:00	aig	KennyTRoland	?Obama Administration Must Stop Bonuses to AIG Ponzi Schemers ... http://bit.ly/2CUIg	Negative
+140	2009-05-17 05:32:30	aig	aMild	started to think that Citi is in really deep s&amp;^t. Are they gonna survive the turmoil or are they gonna be the next AIG?	Negative
+141	2009-05-17 05:32:36	aig	Trazor1	ShaunWoo hate'n on AiG	Negative
+142	2009-05-17 05:35:17	star trek	mimknits	@YarnThing you will not regret going to see Star Trek. It was AWESOME!	Positive
+143	2009-05-17 05:35:28	star trek	GeeRen	On my way to see Star Trek @ The Esquire.	Neutral
+144	2009-05-17 05:35:45	star trek	checkyesjess	Going to see star trek soon with my dad.	Neutral
+145	2009-05-18 01:13:27	Malcolm Gladwell	renano	annoying new trend on the internets:  people picking apart michael lewis and malcolm gladwell.  nobody wants to read that.	Negative
+146	2009-05-18 01:14:41	Malcolm Gladwell	kottkedotorg	Bill Simmons in conversation with Malcolm Gladwell http://bit.ly/j9o50	Neutral
+147	2009-05-18 01:14:47	Malcolm Gladwell	davidm89	Highly recommend: http://tinyurl.com/HowDavidBeatsGoliath by Malcolm Gladwell	Positive
+148	2009-05-18 01:15:17	Malcolm Gladwell	livreal	Blink by malcolm gladwell amazing book and The tipping point!	Positive
+149	2009-05-18 01:16:12	Malcolm Gladwell	mikearosso	Malcolm Gladwell might be my new man crush	Positive
+150	2009-05-18 01:18:03	espn	wendy93639	omg. The commercials alone on ESPN are going to drive me nuts.	Negative
+151	2009-05-18 03:11:06	"twitter api"	ClayFranklin	@robmalon Playing with Twitter API sounds fun.  May need to take a class or find a new friend who like to generate results with API code.	Positive
+152	2009-05-18 03:11:58	"twitter api"	cURLTesting	playing with cURL and the Twitter API	Neutral
+153	2009-05-18 03:12:13	"twitter api"	ringerdrop	Hello Twitter API ;)	Positive
+154	2009-05-18 03:12:18	"twitter api"	danserfaty	playing with Java and the Twitter API	Neutral
+155	2009-05-18 03:12:40	"twitter api"	raykolbe	@morind45 Because the twitter api is slow and most client's aren't good.	Negative
+156	2009-05-18 03:13:03	yahoo	CarolineVilas	yahoo answers can be a butt sometimes	Negative
+157	2009-05-18 05:07:16	scrapbooking	rachelbegins	is scrapbooking with Nic =D	Positive
+172	2009-05-19 04:20:46	wolfram alpha	leedscentlib	RT @mashable: Five Things Wolfram Alpha Does Better (And Vastly Different) Than Google - http://bit.ly/6nSnR	Positive
+173	2009-05-20 02:37:09	nike	sportsgirl505	just changed my default pic to a Nike basketball cause bball is awesome!!!!!	Positive
+174	2009-05-20 02:38:27	nike	MatrixSystems	Nike owns NBA Playoffs ads w/ LeBron, Kobe, Carmelo? http://ow.ly/7Uiy  #Adidas #Billups #Howard  #Marketing #Branding	Neutral
+175	2009-05-20 02:38:45	nike	cadburysgirl	'Next time, I'll call myself Nike'	Neutral
+176	2009-05-20 02:38:50	nike	AddictedToFresh	New blog post: Nike SB Dunk Low Premium 'White Gum' http://tr.im/lOtT	Neutral
+177	2009-05-20 02:39:05	nike	coreysmbpro	RT @SmartChickPDX: Was just told that Nike layoffs started today :-(	Negative
+178	2009-05-20 02:39:28	nike	PRolivia	Back when I worked for Nike we had one fav word : JUST DO IT! :)	Positive
+179	2009-05-20 02:40:23	nike	ErrantDreams	By the way, I'm totally inspired by this freaky Nike commercial: http://snurl.com/icgj9	Positive
+192	2009-05-23 08:43:22	weka	nikete	giving weka an app engine interface, using the bird strike data for the tests, the logo is a given.	Neutral
+194	2009-05-24 04:18:48	50d	bigdigit	Brand New Canon EOS 50D 15MP DSLR Camera Canon 17-85mm IS Lens ...: Web Technology Thread, Brand New Canon EOS 5.. http://u.mavrev.com/5a3t	Neutral
+195	2009-05-24 04:19:04	50d	justinbettman	Class... The 50d is supposed to come today :)	Positive
+196	2009-05-24 08:48:14	lambda calculus	read0	needs someone to explain lambda calculus to him! :(	Negative
+197	2009-05-24 08:48:58	lambda calculus	BAK3R	Took the Graduate Field Exam for Computer Science today.  Nothing makes you feel like more of an idiot than lambda calculus.	Negative
+198	2009-05-24 08:49:52	east palo alto	SLICKSPIT	SHOUT OUTS TO ALL EAST PALO ALTO FOR BEING IN THE BUILDIN KARIZMAKAZE 50CAL GTA! ALSO THANKS TO PROFITS OF DOOM UNIVERSAL HEMPZ CRACKA......	Positive
+199	2009-05-24 08:50:32	east palo alto	ckwright	@legalgeekery Yeahhhhhhhhh, I wouldn't really have lived in East Palo Alto if I could have avoided it.  I guess it's only for the summer.	Negative
+204	2009-05-25 05:15:01	stanford	souleaterjh	@accannis @edog1203 Great Stanford course. Thanks for making it available to the public! Really helpful and informative for starting off!	Positive
+205	2009-05-25 05:15:24	stanford	susangao	NVIDIA Names Stanford's Bill Dally Chief Scientist, VP Of Research http://bit.ly/Fvvg9	Neutral
+206	2009-05-25 05:15:43	stanford	jimmy_chan2009	New blog post: Harvard Versus Stanford - Who Wins? http://bit.ly/MCoCo	Neutral
+207	2009-05-25 05:17:04	lakers	a_fio	@ work til 6pm... lets go lakers!!!	Positive
+208	2009-05-25 05:18:29	north korea	luvslikepi	Damn you North Korea. http://bit.ly/KtMeQ	Negative
+209	2009-05-25 05:19:05	north korea	utsagrad123	Can we just go ahead and blow North Korea off the map already?	Negative
+210	2009-05-25 05:19:14	north korea	stabotage	North Korea, please cease this douchebaggery. China doesn't even like you anymore. http://bit.ly/NeHSl	Negative
+211	2009-05-25 05:21:08	pelosi	zed01	Why the hell is Pelosi in freakin China? and on whose dime?	Negative
+212	2009-05-25 05:23:55	bailout	funky_old_man	Are YOU burning more cash $$$ than Chrysler and GM? Stop the financial tsunami. Where "bailout" means taking a handout!	Negative
+213	2009-05-25 05:25:34	insects	malcozer	insects have infected my spinach plant :(	Negative
+214	2009-05-25 05:26:50	insects	AntoineTheReaL	wish i could catch every mosquito in the world n burn em slowly.they been bitin the shit outta me 2day.mosquitos are the assholes of insects	Negative
+215	2009-05-25 05:27:05	insects	jonwolpert	just got back from church, and I totally hate insects.	Negative
+216	2009-05-25 05:28:50	mcdonalds	jachshore	Just got mcdonalds goddam those eggs make me sick. O yeah Laker up date go lakers. Not much of an update? Well it's true so suck it	Negative
+217	2009-05-25 05:29:39	mcdonalds	MamiYessi	omgg i ohhdee want mcdonalds damn i wonder if its open lol =]	Positive
+218	2009-05-25 05:31:21	exam	jvici0us	History exam studying ugh	Negative
+219	2009-05-25 05:31:43	exam	enriquenieto	I hate revision, it's so boring! I am totally unprepared for my exam tomorrow :( Things are not looking good...	Negative
+220	2009-05-25 05:31:45	exam	Drummermatt_182	Higher physics exam tommorow, not lookin forward to it much :(	Negative
+222	2009-05-25 05:32:11	exam	filmcriticbeta	It's a bank holiday, yet I'm only out of work now. Exam season sucks:(	Negative
+223	2009-05-25 05:34:40	cheney	lvlocal	Cheney and Bush are the real culprits - http://fwix.com/article/939496	Negative
+224	2009-05-25 05:34:51	cheney	QCWofNC	Life?s a bitch? and so is Dick Cheney. #p2 #bipart #tlot #tcot #hhrs #GOP #DNC http://is.gd/DjyQ	Negative
+225	2009-05-25 05:35:23	cheney	jepaco	Dick Cheney's dishonest speech about torture, terror, and Obama. -Fred Kaplan Slate. http://is.gd/DiHg	Negative
+226	2009-05-25 05:37:56	republican	ImportantQuotes	"The Republican party is a bunch of anti-abortion zealots who couldn't draw flies to a dump." -- Neal Boortz (just now, on the radio)	Negative
+227	2009-05-25 05:46:06	twitter api	fwhamm	is Twitter's connections API broken? Some tweets didn't make it to Twitter...	Negative
+228	2009-05-25 05:46:24	twitter api	jos897	i srsly hate the stupid twitter API timeout thing, soooo annoying!!!!! :(	Negative
+233	2009-05-27 12:34:21	jquery book	jystewart	@psychemedia I really liked @kswedberg's "Learning jQuery" book. http://bit.ly/pg0lT is worth a look too	Positive
+234	2009-05-27 12:34:47	jquery book	cfbloggers	jQuery UI 1.6 Book Review - http://cfbloggers.org/?c=30631	Neutral
+235	2009-05-27 12:38:56	goodby silverstein	CaerusMe	Very Interesting Ad from Adobe by Goodby, Silverstein &amp; Partners - YouTube - Adobe CS4: Le Sens Propre http://bit.ly/VprpT	Positive
+236	2009-05-27 12:39:13	goodby silverstein	HallandPartners	Goodby Silverstein agency new site! http://www.goodbysilverstein.com/ Great!	Positive
+237	2009-05-27 12:39:21	goodby silverstein	suedecrush	RT @designplay Goodby, Silverstein's new site: http://www.goodbysilverstein.com/ I enjoy it. *nice find!*	Positive
+238	2009-05-27 12:41:13	goodby silverstein	_imageworks	The ever amazing Psyop and Goodby Silverstein &amp; Partners for HP! http://bit.ly/g2rU8 Have to go play with After Effects now!	Positive
+239	2009-05-27 12:42:22	wieden	dustinrowley	top ten most watched on Viral-Video Chart.  Love the nike #mostvaluablepuppets campaign from Wieden &amp; Kennedy http://bit.ly/nR1n9	Positive
+251	2009-05-27 11:49:47	g2	xzela	zomg!!! I have a G2!!!!!!!	Positive
+252	2009-05-27 11:49:59	g2	mobiledreams	Ok so lots of buzz from IO2009 but how lucky are they - a Free G2!! http://is.gd/Hyzl	Positive
+253	2009-05-27 11:50:46	g2	crashfaster	just got a free G2 android at google i/o!!!	Positive
+254	2009-05-27 11:51:30	g2	dragonal	Guess I'll be retiring my G1 and start using my developer G2 woot #googleio	Positive
+255	2009-05-27 11:56:56	googleio	mastooo	At GWT fireside chat @googleio	Neutral
+256	2009-05-27 11:59:18	googleio	maex242	I am happy for Philip being at GoogleIO today	Positive
+317	2009-05-30 05:46:39	lakers	specs20	Lakers played great!  Cannot wait for Thursday night Lakers vs. ???	Positive
+328	2009-05-31 06:51:14	viral marketing	BrandKarma	Hi there, does anyone have a great source for advice on viral marketing?... http://link.gs/YtZ8	Neutral
+329	2009-05-31 06:51:30	viral marketing	mattcad	Judd Apatow creates fake sitcom on NBC.com to market his new movie... viral marketing at its best. http://is.gd/K0yK	Positive
+330	2009-05-31 06:51:34	viral marketing	grahamgrimshaw	Here's A case study on how to use viral marketing to add over 10,000 people to your list http://snipr.com/i50oz	Neutral
+331	2009-05-31 06:51:44	viral marketing	nicoleisms	VIRAL MARKETING FAIL. This Acia Pills brand oughta get shut down for hacking into people's messenger's.  i get 5-6 msgs in a day! Arrrgh!	Negative
+388	2009-06-02 02:54:09	"night at the museum"	Cristinellaa	watching Night at The Museum . Lmao	Positive
+389	2009-06-02 02:54:12	"night at the museum"	MzJill	i loved night at the museum!!!	Positive
+390	2009-06-02 02:54:22	"night at the museum"	Lynn_Sky	going to see the new night at the museum  movie with my family oh boy a three year old in the movies fuin	Neutral
+391	2009-06-02 02:54:40	"night at the museum"	bobster56	just got back from the movies.  went to see the new night at the museum with rachel.  it was good	Positive
+392	2009-06-02 02:54:44	"night at the museum"	jordanforeman	Just saw the new Night at the Museum movie...it was...okay...lol 7\10	Neutral
+393	2009-06-02 02:54:51	"night at the museum"	britree	Going to see night at the museum 2 with tall boy	Neutral
+394	2009-06-02 02:55:16	"night at the museum"	jellz	@shannyoday I will take you on a date to see night at the museum 2 whenever you want...it looks soooooo good	Positive
+395	2009-06-02 02:55:25	"night at the museum"	droherty	no watching The Night At The Museum. Getting Really Good	Positive
+396	2009-06-02 02:55:39	"night at the museum"	sarahbrooke	Night at the Museum, Wolverine and junk food - perfect monday!	Positive
+397	2009-06-02 02:55:49	"night at the museum"	jeremyempire	saw night at the museum 2 last night.. pretty crazy movie.. but the cast was awesome so it was well worth it. Robin Williams forever!	Positive
+398	2009-06-02 02:56:01	"night at the museum"	MirandaClues	I saw Night at the Museum: Battle of the Swithsonian today. It was okay. Your typical [kids] Ben Stiller movie.	Neutral
+399	2009-06-02 02:56:25	"night at the museum"	RGuad08	Taking Katie to see Night at the Museum.  (she picked it)	Neutral
+400	2009-06-02 02:56:38	"night at the museum"	xshallsx	Night at the Museum tonite instead of UP. :( oh well. that 4 yr old better enjoy it. LOL	Negative
+401	2009-06-02 03:00:25	gm	EconomyUpdates	GM says expects announcment on sale of Hummer soon - Reuters: WDSUGM says expects announcment on sale of Hummer .. http://bit.ly/4E1Fv	Neutral
+402	2009-06-02 03:01:10	gm	mshbrown	It's unfortunate that after the Stimulus plan was put in place twice to help GM on the back of the American people has led to the inevitable	Negative
+403	2009-06-02 03:02:17	gm	misschris62	Tell me again why we are giving more $$ to GM?? We should use that $ for all the programs that support the unemployed.	Negative
+404	2009-06-02 03:05:13	gm	artbynemo	@jdreiss oh yes but if GM dies it will only be worth more boo hahaha	Negative
+405	2009-06-02 03:14:36	time warner	windhamgirl	Time Warner cable is down again 3rd time since Memorial Day bummer!	Negative
+406	2009-06-02 03:15:11	time warner	mmmPi	I would rather pay reasonable yearly taxes for "free" fast internet, than get gouged by Time Warner for a slow connection.	Negative
+407	2009-06-02 03:15:23	time warner	NDEddieMac	NOOOOOOO my DVR just died and I was only half way through the EA presser. Hate you Time Warner	Negative
+408	2009-06-02 03:15:54	time warner	yourboysdot	F*ck Time Warner Cable!!! You f*cking suck balls!!! I have a $700 HD tv &amp; my damn HD channels hardly ever come in. Bullshit!!	Negative
+409	2009-06-02 03:16:16	time warner	Shazzainla	time warner has the worse customer service ever. I will never use them again	Negative
+410	2009-06-02 03:16:27	time warner	dstalk	Time warner is the devil. Worst possible time for the Internet to go out.	Negative
+411	2009-06-02 03:16:37	time warner	ernestalfonso	Fuck no internet damn time warner!	Negative
+412	2009-06-02 03:16:49	time warner	kaaatiee	time warner really picks the worst time to not work. all i want to do is get to mtv.com so i can watch the hills. wtfffff.	Negative
+413	2009-06-02 03:17:04	time warner	JasonNegron	I hate Time Warner! Soooo wish I had Vios. Cant watch the fricken Mets game w/o buffering. I feel like im watching free internet porn.	Negative
+414	2009-06-02 03:17:26	time warner	elphabablue	Ahh...got rid of stupid time warner today &amp; now taking a nap while the roomies cook for me. Pretty good end for a monday :)	Negative
+415	2009-06-02 03:17:55	time warner	gabe_rp	Time Warner's HD line up is crap.	Negative
+416	2009-06-02 03:18:50	time warner	JoeyCircles	is being fucked by time warner cable. didnt know modems could explode. and Susan Boyle sucks too!	Negative
+417	2009-06-02 03:22:07	time warner	ScooPost	Time Warner Cable Pulls the Plug on 'The Girlfriend Experience' - (www.tinyurl.com/m595fk)	Neutral
+418	2009-06-02 03:23:50	time warner	adamjleach	Time Warner Cable slogan: Where calling it a day at 2pm Happens.	Negative
+419	2009-06-02 03:24:43	china	HYPHYROCKSTAR	Rocawear Heads to China, Building 300 Stores  - http://tinyurl.com/nofet3	Neutral
+420	2009-06-02 03:24:47	china	BreakingBizNews	Climate focus turns to Beijing: The United Nations, the US and European governments have called on China to co-o.. http://tinyurl.com/lto92n	Neutral
+421	2009-06-02 03:24:57	china	myfoxdc	myfoxdc Barrie Students Back from Trip to China: A Silver Spring high school's class trip to China has en.. http://tinyurl.com/nlhqba	Neutral
+422	2009-06-02 03:25:01	china	drlombardo	Three China aerospace giants develop Tianjin Binhai  New Area,  22.9 B yuan invested   http://bit.ly/mMiDv	Neutral
+423	2009-06-02 03:27:27	gm	sinostream	http://xi.gs/04FO GM CEO: China will continue to be key partner	Neutral
+424	2009-06-02 03:27:48	gm	hammerauto	RT @LATimesautos is now the time to buy a GM car? http://bit.ly/nRzlu	Neutral
+425	2009-06-02 03:29:23	surgery	scoralli	Recovering from surgery..wishing @julesrenner was here :(	Negative
+426	2009-06-02 03:29:53	dentist	sardonnica	My wrist still hurts. I have to get it looked at. I HATE the dr/dentist/scary places. :( Time to watch Eagle eye. If you want to join, txt!	Positive
+427	2009-06-02 03:32:14	dentist	BChasnov	Dentist tomorrow. Have to brush well in the morning. Like I make my hair all nice before I get it cut. Why?	Neutral
+428	2009-06-02 03:32:33	dentist	LILJIZZEL	THE DENTIST LIED! " U WON'T FEEL ANY DISCOMORT! PROB WON'T EVEN NEED PAIN PILLS" MAN U TWIPPIN THIS SHIT HURT!! HOW MANY PILLS CAN I TAKE!!	Negative
+429	2009-06-02 03:32:45	dentist	giz2000	@kirstiealley my dentist is great but she's expensive...=(	Negative
+430	2009-06-02 03:33:30	dentist	cmonaussiecmon	@kirstiealley Pet Dentist http://www.funnyville.com/fv/pictures/dogdentures.shtml	Neutral
+431	2009-06-02 03:33:53	dentist	sorayabouby	is studing math ;) tomorrow exam and dentist :)	Positive
+432	2009-06-02 03:34:27	dentist	jeffreymodest	my dentist was wrong... WRONG	Negative
+433	2009-06-02 03:34:39	dentist	yowneh	Going to the dentist later.:|	Negative
+434	2009-06-02 03:34:58	dentist	CWilliams_Rltr	Son has me looking at cars online.  I hate car shopping.  Would rather go to the dentist!  Anyone with a good car at a good price to sell?	Negative
+435	2009-06-02 04:29:16	baseball	SimpleManJess	NCAA Baseball Super Regional - Rams Club http://bit.ly/Ro7nx	Neutral
+436	2009-06-02 04:29:26	baseball	H3LLGWAR	just started playing Major League Baseball 2K9. http://raptr.com/H3LLGWAR	Neutral
+437	2009-06-02 04:29:30	baseball	LouisvilleGrads	Cardinals baseball advance to Super Regionals. Face CS-Fullerton Friday.	Neutral
+438	2009-06-02 04:39:24	sony	SwainFamily	Sony coupon code.. Expires soon.. http://www.coupondork.com/r/1796	Neutral
+439	2009-06-02 04:39:49	safeway	neeeelia	waiting in line at safeway.	Neutral
+440	2009-06-02 04:39:59	safeway	ryanlipert	luke and i got stopped walking out of safeway and asked to empty our pockets and lift our shirts. how jacked up is that?	Negative
+441	2009-06-02 04:41:03	safeway	evan	Did not realize there is a gym above Safeway!	Neutral
+442	2009-06-02 04:41:07	safeway	ronjon	@XPhile1908 I have three words for you: "Safeway dot com"	Neutral
+443	2009-06-02 04:41:19	safeway	missleigh	Safeway is very rock n roll tonight	Positive
+444	2009-06-02 04:41:36	safeway	SharkKMV	Bout to hit safeway I gotta eat	Neutral
+445	2009-06-02 04:41:48	safeway	bosZmom	Jake's going to safeway!	Neutral
+446	2009-06-02 04:41:58	safeway	penlynwilson	Found a safeway. Picking up a few staples.	Neutral
+447	2009-06-02 04:42:28	safeway	mobileadgirl	Safeway Super-marketing via mobile coupons http://bit.ly/ONH7w	Neutral
+448	2009-06-02 04:42:34	safeway	phantomzangel	The safeway bathroom still smells like ass!	Negative
+449	2009-06-02 04:42:46	safeway	BreezB	At safeway on elkhorn, they move like they're dead!	Negative
+451	2009-06-02 06:53:03	eating	nonstopdiets	Your Normal Weight (and How to Get There) ? Normal Eating Blog http://bit.ly/ZeT8O	Neutral
+452	2009-06-02 06:53:11	eating	janelleshanks	Is Eating and Watching Movies....	Neutral
+456	2009-06-02 06:53:27	eating	hanaho	eating sashimi	Neutral
+457	2009-06-02 06:53:37	eating	Fiel	is eating  home made yema	Neutral
+458	2009-06-02 06:54:16	eating	aaindefenzo	eating cake	Neutral
+531	2009-06-04 04:49:55	nike	CrownRoyal8	i love Dwight Howard's vitamin water commercial... now i wish he was with NIKE and not adidas. lol.	Positive
+532	2009-06-04 04:52:36	nike	MrGQ	Found NOTHING at Nike Factory :/ Off to Banana Republic Outlet! http://myloc.me/2zic	Negative
+533	2009-06-04 04:53:09	nike	ngngfrancis	iPhone May Get Radio Tagging and Nike  : Recently-released iTunes version 8.2 suggests that VoiceOver functional.. http://tinyurl.com/oq5ctc	Neutral
+534	2009-06-04 04:54:23	nike	mikelongden	is lovin his Nike  already and that's only from running on the spot in his bedroom	Positive
+556	2009-06-07 01:12:50	jquery	imgsearch	Launched! http://imgsearch.net  #imgsearch #ajax #jquery #webapp	Neutral
+557	2009-06-07 01:13:52	jquery	teagone	@matthewcyan I finally got around to using jquery to make my bio collapse. Yay for slide animations.	Positive
+558	2009-06-07 01:14:08	jquery	marcroberts	RT @jquery: The Ultimate jQuery List - http://jquerylist.com/	Neutral
+559	2009-06-07 01:14:15	jquery	jacobrothstein	I just extracted and open-sourced a jQuery plugin from Stormweight to highlight text with a regular expression: http://bit.ly/ybJKb	Neutral
+560	2009-06-07 01:14:19	jquery	bedroomation	@anna_debenham what was the php jquery hack?	Neutral
+561	2009-06-07 01:14:42	jquery	vmkobs	jQuery Cheat Sheet http://www.javascripttoolbox.com/jquery/cheatsheet/	Neutral
+562	2009-06-07 01:15:04	jquery	NewTechBooks	Beginning JavaScript and CSS Development with jQuery #javascript #css #jquery http://bit.ly/TO3e5	Neutral
+563	2009-06-07 03:27:57	warren buffet	adthomas3	@PDubyaD right!!! LOL we'll get there!! I have high expectations, Warren Buffet style.	Positive
+564	2009-06-07 03:28:08	warren buffet	Alfred04654	RT @blknprecious1: RT GREAT @dbroos "Someone's sitting in the shade today because someone planted a tree a long time ago."- Warren Buffet	Positive
+565	2009-06-07 03:28:50	warren buffet	LovelyMiska	Warren Buffet on the economy http://ping.fm/Lau0p	Neutral
+566	2009-06-07 03:29:15	warren buffet	adamgilmer	Warren Buffet became (for a time) the richest man in the United States, not by working but investing in 1 Big idea which lead to the fortune	Positive
+567	2009-06-07 05:42:47	notre dame school	PatfaceCatface	According to the create a school, Notre Dame will have 7 receivers in NCAA 10 at 84 or higher rating :) *sweet*	Positive
+568	2009-06-07 05:42:56	notre dame school	MY_NBA_PLAYOFFS	All-Star Basketball Classic Tuesday Features Top Talent: Chattanooga's Notre Dame High School will play host.. http://bit.ly/qltJA	Neutral
+569	2009-06-07 09:38:16	kindle2	rachaelbender	@BlondeBroad it's definitely under warranty &amp; my experience is the amazon support for kindle is great! had to contact them about my kindle2	Positive
+570	2009-06-07 09:38:42	kindle2	aqrinc	RT Look, Available !Amazon Kindle2 &amp; Kindle DX, Get it Here: http://short.to/87ub The Top Electronic Book Reader Period, free 2 day ship ...	Neutral
+571	2009-06-07 09:47:01	time warner	davepurcell	Time Warner Road Runner customer support here absolutely blows. I hate not having other high-speed net options. I'm ready to go nuclear.	Negative
+572	2009-06-07 09:47:20	time warner	MarleyLuv26	Time Warner cable phone reps r dumber than nails!!!!! UGH! Cable was working 10 mins ago now its not WTF!	Negative
+573	2009-06-07 09:47:33	time warner	acomicbookgirl	@siratomofbones we tried but Time Warner wasn't being nice so we recorded today. :)	Negative
+574	2009-06-07 09:47:42	time warner	MichelleEReagan	OMG - time warner f'ed up my internet install - instead of today  its now NEXT saturday - another week w/o internet! &amp;$*ehfa^V9fhg[*# fml.	Negative
+575	2009-06-07 09:47:50	time warner	jpaje11	wth..i have never seen a line this loooong at time warner before, ugh.	Negative
+576	2009-06-07 09:47:56	time warner	JessSlevin	Impatiently awaiting the arrival of the time warner guy. It's way too pretty to be inside all afternoon	Negative
+577	2009-06-08 12:01:29	federer	jworthington	Man accosts Roger Federer during French Open http://ff.im/3HCPT	Neutral
+578	2009-06-08 01:58:49	"naive bayes"	R0B3rt2	Naive Bayes using EM for Text Classification. Really Frustrating...	Negative
+585	2009-06-08 06:28:01	stanford	TammyT	We went to Stanford University today. Got a tour. Made me want to go back to college. It's also decided all of our kids will go there.	Positive
+586	2009-06-08 06:28:05	stanford	elliottng	Investigation pending on death of Stanford CS prof / Google mentor Rajeev Motwani http://bit.ly/LwOUR tip @techmeme	Neutral
+587	2009-06-08 06:28:23	stanford	Shibuki_kun	I'm going to bed. It was a successful weekend. Stanford, here I come.	Neutral
+588	2009-06-08 06:55:01	car warranty call	painhatelove	@KarrisFoxy If you're being harassed by calls about your car warranty, changing your number won't fix that. They call every number. #d-bags	Negative
+589	2009-06-08 06:55:36	car warranty call	russdavisdotcom	Just blocked United Blood Services using Google Voice. They call more than those Car Warranty guys.	Negative
+594	2009-06-08 07:59:16	at&t	jamesmakeseyes	#at&amp;t is complete fail.	Negative
+595	2009-06-08 07:59:23	at&t	mikeyil	@broskiii OH SNAP YOU WORK AT AT&amp;T DON'T YOU	Negative
+596	2009-06-08 07:59:26	at&t	nakiasmile	@Mbjthegreat i really dont want AT&amp;T phone service..they suck when it comes to having a signal	Negative
+597	2009-06-08 08:00:52	at&t	wiiskey	I say we just cut out the small talk: AT&amp;T's new slogan: F__k you, give us your money. (Apologies to Bob Geldof.)	Negative
+598	2009-06-08 08:01:11	at&t	brkd	pissed about at&amp;t's mid-contract upgrade price for the iPhone (it's $200 more) I'm not going to pay $499 for something I thought was $299	Negative
+599	2009-06-08 08:02:01	at&t	jesusmbaez	Safari 4 is fast :) Even on my shitty AT&amp;T tethering.	Negative
+600	2009-06-08 08:06:29	at&t	ClaystationX	@ims What is AT&amp;T fucking up?	Negative
+601	2009-06-08 08:06:57	at&t	matthewphewes	@springsingfiend @dvyers @sethdaggett @jlshack AT&amp;T dropped the ball and isn't supporting crap with the new iPhone 3.0... FAIL #att SUCKS!!!	Negative
+602	2009-06-08 08:08:26	at&t	chelseabot	@MMBarnhill yay, glad you got the phone! Still, damn you, AT&amp;T.	Negative
+603	2009-06-08 08:46:01	wave sandbox	girgely	Google Wave Developer Sandbox Account Request http://bit.ly/2NYlc	Neutral
+613	2009-06-09 01:02:11	bing	StrategisAdv	Talk is Cheap: Bing that, I?ll stick with Google. http://bit.ly/XC3C8	Negative
+614	2009-06-09 03:58:40	summize	fabulousaura	@defsounds WTF is the point of deleting tweets if they can still be found in summize and searches? Twitter, please fix that. Thanks and bye	Negative
+626	2009-06-10 05:24:16	google	drylight	@mattcutts have google profiles stopped showing up in searches? cant see them anymore	Neutral
+627	2009-06-10 05:24:26	google	ManiKarthik	@ArunBasilLal I love Google Translator too ! :D Good day mate !	Positive
+1002	2009-05-11 03:17:54	kindle2	jhall515	reading on my new Kindle2!	Positive
+1003	2009-05-11 03:18:59	kindle2	HappyWino	My Kindle2 came and I LOVE it! :)	Positive
+1004	2009-05-11 03:21:50	kindle2	Teaguem2005	LOVING my new Kindle2.  Named her Kendra in case u were wondering. The "cookbook" is THE tool cuz it tells u all the tricks!  Best gift EVR!	Positive
+1005	2009-05-11 03:22:24	aig	dailysourcedev	The real AIG scandal / http://bit.ly/b82Px	Negative
+1006	2009-05-11 03:27:20	twitter	gandhirama	Any twitter to aprs apps yet?	Neutral
+1007	2009-05-11 03:27:58	twitter	delpop	45 Pros You Should Be Following on Twitter - http://is.gd/sMbZ	Neutral
+1008	2009-05-11 03:29:01	obama	lingbellbell	Obama is quite a good comedian! check out his dinner speech on CNN :) very funny jokes.	Positive
+1009	2009-05-11 03:29:38	obama	motsandco	' Barack Obama shows his funny side " &gt;&gt; http://tr.im/l0gY !! Great speech..	Positive
+1010	2009-05-11 03:29:41	obama	mickou	I like this guy : ' Barack Obama shows his funny side " &gt;&gt; http://tr.im/l0gY !!	Positive
+1011	2009-05-11 03:32:35	obama	meggentile	Obama's speech was pretty awesome last night! http://bit.ly/IMXUM	Positive
+1012	2009-05-11 03:33:05	obama	failness	Reading  "Bill Clinton Fail - Obama Win?" http://tinyurl.com/pcyxj7	Positive
+1013	2009-05-11 03:33:43	obama	kledy	Obama More Popular Than U.S. Among Arabs: Survey: President Barack Obama's popularity in leading Arab countries .. http://tinyurl.com/prlvqu	Positive
+1014	2009-05-11 03:34:04	obama	LaurelEdelstein	Obama's got JOKES!! haha just got to watch a bit of his after dinner speech from last night... i'm in love with mr. president ;)	Positive
+1015	2009-05-11 05:19:58	lebron	chelseabigass	LEbron james got in a car accident i guess..just heard it on evening news...wow i cant believe it..will he be ok ? http://twtad.com/69750	Negative
+1016	2009-05-11 05:20:22	lebron	Smitty478	is it me or is this the best the playoffs have been in years oh yea lebron and melo in the finals	Positive
+1017	2009-05-11 05:20:41	lebron	PurpleGorillaZz	@khalid0456 No, Lebron is the best	Positive
+1018	2009-05-11 05:20:48	lebron	MsStacha	@the_real_usher LeBron is cool.  I like his personality...he has good character.	Positive
+1019	2009-05-11 05:21:25	lebron	undefeated310	Watching Lebron highlights. Damn that niggas good	Positive
+1020	2009-05-11 05:21:57	lebron	BI_POLAROID	@Lou911 Lebron is MURDERING shit.	Positive
+1021	2009-05-11 05:22:06	lebron	IAmNoeAngel	@uscsports21 LeBron is a monsta and he is only 24. SMH The world ain't ready.	Positive
+1022	2009-05-11 05:22:26	lebron	ksmedia	@cthagod when Lebron is done in the NBA he will probably be greater than Kobe. Like u said Kobe is good but there alot of 'good' players.	Positive
+1023	2009-05-11 05:22:40	lebron	PrEttIBoIGaRy	KOBE IS GOOD BT LEBRON HAS MY VOTE	Positive
+1024	2009-05-11 05:22:51	lebron	kellan38	Kobe is the best in the world not lebron .	Negative
+1025	2009-05-11 05:52:44	world cup	jsincere150	@asherroth World Cup 2010 Access?? Damn, that's a good look!	Positive
+1026	2009-05-11 05:53:33	world cup 2010	biren	Just bought my tickets for the 2010 FIFA World Cup in South Africa. Its going to be a great summer. http://bit.ly/9GEZI	Positive
+1031	2009-05-11 07:49:06	fred wilson	DoAndroidsDream	Share: Disruption...Fred Wilson's slides for his talk at Google HQ  http://bit.ly/Bo8PG	Neutral
+2010	2009-05-14 02:58:11	"booz allen"	Moc5085	I have to go to Booz Allen Hamilton for a 2hr meeting :(  But then i get to go home :)	Negative
+2011	2009-05-14 03:41:01	indian election	citizenofindia	The great Indian tamasha truly will unfold from May 16, the result day for Indian General Election.	Positive
+2012	2009-05-14 05:23:32	kindle2	Melonze	@crlane I have the Kindle2. I've seen pictures of the DX, but haven't seen it in person. I love my Kindle - I'm on it everyday.	Positive
+2013	2009-05-14 05:24:33	kindle2	SPReviews	@criticalpath Such an awesome idea - the  continual learning program with a Kindle2  http://bit.ly/1ZLfF	Positive
+2014	2009-05-14 05:25:08	40d	ha_nobita	ok.. do nothing.. just thinking about 40D	Neutral
+2015	2009-05-14 05:26:03	40d	Jen2Squared	@faithbabywear Ooooh, what model are you getting??? I have the 40D and LOVE LOVE LOVE LOVE it!	Positive
+2018	2009-05-15 06:45:54	india election	__new	The Times of India: The wonder that is India's election. http://bit.ly/p7u1H	Positive
+2080	2009-05-16 04:18:47	google	BillVick	http://is.gd/ArUJ Good video from Google on using search options.	Positive
+2083	2009-05-16 10:42:21	itchy	xmikeflhxcx	@ambcharlesfield lol. Ah my skin is itchy :( damn lawnmowing.	Negative
+2084	2009-05-16 10:42:40	itchy	Timl9068	itchy back!! dont ya hate it!	Negative
+2085	2009-05-16 11:48:10	stanford	PassionModel	Stanford Charity Fashion Show a top draw http://cli.gs/NeNuAH	Positive
+2086	2009-05-16 11:48:38	stanford	TechUpdater	Stanford University?s Facebook Profile is One of the Most Popular Official University Pages - http://tinyurl.com/p5b3fl	Positive
+2087	2009-05-16 11:58:44	lyx	robotickilldozr	Lyx is cool.	Positive
+2093	2009-05-17 03:04:50	Danny Gokey	TheDALiSiA	SOOO DISSAPOiNTED THEY SENT DANNY GOKEY HOME... YOU STiLL ROCK ...DANNY ... MY HOMETOWN HERO !! YEAH MiLROCKEE!!	Positive
+2094	2009-05-17 03:04:55	Danny Gokey	fashion_retweet	RT @PassionModel 'American Idol' fashion: Adam Lambert tones down, Danny Gokey cute ... http://cli.gs/7JWSHV	Positive
+2095	2009-05-17 03:05:07	Danny Gokey	angelkim17	@dannygokey I love you DANNY GOKEY!! :)	Positive
+2096	2009-05-17 03:10:58	gm	download11	RT @justindavey: RT @tweetmeme GM OnStar now instantly sends accident location coordinates to 911 | GPS Obsessed http://bit.ly/16szL1	Neutral
+2097	2009-05-17 05:27:54	sleep	nichole17	so tired. i didn't sleep well at all last night.	Negative
+2098	2009-05-17 05:29:05	san francisco	xstaylor	Boarding plane for San Francisco in 1 hour; 6 hr flight. Blech.	Negative
+2099	2009-05-17 05:29:41	san francisco	miwahh	bonjour San Francisco. My back hurts from last night..	Negative
+2100	2009-05-17 05:30:03	san francisco	bKnapp	breakers. in San Francisco, CA http://loopt.us/4v88Bw.t	Neutral
+2101	2009-05-17 05:30:25	san francisco	rayceja	Heading to San Francisco	Neutral
+2102	2009-05-17 05:30:48	san francisco	deepikaC	With my best girl for a few more hours in San francisco. Mmmmmfamily is wonderful!	Positive
+2103	2009-05-17 05:31:44	aig	kaaslaw	F*** up big, or go home - AIG	Negative
+2104	2009-05-17 05:34:55	star trek	Pgobb	Went to see the Star Trek movie last night.  Very satisfying.	Positive
+2105	2009-05-17 05:35:23	star trek	qrboy85	I can't wait, going to see star trek tonight!!	Positive
+2106	2009-05-17 05:35:58	star trek	adamrisser	Star Trek was as good as everyone said!!	Positive
+2107	2009-05-18 01:13:21	Malcolm Gladwell	GoodPhoenix	am loving new malcolm gladwell book - outliers	Positive
+2108	2009-05-18 01:13:42	Malcolm Gladwell	silentcarto	I highly recommend Malcolm Gladwell's 'The Tipping Point.' My next audiobook will probably be one of his as well.	Positive
+2109	2009-05-18 01:14:02	Malcolm Gladwell	kerrrrrr	Malcolm Gladwell is a genius at tricking people into not realizing he's a fucking idiot	Negative
+2110	2009-05-18 01:14:35	Malcolm Gladwell	bling_crosby	@sportsguy33 hey no offense but malcolm gladwell is a pretenious, annoying cunt and he brings you down. cant read his shit	Negative
+2111	2009-05-18 01:15:31	Malcolm Gladwell	ripplemdk	RT @clashmore: http://bit.ly/SOYv7  Great article by Malcolm Gladwell.	Positive
+2112	2009-05-18 01:16:10	Malcolm Gladwell	drewlew34	I seriously underestimated Malcolm Gladwell.  I want to meet this dude.	Positive
+2113	2009-05-18 01:21:12	comcast	MrsGinobili	i hate comcast right now. everything is down cable internet &amp; phone....ughh what am i to do	Negative
+2114	2009-05-18 01:22:40	comcast	stormygirl223	Comcast sucks.	Negative
+2115	2009-05-18 01:23:00	comcast	theZoctor	The day I never have to deal with Comcast again will rank as one of the best days of my life.	Negative
+2116	2009-05-18 01:23:30	comcast	motkeps	@Dommm did comcast fail again??	Negative
+2117	2009-05-18 03:10:34	"twitter api"	YouAnswer	How do you use the twitter API?... http://bit.ly/4VBhH	Neutral
+2118	2009-05-18 03:10:52	"twitter api"	marekdsi	curses the Twitter API limit	Negative
+2119	2009-05-18 03:11:27	"twitter api"	mikecane	Now I can see why Dave Winer screams about lack of Twitter API, its limitations and access throttles!	Negative
+2120	2009-05-18 03:11:50	"twitter api"	trivektor	testing Twitter API	Neutral
+2121	2009-05-18 03:12:09	"twitter api"	rdoc420	Arg. Twitter API is making me crazy.	Negative
+2122	2009-05-18 03:12:23	"twitter api"	Hot_Tweets	Testing Twitter API. Remote Update	Neutral
+2137	2009-05-19 04:20:40	wolfram alpha	jeffswhite	I'm really loving the new search site Wolfram/Alpha. Makes Google seem so ... quaint. http://www72.wolframalpha.com/	Positive
+2138	2009-05-19 04:21:05	wolfram alpha	marriop	#wolfram Alpha SUCKS! Even for researchers the information provided is less than you can get from #google or #wikipedia, totally useless!	Negative
+2139	2009-05-20 02:37:18	nike	kewpiezmom	Off to the NIKE factory!!!	Positive
+2140	2009-05-20 02:38:17	nike	Chet_Lemon	New nike muppet commercials are pretty cute. Why do we live together again?	Positive
+2141	2009-05-20 02:38:28	nike	sneakerfiles	New blog post: Nike Zoom LeBron Soldier 3 (III) - White / Black - Teal http://bit.ly/rouUS	Neutral
+2142	2009-05-20 02:38:47	nike	nikeblog	New blog post: Nike Trainer 1 http://bit.ly/394bp	Neutral
+2143	2009-05-20 02:39:22	nike	laurenornot	@Fraggle312 oh those are awesome! i so wish they weren't owned by nike :(	Negative
+2158	2009-05-23 04:23:54	shoreline amphitheatre	julieules	@tonyhawk http://twitpic.com/5c7uj - AWESOME!!! Seeing the show Friday at the Shoreline Amphitheatre. Never seen NIN before. Can't wait. ...	Positive
+2159	2009-05-23 08:43:16	weka	gux_kung	arhh, It's weka bug. = =" and I spent almost two hours to find that out. crappy me	Negative
+2160	2009-05-24 04:18:46	50d	GrfxGuru	@mitzs hey bud :) np I do so love my 50D, although I'd love a 5D mkII more	Positive
+2161	2009-05-24 04:18:54	50d	joelgoodman	@jonduenas @robynlyn just got us a 50D for the office. :D	Positive
+2162	2009-05-24 04:19:00	50d	trevorcgibson	Just picked up my new Canon 50D...it's beautiful!!  Prepare for some seriously awesome photography!	Positive
+2163	2009-05-24 04:19:03	50d	ashpeckham	Just got my new toy. Canon 50D. Love love love it!	Positive
+2164	2009-05-24 08:48:13	lambda calculus	davidivins	Learning about lambda calculus :)	Positive
+2165	2009-05-24 08:49:34	east palo alto	SCSanFrancisco	#jobs #sittercity Help with taking care of sick child (East Palo Alto, CA) http://tinyurl.com/qwrr2m	Neutral
+2166	2009-05-24 08:50:19	east palo alto	nfarzan	I'm moving to East Palo Alto!	Positive
+2171	2009-05-25 05:14:58	stanford	tylerlin	@ atebits I just finished watching your Stanford iPhone Class session. I really appreciate it. You Rock!	Positive
+2172	2009-05-25 05:15:05	stanford	souleaterjh	@jktweet Hi! Just saw your Stanford talk and really liked your advice. Just saying Hi from Singapore (yes the videos do get around)	Positive
+2173	2009-05-25 05:15:18	stanford	MbaAdmission	#MBA Admissions Tips Stanford GSB Deadlines and Essay Topics 2009-2010 http://tinyurl.com/pet4fd	Neutral
+2174	2009-05-25 05:15:35	stanford	narain	Ethics and nonprofits - http://bit.ly/qsXRp  #stanford #socialentrepreneurship	Neutral
+2175	2009-05-25 05:16:52	lakers	JuanGir	LAKERS tonight let's go!!!!	Positive
+2176	2009-05-25 05:17:10	lakers	Alexi_G	Will the Lakers kick the Nuggets ass tonight?	Positive
+2177	2009-05-25 05:18:49	north korea	one_eighteen	Oooooooh... North Korea is in troubleeeee! http://bit.ly/19epAH	Negative
+2178	2009-05-25 05:19:07	north korea	FOLKTALE09	Wat the heck is North Korea doing!!??!! They just conducted powerful nuclear tests! Follow the link: http://www.msnbc.msn.com/id/30921379	Negative
+2179	2009-05-25 05:19:30	north korea	Mvsic	Listening to Obama... Friggin North Korea...	Negative
+2180	2009-05-25 05:21:16	pelosi	CFURNAROS	I just realized we three monkeys in the white Obama.Biden,Pelosi . Sarah Palin 2012	Negative
+2181	2009-05-25 05:21:30	pelosi	Rachael90210	@foxnews Pelosi should stay in China and never come back.	Negative
+2182	2009-05-25 05:21:35	pelosi	TylerSchmidt	Nancy Pelosi gave the worst commencement speech I've ever heard. Yes I'm still bitter about this	Negative
+2183	2009-05-25 05:25:36	insects	KayJay_x	ugh. the amount of times these stupid insects have bitten me. Grr..	Negative
+2184	2009-05-25 05:25:54	insects	BecCrew	Prettiest insects EVER - Pink Katydids: http://bit.ly/2Upw2p	Positive
+2185	2009-05-25 05:26:30	insects	euthanasia86	Just got barraged by a horde of insects hungry for my kitchen light. So scary.	Negative
+2187	2009-05-25 05:29:06	mcdonalds	connlocks	Just had McDonalds for dinner. :D It was goooood. Big Mac Meal. ;)	Positive
+2188	2009-05-25 05:29:11	mcdonalds	MamiYessi	AHH YES LOL IMA TELL MY HUBBY TO GO GET ME SUM MCDONALDS =]	Positive
+2190	2009-05-25 05:29:46	mcdonalds	Yuleineeee	Stopped to have lunch at McDonalds. Chicken Nuggetssss! :) yummmmmy.	Positive
+2191	2009-05-25 05:29:51	mcdonalds	XrachulX	Could go for a lot of McDonalds. i mean A LOT.	Positive
+2193	2009-05-25 05:31:52	exam	xKimmelie	my exam went good. @HelloLeonie: your prayers worked (:	Positive
+2194	2009-05-25 05:31:58	exam	laulaulauren	Only one exam left, and i am so happy for it :D	Positive
+2195	2009-05-25 05:32:22	exam	elllllen	Math review. Im going to fail the exam.	Negative
+2196	2009-05-25 05:35:08	cheney	LPSsports43	Colin Powell rocked yesterday on CBS. Cheney needs to shut the hell up and go home.Powell is a man of Honor and served our country proudly	Negative
+2197	2009-05-25 05:35:43	cheney	joahs	obviously not siding with Cheney here: http://bit.ly/19j2d	Negative
+2202	2009-05-26 10:39:46	mashable	paulobsf	Absolutely hilarious!!! from @mashable:  http://bit.ly/bccWt	Positive
+2203	2009-05-26 10:40:41	mashable	christinerose	@mashable I never did thank you for including me in your Top 100 Twitter Authors! You Rock! (&amp; I New Wave :-D) http://bit.ly/EOrFV	Positive
+2204	2009-05-27 12:34:45	jquery book	cfbloggers	Learning jQuery 1.3 Book Review - http://cfbloggers.org/?c=30629	Neutral
+2205	2009-05-27 12:37:30	jquery book	pdelsignore	RT @shrop: Awesome JQuery reference book for Coda! http://www.macpeeps.com/coda/ #webdesign	Positive
+2206	2009-05-27 12:38:44	goodby silverstein	bskatz	I've been sending e-mails like crazy today to my contacts...does anyone have a contact at Goodby SIlverstein...I'd love to speak to them	Positive
+2207	2009-05-27 12:39:05	goodby silverstein	sc0ttman	Adobe CS4 commercial by Goodby Silverstein: http://bit.ly/1aikhF	Neutral
+2208	2009-05-27 12:39:17	goodby silverstein	designplay	Goodby, Silverstein's new site... http://www.goodbysilverstein.com/ I enjoy it.	Positive
+2220	2009-05-27 11:49:35	g2	Drisgill	Wow everyone at the Google I/O conference got free G2's with a month of unlimited service	Positive
+2221	2009-05-27 11:50:26	g2	DearJellyHiJely	@vkerkez dood I got a free google android phone at the I/O conference. The G2!	Positive
+2222	2009-05-27 11:50:48	g2	itamarw	@Orli the G2 is amazing btw, a HUGE improvement over the G1	Positive
+2223	2009-05-27 11:56:46	googleio	daynah	HTML 5 Demos! Lots of great stuff to come! Yes, I'm excited. :) http://htmlfive.appspot.com #io2009 #googleio	Positive
+2224	2009-05-27 11:56:53	googleio	jackdaniels08	@googleio http://twitpic.com/62shi - Yay! Happy place! Place place!  I love Google!	Positive
+2225	2009-05-27 11:57:02	googleio	alpheus1	#GoogleIO | O3D - Bringing 3d graphics to the browser. Very nice tbh. Funfun.	Positive
+2295	2009-05-31 06:51:32	viral marketing	joshgammon	Awesome viral marketing for "Funny People" http://www.nbc.com/yo-teach/	Positive
+2296	2009-05-31 06:54:34	hitler	KatyWheatley1	Watching a programme about the life of Hitler, its only enhancing my geekiness of history.	Neutral
+2355	2009-06-02 02:54:08	"night at the museum"	TiffanyBakker	saw night at the museum out of sheer desperation. who is funding these movies?	Negative
+2356	2009-06-02 02:54:11	"night at the museum"	kezzumz	Night At The Museum 2? Pretty furkin good.	Positive
+2357	2009-06-02 02:54:14	"night at the museum"	bodhibuggy	Watching Night at the Museum - giggling.	Positive
+2358	2009-06-02 02:54:29	"night at the museum"	HistoryLuV3R	@pambeeslyjenna Jenna, I went to see Night At The Museum 2 today and I was so surprised to see three cast members from The Office...	Neutral
+2359	2009-06-02 02:54:42	"night at the museum"	ErcDrso	About to watch Night at the Museum with Ryan and Stacy	Neutral
+2360	2009-06-02 02:54:49	"night at the museum"	aykataoka	Getting ready to go watch Night at the Museum 2.  Dum dum, you give me gum gum!	Neutral
+2361	2009-06-02 02:55:06	"night at the museum"	Bcapote	Back from seeing 'Star Trek' and 'Night at the Museum.' 'Star Trek' was amazing, but 'Night at the Museum' was; eh.	Negative
+2362	2009-06-02 02:55:31	"night at the museum"	crikket_churps	just watched night at the museum 2! so stinkin cute!	Positive
+2363	2009-06-02 02:55:50	"night at the museum"	tish_tish	So, Night at the Museum 2 was AWESOME! Much better than part 1. Next weekend we'll see Up.	Positive
+2364	2009-06-02 02:56:13	"night at the museum"	Lilimich	I think I may have a new favorite restaurant. On our way to see "Night at the Museum 2".	Neutral
+2365	2009-06-02 02:56:31	"night at the museum"	stealing_second	UP! was sold out, so i'm seeing Night At The Museum 2. I'm __ years old.	Neutral
+2366	2009-06-02 02:56:44	"night at the museum"	Pas_de_Cheval	saw the new Night at the Museum and i loved it. Next is to go see UP in 3D	Positive
+2367	2009-06-02 03:00:28	gm	lloydnelson	It is a shame about GM. What if they are forced to make only cars the White House THINKS will sell? What do you think?	Negative
+2368	2009-06-02 03:00:40	gm	overthrow	As u may have noticed, not too happy about the GM situation, nor AIG, Lehman, et al	Negative
+2369	2009-06-02 03:00:51	gm	economywire	Obama: Nationalization of GM to be short-term   (AP) http://tinyurl.com/md347r	Neutral
+2370	2009-06-02 03:02:00	gm	tradecruz	@Pittstock $GM good riddance.  sad though.	Negative
+2371	2009-06-02 03:02:34	gm	ZendoDeb	I Will NEVER Buy a Government Motors Vehicle: Until just recently, I drove GM cars. Since 1988, when I bought a .. http://tinyurl.com/lulsw8	Negative
+2372	2009-06-02 03:04:22	gm	rbmshow	Having the old Coca-Cola guy on the GM board is stupid has heck! #tcot #ala	Negative
+2373	2009-06-02 03:04:35	gm	Ash_Craigslist	#RantsAndRaves The worst thing about GM (concord / pleasant hill / martinez): is the fucking UAW. ..   http://buzzup.com/4ueb	Negative
+2374	2009-06-02 03:04:45	gm	BarackProblema	Give a man a fish, u feed him for the day. Teach him to fish, u feed him for life. Buy him GM, and u F**K him over for good.	Negative
+2375	2009-06-02 03:05:18	gm	ericdano	The more I hear about this GM thing the more angry I get. Billions wasted, more bullshit. All for something like 40k employees and all the..	Negative
+2376	2009-06-02 03:05:50	gm	tradecruz	@QuantTrader i own a GM car and it is junk as far as quality compared to a honda	Negative
+2377	2009-06-02 03:06:40	gm	ktsophie	sad day...bankrupt GM	Negative
+2378	2009-06-02 03:06:45	gm	nicolemg415	is upset about the whole GM thing. life as i know it is so screwed up	Negative
+2379	2009-06-02 03:14:21	time warner	ProofofVenom	whoever is running time warner needs to be repeatedly raped by a rhino so they understand the consequences of putting out shitty cable svcs	Negative
+2380	2009-06-02 03:14:32	time warner	flywire	Time Warner CEO hints at online fees for magazines      (AP) - Read from Mountain View,United States. Views 16209 http://bit.ly/UdFCH	Neutral
+2381	2009-06-02 03:15:18	time warner	batchoutlost	#WFTB Joining a bit late. My connection was down (boo time warner)	Negative
+2382	2009-06-02 03:15:32	time warner	floatingatoll	Cox or Time Warner?  Cox is cheaper and gets a B on dslreports.  TW is more expensive and gets a C.	Negative
+2383	2009-06-02 03:15:52	time warner	kippy2	i am furious with time warner and their phone promotions!	Negative
+2384	2009-06-02 03:16:23	time warner	iamtony	Just got home from chick-fil-a with the boys. Damn my internets down =( stupid time warner	Negative
+2385	2009-06-02 03:16:42	time warner	dcwhip	could time-warner cable suck more?  NO.	Negative
+2386	2009-06-02 03:17:03	time warner	JustGLB	Pissed at Time Warner for causin me to have slow internet problems	Negative
+2387	2009-06-02 03:18:04	time warner	chaneykyoto	@sportsguy33 Ummm, having some Time Warner problems?	Negative
+2388	2009-06-02 03:18:49	time warner	ldmullen	You guys see this?  Why does Time Warner have to suck so much ass?  Really wish I could get U-Verse at my apartment. http://bit.ly/s594j	Negative
+2389	2009-06-02 03:22:08	time warner	JohnTurlington	RT @sportsguy33 The upside to Time Warner: unhelpful phone operators   superslow on-site service. Crap, that's not an upside.	Negative
+2390	2009-06-02 03:22:19	time warner	johnscleary	RT @sportsguy33: New Time Warner slogan: "Time Warner, where we make you long for the days before cable."	Negative
+2391	2009-06-02 03:23:36	time warner	ecormany	confirmed: it's Time Warner's fault, not Facebook's, that fb is taking about 3 minutes to load. so tempted to switch to verizon =/	Negative
+2392	2009-06-02 03:24:00	time warner	matsonj	@sportsguy33 Time Warner = epic fail	Negative
+2393	2009-06-02 03:24:45	china	YildirimNews	Lawson to head Newedge Hong Kong http://bit.ly/xLQSD #business #china	Neutral
+2394	2009-06-02 03:24:59	china	zedomax	Weird Piano Guitar House in China! http://u2s.me/72i8	Neutral
+2395	2009-06-02 03:27:19	gm	theprovince	Send us your GM/Chevy photos http://tinyurl.com/luzkpq	Neutral
+2396	2009-06-02 03:27:34	gm	PeteHall	I know. How sad is that?  RT @caseymercier: 1st day of hurricane season. That's less scarey than govt taking over GM.	Negative
+2397	2009-06-02 03:27:52	gm	ram_zone	GM files Bankruptcy, not a good sign...	Negative
+2398	2009-06-02 03:28:41	yankees	irishyanks	yankees won mets lost. its a good day.	Positive
+2399	2009-06-02 03:29:47	dentist	Erinthebigsis	My dentist appt today was actually quite enjoyable.	Positive
+2400	2009-06-02 03:32:10	dentist	cassieeeelove	I hate the effing dentist.	Negative
+2401	2009-06-02 03:32:28	dentist	johnnyt183	@stevemoakler i had a dentist appt this morning and had the same conversation!	Neutral
+2402	2009-06-02 03:33:25	dentist	b_bassi	@kirstiealley I hate going to the dentist.. !!!	Negative
+2403	2009-06-02 03:34:23	dentist	cmg11	i hate the dentist....who invented them anyways?	Negative
+2404	2009-06-02 03:34:37	dentist	arianaflyy	this dentist's office is cold :/	Negative
+2405	2009-06-02 03:34:50	dentist	jettellis	Check this video out -- David After Dentist http://bit.ly/47aW2	Neutral
+2406	2009-06-02 03:35:05	dentist	AdiOpERsOcoM	First dentist appointment [in years] on Wednesday possibly.	Neutral
+2407	2009-06-02 04:29:14	baseball	HallofChampions	Tom Shanahan's latest column on SDSU and its NCAA Baseball Regional appearance: http://ow.ly/axhu	Neutral
+2408	2009-06-02 04:29:17	baseball	SimpleManJess	BaseballAmerica.com: Blog: Baseball America Prospects Blog ? Blog ... http://bit.ly/EtT8a	Neutral
+2409	2009-06-02 04:29:28	baseball	Oregon_Live	Portland city politics may undo baseball park http://tinyurl.com/lpjquj	Neutral
+2410	2009-06-02 04:39:41	safeway	AirDye	RT @WaterSISWEB: CA Merced's water bottled by Safeway, resold at a profit: Wells are drying up across the county http://tinyurl.com/mb573s	Neutral
+2411	2009-06-02 04:40:09	safeway	csquaredx	dropped her broccoli walking home from safeway! ;( so depressed	Neutral
+2412	2009-06-02 04:41:05	safeway	XPhile1908	@ronjon we don't have Safeway.	Neutral
+2413	2009-06-02 04:41:13	safeway	LaurenAmor	Just applied at Safeway!(: Yeeeee!	Positive
+2414	2009-06-02 04:41:24	safeway	TravisJensenSF	@ Safeway. Place is a nightmare right now. Bumming.	Negative
+2415	2009-06-02 04:41:32	safeway	Lovely_Lauren	at safeway with dad	Neutral
+2416	2009-06-02 04:41:41	safeway	fugface85	HATE safeway select green tea icecream! bought two cartons, what a waste of money.  &gt;_&lt;	Negative
+2417	2009-06-02 04:42:00	safeway	_JessicaJOY	Safeway with Marvin, Janelle, and Auntie Lhu	Neutral
+2418	2009-06-02 04:42:29	safeway	mobileadgirl	Safeway offering mobile coupons http://bit.ly/ONH7w	Neutral
+2419	2009-06-02 06:52:26	driving	m_marchesi	Phillies Driving in the Cadillac with the Top Down in Cali, Win 5-3 - http://tinyurl.com/nzcjqa	Neutral
+2421	2009-06-02 06:53:09	eating	TheDebtress	Saved money by opting for grocery store trip and stocking food in hotel room fridge vs. eating out every night while out of town.	Neutral
+2422	2009-06-02 06:53:15	eating	face_of_boe	Lounging around, eating Taco Bell and watching NCIS before work tonight. Need help staying awake.	Neutral
+2426	2009-06-02 06:53:30	eating	LaraAvni	eating breakfast and then school	Neutral
+2427	2009-06-02 06:53:32	eating	elpasira	still hungry after eating....	Neutral
+2428	2009-06-02 06:53:45	eating	Fitness_101	10 tips for healthy eating ? ResultsBy Fitness Blog :: Fitness ... http://bit.ly/62gFn	Neutral
+2429	2009-06-02 06:54:11	eating	ohmurder	with the boyfriend, eating a quesadilla	Neutral
+2430	2009-06-02 06:54:19	eating	whoaoblivious	Eating dinner. Meat, chips, and risotto.	Neutral
+2502	2009-06-04 04:53:02	nike	stefanjos	got a new pair of nike shoes. pics up later	Neutral
+2503	2009-06-04 04:53:15	nike	nsborg	Nike SB Blazer High "ACG" Custom - Brad Douglas - http://timesurl.at/45a448	Neutral
+2504	2009-06-04 04:53:20	nike	marieforleo	Nike rocks. I'm super grateful for what I've done with them :) &amp; the European Division of NIKE is BEYOND! @whitSTYLES @muchasmuertes	Positive
+2505	2009-06-04 04:53:48	nike	imflashy	Nike Air Yeezy Khaki/Pink Colorway Release - http://shar.es/bjfN	Neutral
+2506	2009-06-04 04:54:17	nike	TheGlossMagazin	@evelynbyrne have you tried Nike  ? V. addictive.	Positive
+2507	2009-06-04 04:54:32	nike	MiniGreek	@erickoston That looks an awful lot like one of Nike's private jets....I'm just sayin....	Neutral
+2508	2009-06-04 04:54:36	nike	TracySuter	The Nike Training Club (beta) iPhone app looks very interesting.	Positive
+2529	2009-06-07 01:12:38	jquery	TobyJuanKenobi	argghhhh why won't  my jquery appear in safari bad safari !!!	Negative
+2530	2009-06-07 01:12:44	jquery	inBlogs	DevSnippets : jQuery Tools - Javascript UI Components for the Web... http://inblogs.org/go/hfuqt	Neutral
+2531	2009-06-07 01:12:46	jquery	vmkobs	all about Ajax,jquery ,css ,JavaScript and more... (many examples) http://ajaxian.com/	Neutral
+2532	2009-06-07 01:13:23	jquery	ghurson	I'm ready to drop the pretenses, I am forever in love with jQuery, and I want to marry it. Sorry ladies, this nerd is jquery.spokenFor.js	Positive
+2533	2009-06-07 01:13:34	jquery	5x1llz	This is cold.. I was looking at google's chart//visualization API and found this jQuery "wrapper" for the API...  http://tinyurl.com/mq52bq	Neutral
+2534	2009-06-07 01:13:43	jquery	bryall	I spent most of my day reading a jQuery book. Now to start drinking some delirium tremens.	Neutral
+2535	2009-06-07 01:14:41	jquery	vmkobs	jquery Selectors http://codylindley.com/jqueryselectors/	Neutral
+2536	2009-06-07 01:15:08	jquery	maheshcha	How to implement a news ticker with jQuery and ten lines of code http://bit.ly/CZnFJ	Neutral
+2537	2009-06-07 03:27:52	warren buffet	MyBenchmarkMtg	What's Buffet Doing? Warren Buffett Kicks Butt In Battle of the Boots: Posted By:Alex Crippe.. http://bit.ly/AUIzO	Neutral
+2538	2009-06-07 03:28:18	warren buffet	PragCapitalist	SUPER INVESTORS: A great weekend read here from Warren Buffet. Oldie, but a goodie. http://tinyurl.com/oqxgga	Positive
+2539	2009-06-07 03:28:26	warren buffet	SmartMouthBroad	I'm truly braindead.  I couldn't come up with Warren Buffet's name to save my soul	Neutral
+2540	2009-06-07 03:29:04	warren buffet	goncalol	reading Michael Palin book, The Python Years...great book. I also recommend Warren Buffet &amp; Nelson Mandela's bio	Positive
+2541	2009-06-07 05:42:50	notre dame school	BobtheRobot	I mean, I'm down with Notre Dame if I have to.  It's a good school, I'd be closer to Dan, I'd enjoy it.	Positive
+2543	2009-06-07 09:47:45	time warner	Hittman	I can't watch TV without a Tivo.  And after all these years, the Time/Warner DVR  STILL sucks. http://www.davehitt.com/march03/twdvr.html	Negative
+2544	2009-06-08 12:01:27	federer	aiban	I'd say some sports writers are idiots for saying Roger Federer is one of the best ever in Tennis.  Roger Federer is THE best ever in Tennis	Positive
+2545	2009-06-08 12:12:16	kindle2	nyctimes	I still love my Kindle2 but reading The New York Times on it does not feel natural. I miss the Bloomingdale ads.	Negative
+2546	2009-06-08 12:13:48	kindle2	k8tb52	I love my Kindle2. No more stacks of books to trip over on the way to the loo.	Positive
+2558	2009-06-08 07:59:10	at&t	taylorcarrigan	Although today's keynote rocked, for every great announcement, AT&amp;T shit on us just a little bit more.	Negative
+2559	2009-06-08 07:59:50	at&t	susanjane	@sheridanmarfil - its not so much my obsession with cell phones, but the iphone!  i'm a slave to at&amp;t forever because of it. :)	Negative
+2560	2009-06-08 08:01:17	at&t	stick08	@freitasm oh I see. I thought AT&amp;T were 900MHz WCDMA?	Neutral
+2561	2009-06-08 08:01:55	at&t	CaptainCraigos	@Plip Where did you read about tethering support Phil?  Just AT&amp;T or will O2 be joining in?	Neutral
+2562	2009-06-08 08:06:40	at&t	iPhoneFuzzball	Fuzzball is more fun than AT&amp;T ;P http://fuzz-ball.com/twitter	Negative
+2563	2009-06-08 08:07:44	at&t	itsolivia	Today is a good day to dislike AT&amp;T. Vote out of office indeed, @danielpunkass	Negative
+2564	2009-06-08 08:46:18	wave sandbox	kyrabeckf	GOT MY WAVE SANDBOX INVITE! Extra excited! Too bad I have class now... but I'll play with it soon enough! #io2009 #wave	Positive
+2575	2009-06-09 03:58:11	summize	auxesis	looks like summize has gone down. too many tweets from WWDC perhaps?	Negative
+2576	2009-06-09 05:14:20	kindle2	deedeewarren	I hope the girl at work  buys my Kindle2	Neutral
+2577	2009-06-09 05:14:32	kindle2	RogerSPress	Missed this insight-filled May column: One smart guy looking closely at why he's impressed with Kindle2 http://bit.ly/i0peY @wroush	Neutral
+2578	2009-06-09 05:17:27	kindle2	kmozena	@sklososky Thanks so much!!! ...from one of your *very* happy Kindle2 winners ; ) I was so surprised, fabulous. Thank you! Best, Kathleen	Positive
+2579	2009-06-09 05:53:40	iphone app	Jesssssii	Man I kinda dislike Apple right now. Case in point: the iPhone 3GS. Wish there was a video recorder app. Please?? http://bit.ly/DZm1T	Negative
+7011	2009-06-10 04:03:37	kindle2	jimhong	@cwong08 I have a Kindle2 (&amp; Sony PRS-500). Like it! Physical device feels good. Font is nice. Pg turns are snappy enuf. UI a little klunky.	Positive
+7012	2009-06-10 04:03:53	kindle2	Ant_Ward	The #Kindle2 seems the best eReader, but will it work in the UK and where can I get one?	Positive
+7015	2009-06-10 05:24:40	google	popitlockit	I have a google addiction. Thank you for pointing that out, @annamartin123. Hahaha.	Positive
+7055	2009-06-10 03:31:56	visa card	FionaSarah	@ruby_gem My primary debit card is Visa Electron.	Neutral
+8051	2009-06-10 03:31:59	visa card	MalloryRayne	Off to the bank to get my new visa platinum card	Neutral
+8052	2009-06-10 03:32:06	visa card	_abi_	dearest @google, you rich bastards! the VISA card you sent me doesn't work. why screw a little guy like me?	Negative
+13051	2009-06-13 04:23:31	Bobby Flay	sfkerropi6	has a date with bobby flay and gut fieri from food network	Neutral
+13052	2009-06-13 04:24:08	Bobby Flay	tessalau	Excited about seeing Bobby Flay and Guy Fieri tomorrow at the Great American Food &amp; Music Fest!	Positive
+13053	2009-06-13 04:24:12	Bobby Flay	ZFilth	Gonna go see Bobby Flay 2moro at Shoreline. Eat and drink. Gonna be good.	Positive
+13054	2009-06-13 04:24:25	Bobby Flay	annieblane	can't wait for the great american food and music festival at shoreline tomorrow.  mmm...katz pastrami and bobby flay. yes please.	Positive
+13055	2009-06-13 04:24:34	Bobby Flay	LAURAcBRYAN	My dad was in NY for a day, we ate at MESA grill last night and met Bobby Flay. So much fun, except I completely lost my voice today.	Positive
+13073	2009-06-14 04:35:33	latex	NathanChalmers	Fighting with LaTex. Again...	Negative
+13074	2009-06-14 04:35:53	latex	LoonyLongbottom	@Iheartseverus we love you too and don't want you to die!!!!!!  Latex = the devil	Negative
+13075	2009-06-14 04:36:07	latex	QuadError	7 hours. 7 hours of inkscape crashing, normally solid as a rock. 7 hours of LaTeX complaining at the slightest thing. I can't take any more.	Negative
+13076	2009-06-14 09:35:58	iran	musicmuse	How to Track Iran with Social Media: http://bit.ly/2BoqU	Neutral
+13077	2009-06-14 09:36:04	iran	sketoaks	Shit's hitting the fan in Iran...craziness indeed #iranelection	Negative
+13078	2009-06-14 09:36:09	iran	jamespenycate	Monday already. Iran may implode. Kitchen is a disaster. @annagoss seems happy. @sebulous had a nice weekend and @goldpanda is great. whoop.	Negative
+14045	2009-06-13 04:13:59	aapl	boardcentral	Twitter Stock buzz: $AAPL $ES_F $SPY $SPX $PALM  (updated: 12:00 PM)	Neutral
+14046	2009-06-13 04:23:41	Bobby Flay	JimFacey	getting ready to test out some burger receipes this weekend. Bobby Flay has some great receipes to try. Thanks Bobby.	Positive
+14049	2009-06-13 04:24:03	Bobby Flay	wetfishdesigns	@johncmayer is Bobby Flay joining you?	Neutral
+14050	2009-06-13 04:24:15	Bobby Flay	A_TALL_BLONDE	i lam so in love with Bobby Flay... he is my favorite. RT @terrysimpson: @bflay you need a place in Phoenix. We have great peppers here!	Positive
+14069	2009-06-14 04:31:12	latex	rooney_tunes	I just created my first LaTeX file from scratch. That didn't work out very well. (See @amandabittner , it's a great time waster)	Negative
+14070	2009-06-14 04:31:23	latex	roguemovement	using Linux and loving it - so much nicer than windows... Looking forward to using the wysiwyg latex editor!	Positive
+14071	2009-06-14 04:31:28	latex	yomcat	After using LaTeX a lot, any other typeset mathematics just looks hideous.	Positive
+14072	2009-06-14 04:31:43	latex	proggit	Ask Programming: LaTeX or InDesign?: submitted by calcio1 [link] [1 comment] http://tinyurl.com/myfmf7	Neutral
+14073	2009-06-14 04:32:17	latex	sam33r	On that note, I hate Word. I hate Pages. I hate LaTeX. There, I said it. I hate LaTeX. All you TEXN3RDS can come kill me now.	Negative
+14074	2009-06-14 04:36:34	latex	iamtheonlyjosie	Ahhh... back in a *real* text editing environment. I &lt;3 LaTeX.	Positive
+14075	2009-06-14 09:36:07	iran	plutopup7	Trouble in Iran, I see. Hmm. Iran. Iran so far away. #flockofseagullsweregeopoliticallycorrect	Negative
+14076	2009-06-14 09:36:17	iran	captain_pete	Reading the tweets coming out of Iran... The whole thing is terrifying and incredibly sad...	Negative

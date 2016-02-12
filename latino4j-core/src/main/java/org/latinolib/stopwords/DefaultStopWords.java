@@ -27,7 +27,7 @@ public class DefaultStopWords implements StopWords, Serializable
     }
 
     private void loadStopWords(Language language) throws IOException {
-        InputStream ip = getClass().getResourceAsStream("/latino-" + language.toString().toLowerCase() + ".sw");
+        InputStream ip = DefaultStopWords.class.getResourceAsStream("latino-" + language.toString().toLowerCase() + ".sw");
         if (ip == null) { throw new IOException("Cannot find " + language + " stop words."); }
         BufferedReader br = new BufferedReader(new InputStreamReader(ip));
         String line;

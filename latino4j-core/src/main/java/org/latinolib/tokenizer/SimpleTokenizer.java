@@ -10,7 +10,7 @@ import java.util.NoSuchElementException;
 /**
  * author saxo
  */
-public class SimpleTokenizer implements Tokenizer, Serializable
+public class SimpleTokenizer implements Tokenizer
 {
     private static final long serialVersionUID = 2460649040242465196L;
 

@@ -8,7 +8,7 @@ import java.util.HashSet;
 /**
  * Author mIHA
  */
-public class DefaultStopWords implements StopWords, Serializable
+public class DefaultStopWords implements StopWords
 {
     private static final long serialVersionUID = 5614057816875363839L;
 

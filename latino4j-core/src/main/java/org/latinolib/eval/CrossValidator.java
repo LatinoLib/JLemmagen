@@ -45,6 +45,10 @@ public class CrossValidator<T, U>
         }
     }
 
+    public static <T, U> CrossValidator<T, U> nonShuffled(int numFolds, LabeledDataset<T, U> data) {
+        return new CrossValidator<T, U>(numFolds, data, null, false, false, false);
+    }
+
     public static <T, U> CrossValidator<T, U> shuffled(int numFolds, LabeledDataset<T, U> data) {
         return new CrossValidator<T, U>(numFolds, data, null, true, false, false);
     }
@@ -55,6 +59,10 @@ public class CrossValidator<T, U>
 
     public static <T, U> CrossValidator<T, U> stratifiedShuffled(int numFolds, LabeledDataset<T, U> data) {
         return new CrossValidator<T, U>(numFolds, data, null, true, true, true);
+    }
+
+    public static <T, U> CrossValidator<T, U> nonShuffled(int numFolds, LabeledDataset<T, U> data, Random rnd) {
+        return new CrossValidator<T, U>(numFolds, data, rnd, false, false, false);
     }
 
     public static <T, U> CrossValidator<T, U> shuffled(int numFolds, LabeledDataset<T, U> data, Random rnd) {
@@ -133,9 +141,15 @@ public class CrossValidator<T, U>
         }
     }
 
+    public PerfData<T> runModel(final Model<T, U> model, ExecutorService executor)
+            throws ExecutionException, InterruptedException {
+        return runModel(model, "", "", executor);
+    }
+
     public PerfData<T> runModel(final Model<T, U> model, final String expName, final String algName,
             ExecutorService executor) throws ExecutionException, InterruptedException {
         Preconditions.checkNotNull(model);
+        Preconditions.checkNotNull(executor);
 
         final PerfData<T> perfData = new PerfData<T>();
         List<Future<?>> futures = Lists.newArrayList();

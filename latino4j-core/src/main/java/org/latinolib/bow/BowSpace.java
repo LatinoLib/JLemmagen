@@ -399,7 +399,6 @@ public class BowSpace implements Serializable
         return bows;
     }
 
-
     private void processDocumentNGrams(List<WordStem> nGrams, int startIdx, Map<Integer, Integer> tfVec) {
         String nGramStem = "";
         String nGram = "";
@@ -414,6 +413,10 @@ public class BowSpace implements Serializable
             nGram += " ";
             nGramStem += " ";
         }
+    }
+
+    public SparseVector processDocument(String document) {
+        return processDocument(document, true);
     }
 
     public SparseVector processDocument(String document, boolean normalizeTokens) {

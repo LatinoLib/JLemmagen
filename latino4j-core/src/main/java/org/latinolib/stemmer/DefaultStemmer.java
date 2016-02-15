@@ -8,7 +8,7 @@ import java.io.Serializable;
 /**
  * Author mIHA
  */
-public class DefaultStemmer implements Stemmer, Serializable
+public class DefaultStemmer implements Stemmer
 {
     private static final long serialVersionUID = 1281198274687573313L;
 

@@ -1,6 +1,7 @@
 package org.latinolib.eval;
 
 import com.google.common.base.Preconditions;
+import com.google.common.base.Supplier;
 import com.google.common.collect.Lists;
 import org.latinolib.model.LabeledDataset;
 import org.latinolib.model.LabeledExampleEntry;
@@ -103,9 +104,9 @@ public class CrossValidator<T, U>
         return folds.get(idx);
     }
 
-    public List<FoldData> getFolds() {
+    public List<FoldData<T, U>> getFolds() {
         return Lists.newArrayList(
-            new Iterator<FoldData>()
+            new Iterator<FoldData<T, U>>()
             {
                 private int current = 0;
 
@@ -131,9 +132,15 @@ public class CrossValidator<T, U>
         return runModel(model, "", "");
     }
 
-    public PerfData<T> runModel(Model<T, U> model, String expName, String algName) {
+    public PerfData<T> runModel(final Model<T, U> model, String expName, String algName) {
         try {
-            return runModel(model, expName, algName, Executors.newSingleThreadExecutor());
+            return runModel(new Supplier<Model<T, U>>()
+            {
+                @Override
+                public Model<T, U> get() {
+                    return model;
+                }
+            }, expName, algName, Executors.newSingleThreadExecutor());
         } catch (ExecutionException e) {
             throw new RuntimeException(e);
         } catch (InterruptedException e) {
@@ -141,14 +148,14 @@ public class CrossValidator<T, U>
         }
     }
 
-    public PerfData<T> runModel(final Model<T, U> model, ExecutorService executor)
+    public PerfData<T> runModel(Supplier<Model<T, U>> model, ExecutorService executor)
             throws ExecutionException, InterruptedException {
         return runModel(model, "", "", executor);
     }
 
-    public PerfData<T> runModel(final Model<T, U> model, final String expName, final String algName,
+    public PerfData<T> runModel(final Supplier<Model<T, U>> modelSupplier, final String expName, final String algName,
             ExecutorService executor) throws ExecutionException, InterruptedException {
-        Preconditions.checkNotNull(model);
+        Preconditions.checkNotNull(modelSupplier);
         Preconditions.checkNotNull(executor);
 
         final PerfData<T> perfData = new PerfData<T>();
@@ -159,6 +166,7 @@ public class CrossValidator<T, U>
             {
                 @Override
                 public void run() {
+                    Model<T, U> model = modelSupplier.get();
                     FoldData<T, U> fold = getFold(foldN);
                     model.train(fold.getTrainSet());
                     PerfMatrix<T> matrix = perfData.getPerfMatrix(expName, algName, foldN);

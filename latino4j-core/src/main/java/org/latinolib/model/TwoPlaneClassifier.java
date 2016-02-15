@@ -3,6 +3,8 @@ package org.latinolib.model;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.Lists;
 import org.latinolib.SparseVector;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.Serializable;
 import java.util.Collections;
@@ -14,6 +16,7 @@ import java.util.List;
 public class TwoPlaneClassifier<T extends Serializable> implements Model<T, SparseVector>, Serializable
 {
     private static final long serialVersionUID = 7509696890306666596L;
+    private transient Logger log = LoggerFactory.getLogger(TwoPlaneClassifier.class);
 
     private LinearModel posClassifier;
     private LinearModel negClassifier;

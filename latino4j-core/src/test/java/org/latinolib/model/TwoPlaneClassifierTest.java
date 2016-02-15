@@ -1,5 +1,6 @@
 package org.latinolib.model;
 
+import com.google.common.base.Supplier;
 import com.google.common.collect.Lists;
 import org.junit.Test;
 import org.latinolib.Language;
@@ -16,6 +17,8 @@ import java.text.ParseException;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Executors;
 import java.util.regex.Pattern;
 
 import static org.junit.Assert.assertEquals;
@@ -37,6 +40,26 @@ public class TwoPlaneClassifierTest
         double accuracy = perfData.getAvg("", "", PerfMetric.ACCURACY);
         assertTrue(accuracy >= 0.5 && accuracy <= 0.7);
     }
+
+    @Test
+    public void testAccuracyMultiThreaded() throws IOException, ExecutionException, InterruptedException {
+        List<LabeledExample<String, String>> labeledExamples = getLabeledExamples();
+        LabeledDataset<String, SparseVector> dataset = getBowVectors(labeledExamples);
+
+        PerfData<String> perfData = CrossValidator
+            .stratified(10, dataset)
+            .runModel(new Supplier<Model<String, SparseVector>>()
+            {
+                @Override
+                public Model<String, SparseVector> get() {
+                    return new TwoPlaneClassifier<String>("Negative", "Neutral", "Positive");
+                }
+            }, Executors.newFixedThreadPool(15));
+
+        double accuracy = perfData.getAvg("", "", PerfMetric.ACCURACY);
+        assertTrue(accuracy >= 0.5 && accuracy <= 0.7);
+    }
+
 
     @SuppressWarnings("unchecked")
     @Test

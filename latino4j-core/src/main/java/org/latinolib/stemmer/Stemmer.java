@@ -1,11 +1,9 @@
 package org.latinolib.stemmer;
 
-import java.io.Serializable;
-
 /**
  * Author mIHA
  */
-public interface Stemmer extends Serializable
+public interface Stemmer
 {
     String getStem(String word);
 }

@@ -19,63 +19,54 @@ public class CrossValidator<T, U>
     private final int numFolds;
     private final LabeledDataset<T, U> data;
     private final boolean stratified;
-    private final boolean shuffleStratified;
+    private final boolean shuffled;
     private final List<FoldData<T, U>> folds;
 
-    public CrossValidator(int numFolds, LabeledDataset<T, U> data, Random rnd,
-                          boolean prepareData, boolean stratified, boolean shuffleStratified) {
+    public CrossValidator(int numFolds, LabeledDataset<T, U> data, Random rnd, boolean shuffled, boolean stratified) {
         Preconditions.checkArgument(data.size() >= 2);
         Preconditions.checkArgument(numFolds >= 2 && numFolds <= data.size());
 
         this.numFolds = numFolds;
         this.data = new LabeledDataset<T, U>(Preconditions.checkNotNull(data)); // defensive copy
         this.stratified = stratified;
-        this.shuffleStratified = shuffleStratified;
+        this.shuffled = shuffled;
         folds = Lists.newArrayListWithCapacity(numFolds);
         for (int i = 0; i < numFolds; i++) { folds.add(null); }
-        if (prepareData) {
+        if (shuffled || stratified) {
             if (stratified) {
-                groupByLabel(this.data, shuffleStratified, rnd);
+                groupByLabel(this.data, shuffled, rnd);
             } else {
-                if (rnd == null) {
-                    Collections.shuffle(this.data);
-                } else {
-                    Collections.shuffle(this.data, rnd);
-                }
+                Collections.shuffle(this.data, rnd == null ? new Random(1) : rnd);
             }
         }
     }
 
-    public static <T, U> CrossValidator<T, U> nonShuffled(int numFolds, LabeledDataset<T, U> data) {
-        return new CrossValidator<T, U>(numFolds, data, null, false, false, false);
-    }
-
-    public static <T, U> CrossValidator<T, U> shuffled(int numFolds, LabeledDataset<T, U> data) {
-        return new CrossValidator<T, U>(numFolds, data, null, true, false, false);
+    public static <T, U> CrossValidator<T, U> standard(int numFolds, LabeledDataset<T, U> data) {
+        return new CrossValidator<T, U>(numFolds, data, null, true, false);
     }
 
     public static <T, U> CrossValidator<T, U> stratified(int numFolds, LabeledDataset<T, U> data) {
-        return new CrossValidator<T, U>(numFolds, data, null, true, true, false);
+        return new CrossValidator<T, U>(numFolds, data, null, true, true);
     }
 
-    public static <T, U> CrossValidator<T, U> stratifiedShuffled(int numFolds, LabeledDataset<T, U> data) {
-        return new CrossValidator<T, U>(numFolds, data, null, true, true, true);
+    public static <T, U> CrossValidator<T, U> standard(int numFolds, LabeledDataset<T, U> data,
+            boolean shuffle, Random rnd) {
+        return new CrossValidator<T, U>(numFolds, data, rnd, shuffle, false);
     }
 
-    public static <T, U> CrossValidator<T, U> nonShuffled(int numFolds, LabeledDataset<T, U> data, Random rnd) {
-        return new CrossValidator<T, U>(numFolds, data, rnd, false, false, false);
+    public static <T, U> CrossValidator<T, U> stratified(int numFolds, LabeledDataset<T, U> data,
+            boolean shuffle, Random rnd) {
+        return new CrossValidator<T, U>(numFolds, data, rnd, shuffle, true);
     }
 
-    public static <T, U> CrossValidator<T, U> shuffled(int numFolds, LabeledDataset<T, U> data, Random rnd) {
-        return new CrossValidator<T, U>(numFolds, data, rnd, true, false, false);
-    }
-
-    public static <T, U> CrossValidator<T, U> stratified(int numFolds, LabeledDataset<T, U> data, Random rnd) {
-        return new CrossValidator<T, U>(numFolds, data, rnd, true, true, false);
-    }
-
-    public static <T, U> CrossValidator<T, U> stratifiedShuffled(int numFolds, LabeledDataset<T, U> data, Random rnd) {
-        return new CrossValidator<T, U>(numFolds, data, rnd, true, true, true);
+    public static <T, U> List<Model<T, U>> getModelList(Supplier<Model<T, U>> modelSupplier, int size) {
+        Preconditions.checkNotNull(modelSupplier);
+        Preconditions.checkArgument(size > 0);
+        List<Model<T, U>> models = Lists.newArrayListWithCapacity(size);
+        for (int i = 0; i < size; i++) {
+            models.add(modelSupplier.get());
+        }
+        return models;
     }
 
     public int getNumFolds() {
@@ -86,8 +77,8 @@ public class CrossValidator<T, U>
         return stratified;
     }
 
-    public boolean isShuffleStratified() {
-        return shuffleStratified;
+    public boolean isShuffled() {
+        return shuffled;
     }
 
     public FoldData<T, U> getFold(int fold) {
@@ -116,7 +107,7 @@ public class CrossValidator<T, U>
                 }
 
                 @Override
-                public FoldData next() {
+                public FoldData<T, U> next() {
                     return getFold(current++ + 1);
                 }
 
@@ -128,19 +119,13 @@ public class CrossValidator<T, U>
         );
     }
 
-    public PerfData<T> runModel(Model<T, U> model) {
-        return runModel(model, "", "");
+    public PerfData<T> runModel(List<Model<T, U>> models) {
+        return runModel(models, "", "");
     }
 
-    public PerfData<T> runModel(final Model<T, U> model, String expName, String algName) {
+    public PerfData<T> runModel(final List<Model<T, U>> models, String expName, String algName) {
         try {
-            return runModel(new Supplier<Model<T, U>>()
-            {
-                @Override
-                public Model<T, U> get() {
-                    return model;
-                }
-            }, expName, algName, Executors.newSingleThreadExecutor());
+            return runModel(models, expName, algName, Executors.newSingleThreadExecutor());
         } catch (ExecutionException e) {
             throw new RuntimeException(e);
         } catch (InterruptedException e) {
@@ -148,14 +133,15 @@ public class CrossValidator<T, U>
         }
     }
 
-    public PerfData<T> runModel(Supplier<Model<T, U>> model, ExecutorService executor)
+    public PerfData<T> runModel(List<Model<T, U>> models, ExecutorService executor)
             throws ExecutionException, InterruptedException {
-        return runModel(model, "", "", executor);
+        return runModel(models, "", "", executor);
     }
 
-    public PerfData<T> runModel(final Supplier<Model<T, U>> modelSupplier, final String expName, final String algName,
+    public PerfData<T> runModel(final List<Model<T, U>> models, final String expName, final String algName,
             ExecutorService executor) throws ExecutionException, InterruptedException {
-        Preconditions.checkNotNull(modelSupplier);
+        Preconditions.checkNotNull(models);
+        Preconditions.checkArgument(models.size() >= numFolds);
         Preconditions.checkNotNull(executor);
 
         final PerfData<T> perfData = new PerfData<T>();
@@ -166,7 +152,7 @@ public class CrossValidator<T, U>
             {
                 @Override
                 public void run() {
-                    Model<T, U> model = modelSupplier.get();
+                    Model<T, U> model = models.get(foldN - 1);
                     FoldData<T, U> fold = getFold(foldN);
                     model.train(fold.getTrainSet());
                     PerfMatrix<T> matrix = perfData.getPerfMatrix(expName, algName, foldN);

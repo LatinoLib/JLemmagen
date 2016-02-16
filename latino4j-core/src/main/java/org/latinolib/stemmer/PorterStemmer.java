@@ -7,7 +7,7 @@ import java.io.Serializable;
 /**
  * Author mIHA
  */
-public class PorterStemmer implements Stemmer
+public class PorterStemmer implements Stemmer, Serializable
 {
     private static final long serialVersionUID = -8630180403973087053L;
 

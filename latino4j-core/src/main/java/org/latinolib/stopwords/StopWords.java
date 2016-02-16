@@ -1,11 +1,9 @@
 package org.latinolib.stopwords;
 
-import java.io.Serializable;
-
 /**
  * Author mIHA
  */
-public interface StopWords extends Serializable
+public interface StopWords
 {
     boolean isStopWord(String word);
 }

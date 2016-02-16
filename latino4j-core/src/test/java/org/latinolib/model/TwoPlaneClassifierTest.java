@@ -34,8 +34,14 @@ public class TwoPlaneClassifierTest
         List<LabeledExample<String, String>> labeledExamples = getLabeledExamples();
         LabeledDataset<String, SparseVector> dataset = getBowVectors(labeledExamples);
 
-        TwoPlaneClassifier<String> classifier = new TwoPlaneClassifier<String>("Negative", "Neutral", "Positive");
-        PerfData<String> perfData = CrossValidator.stratified(10, dataset).runModel(classifier);
+        PerfData<String> perfData = CrossValidator.stratified(10, dataset).runModel(
+            CrossValidator.getModelList(new Supplier<Model<String, SparseVector>>()
+            {
+                @Override
+                public Model<String, SparseVector> get() {
+                    return new TwoPlaneClassifier<String>("Negative", "Neutral", "Positive");
+                }
+            }, 10));
 
         double accuracy = perfData.getAvg("", "", PerfMetric.ACCURACY);
         assertTrue(accuracy >= 0.5 && accuracy <= 0.7);
@@ -48,13 +54,13 @@ public class TwoPlaneClassifierTest
 
         PerfData<String> perfData = CrossValidator
             .stratified(10, dataset)
-            .runModel(new Supplier<Model<String, SparseVector>>()
+            .runModel(CrossValidator.getModelList(new Supplier<Model<String, SparseVector>>()
             {
                 @Override
                 public Model<String, SparseVector> get() {
                     return new TwoPlaneClassifier<String>("Negative", "Neutral", "Positive");
                 }
-            }, Executors.newFixedThreadPool(15));
+            }, 10), Executors.newFixedThreadPool(15));
 
         double accuracy = perfData.getAvg("", "", PerfMetric.ACCURACY);
         assertTrue(accuracy >= 0.5 && accuracy <= 0.7);
@@ -68,7 +74,14 @@ public class TwoPlaneClassifierTest
         LabeledDataset<String, SparseVector> dataset = getBowVectors(labeledExamples);
 
         TwoPlaneClassifier<String> classifier = new TwoPlaneClassifier<String>("Negative", "Neutral", "Positive");
-        PerfData<String> perfData = CrossValidator.stratified(10, dataset).runModel(classifier);
+        PerfData<String> perfData = CrossValidator.stratified(10, dataset, false, null).runModel(
+            CrossValidator.getModelList(new Supplier<Model<String, SparseVector>>()
+            {
+                @Override
+                public Model<String, SparseVector> get() {
+                    return new TwoPlaneClassifier<String>("Negative", "Neutral", "Positive");
+                }
+            }, 10));
         double expectedAccuracy = perfData.getAvg("", "", PerfMetric.ACCURACY);
 
         ByteArrayOutputStream bout = new ByteArrayOutputStream();
@@ -77,9 +90,15 @@ public class TwoPlaneClassifierTest
 
         ByteArrayInputStream bin = new ByteArrayInputStream(bout.toByteArray());
         ObjectInputStream oin = new ObjectInputStream(bin);
-        classifier = (TwoPlaneClassifier<String>)oin.readObject();
 
-        perfData = CrossValidator.stratified(10, dataset).runModel(classifier);
+        perfData = CrossValidator.stratified(10, dataset, false, null).runModel(
+            CrossValidator.getModelList(new Supplier<Model<String, SparseVector>>()
+            {
+                @Override
+                public Model<String, SparseVector> get() {
+                    return new TwoPlaneClassifier<String>("Negative", "Neutral", "Positive");
+                }
+            }, 10));
         double accuracy = perfData.getAvg("", "", PerfMetric.ACCURACY);
 
         assertEquals(expectedAccuracy, accuracy, 0.01);

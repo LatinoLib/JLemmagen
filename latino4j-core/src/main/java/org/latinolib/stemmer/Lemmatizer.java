@@ -10,7 +10,7 @@ import java.io.Serializable;
 /**
  * Author mIHA
  */
-public class Lemmatizer implements Stemmer
+public class Lemmatizer implements Stemmer, Serializable
 {
     private static final long serialVersionUID = 4682371004630411041L;
 

@@ -28,19 +28,19 @@ public class CrossValidationTest
         LabeledDataset<Integer, Integer> ld = newData(new Object[][] { {1, 10}, {2, 1}, {1, 1} });
 
         exception.expect(IllegalArgumentException.class);
-        new CrossValidator<Integer, Integer>(2, ld, null, false, true, false).getFolds();
+        CrossValidator.splitStratified(2, 1, ld);
     }
 
     @Test
     public void testStratifiedGroupedCheckOk() {
         LabeledDataset<Integer, Integer> ld = newData(new Object[][] { { 1, 10 }, { 2, 1 } });
-        new CrossValidator<Integer, Integer>(2, ld, null, false, true, false).getFolds();
+        new CrossValidator<Integer, Integer>(2, ld, null, false, false).getFolds();
 
         ld = newData(new Object[][] { { 1, 10 }, { 2, 1 }, { 1, 1 } });
-        new CrossValidator<Integer, Integer>(2, ld, null, true, true, false).getFolds();
+        new CrossValidator<Integer, Integer>(2, ld, null, true, false).getFolds();
 
         ld = newData(new Object[][] { { 1, 10 }, { 2, 1 }, { 1, 1 }, { 2, 10 } });
-        new CrossValidator<Integer, Integer>(2, ld, null, true, true, false).getFolds();
+        new CrossValidator<Integer, Integer>(2, ld, null, true, false).getFolds();
     }
 
     @Test

@@ -28,7 +28,7 @@ public class PerfData<T>
 
         public void put(int index, PerfMatrix<T> mtx) {
             resize(index + 1);
-            super.add(index, mtx);
+            super.set(index, mtx);
         }
     }
 

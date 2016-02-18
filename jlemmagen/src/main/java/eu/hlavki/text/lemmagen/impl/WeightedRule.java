@@ -17,7 +17,7 @@ package eu.hlavki.text.lemmagen.impl;
 
 /**
  *
- * @author Michal Hlavac <hlavki@hlavki.eu>
+ * @author Michal Hlavac {@literal <hlavki@hlavki.eu>}
  */
 public class WeightedRule implements Comparable<WeightedRule> {
 

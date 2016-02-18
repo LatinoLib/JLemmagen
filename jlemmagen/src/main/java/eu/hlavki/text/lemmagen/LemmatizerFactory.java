@@ -33,7 +33,7 @@ import java.text.MessageFormat;
 
 /**
  *
- * @author Michal Hlavac <hlavki@hlavki.eu>
+ * @author Michal Hlavac {@literal <hlavki@hlavki.eu>}
  */
 public final class LemmatizerFactory {
 

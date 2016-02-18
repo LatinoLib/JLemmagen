@@ -24,7 +24,7 @@ import java.util.HashSet;
 
 /**
  *
- * @author Michal Hlavac <hlavki@hlavki.eu>
+ * @author Michal Hlavac {@literal <hlavki@hlavki.eu>}
  */
 public class LemmaExample implements Comparable<LemmaExample> {
 

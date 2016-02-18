@@ -21,7 +21,7 @@ import java.io.ObjectOutput;
 
 /**
  *
- * @author Michal Hlavac <hlavki@hlavki.eu>
+ * @author Michal Hlavac {@literal <hlavki@hlavki.eu>}
  */
 final class Serializer {
 

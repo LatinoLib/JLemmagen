@@ -20,7 +20,8 @@ public class CrossValidator<T, U>
     private final LabeledDataset<T, U> data;
     private final boolean stratified;
     private final boolean shuffled;
-    private final List<FoldData<T, U>> folds;
+    private final ConcurrentMap<Integer, FoldData<T, U>> folds = new ConcurrentHashMap<Integer, FoldData<T, U>>();
+
 
     public CrossValidator(int numFolds, LabeledDataset<T, U> data, Random rnd, boolean shuffled, boolean stratified) {
         Preconditions.checkArgument(data.size() >= 2);
@@ -30,8 +31,6 @@ public class CrossValidator<T, U>
         this.data = new LabeledDataset<T, U>(Preconditions.checkNotNull(data)); // defensive copy
         this.stratified = stratified;
         this.shuffled = shuffled;
-        folds = Lists.newArrayListWithCapacity(numFolds);
-        for (int i = 0; i < numFolds; i++) { folds.add(null); }
         if (shuffled || stratified) {
             if (stratified) {
                 groupByLabel(this.data, shuffled, rnd);
@@ -59,16 +58,6 @@ public class CrossValidator<T, U>
         return new CrossValidator<T, U>(numFolds, data, rnd, shuffle, true);
     }
 
-    public static <T, U> List<Model<T, U>> getModelList(Supplier<Model<T, U>> modelSupplier, int size) {
-        Preconditions.checkNotNull(modelSupplier);
-        Preconditions.checkArgument(size > 0);
-        List<Model<T, U>> models = Lists.newArrayListWithCapacity(size);
-        for (int i = 0; i < size; i++) {
-            models.add(modelSupplier.get());
-        }
-        return models;
-    }
-
     public int getNumFolds() {
         return numFolds;
     }
@@ -83,32 +72,31 @@ public class CrossValidator<T, U>
 
     public FoldData<T, U> getFold(int fold) {
         Preconditions.checkArgument(fold >= 1 && fold <= numFolds);
-        int idx = fold - 1;
-        if (folds.get(idx) == null) {
-            FoldData<T, U> foldData = stratified ? splitStratified(numFolds, fold, data) : split(numFolds, fold, data);
-            synchronized (folds) {
-                if (folds.get(idx) == null) {
-                    folds.set(idx, foldData);
-                }
+        FoldData<T, U> foldData = folds.get(fold);
+        if (foldData == null) {
+            foldData = stratified ? splitStratified(numFolds, fold, data) : split(numFolds, fold, data);
+            FoldData<T, U> prev = folds.putIfAbsent(fold, foldData);
+            if (prev != null) {
+                foldData = prev;
             }
         }
-        return folds.get(idx);
+        return foldData;
     }
 
     public List<FoldData<T, U>> getFolds() {
         return Lists.newArrayList(
             new Iterator<FoldData<T, U>>()
             {
-                private int current = 0;
+                private int current = 1;
 
                 @Override
                 public boolean hasNext() {
-                    return current < numFolds;
+                    return current <= numFolds;
                 }
 
                 @Override
                 public FoldData<T, U> next() {
-                    return getFold(current++ + 1);
+                    return getFold(current++);
                 }
 
                 @Override
@@ -205,21 +193,23 @@ public class CrossValidator<T, U>
         Preconditions.checkArgument(fold >= 1 && fold <= numFolds);
 
         // calc label segments
-        Map<T, Integer> labelSegments = new HashMap<T, Integer>();
+        List<Integer> segmentLengths = Lists.newArrayList();
         T label = data.get(0).getLabel();
+        Set<T> segmentLabels = new HashSet<T>();
         for (int i = 1, startN = 0; i <= data.size(); i++) {
             if (i == data.size() || !label.equals(data.get(i).getLabel())) {
-                if (labelSegments.containsKey(label)) {
+                if (segmentLabels.contains(label)) {
                     throw new IllegalArgumentException("labeled data items not grouped");
                 }
-                labelSegments.put(label, i - startN);
+                segmentLabels.add(label);
+                segmentLengths.add(i - startN);
                 if (i < data.size()) {
                     startN = i;
                     label = data.get(i).getLabel();
                 }
             }
         }
-        if (data.size() < numFolds * labelSegments.size()) {
+        if (data.size() < numFolds * segmentLengths.size()) {
             throw new IllegalArgumentException("dataset too small to stratify");
         }
 
@@ -227,10 +217,10 @@ public class CrossValidator<T, U>
         LabeledDataset<T, U> trainSet = new LabeledDataset<T, U>();
         LabeledDataset<T, U> testSet = new LabeledDataset<T, U>();
         int segStart = 0;
-        for (Map.Entry<T, Integer> segment : labelSegments.entrySet()) {
-            int len = segment.getValue() / numFolds;
+        for (int segmentLen : segmentLengths) {
+            int len = segmentLen / numFolds;
             int testStart = segStart + (fold - 1) * len;
-            int mod = segment.getValue() % numFolds;
+            int mod = segmentLen % numFolds;
             if (fold <= mod) {
                 len++;
                 testStart += fold - 1;
@@ -245,7 +235,7 @@ public class CrossValidator<T, U>
             for (int i = testStart; i < testEnd; i++) {
                 testSet.add(data.get(i).getLabel(), data.get(i).getExample());
             }
-            int segEnd = segStart + segment.getValue();
+            int segEnd = segStart + segmentLen;
             for (int i = testEnd; i < segEnd; i++) {
                 trainSet.add(data.get(i).getLabel(), data.get(i).getExample());
             }

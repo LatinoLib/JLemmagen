@@ -13,22 +13,33 @@ import java.util.concurrent.ConcurrentMap;
  */
 public class PerfData<T>
 {
-    private class FoldData extends ArrayList<PerfMatrix<T>>
+    private class FoldData implements Iterable<PerfMatrix<T>>
     {
         private static final long serialVersionUID = -7820683828561338945L;
-        private transient final Object lock = new Object();
 
-        public void resize(int n) {
-            synchronized (lock) {
-                while (size() < n) {
-                    add(null);
-                }
-            }
+        private final ConcurrentMap<Integer, PerfMatrix<T>> matrices = new ConcurrentHashMap<Integer, PerfMatrix<T>>();
+
+        public PerfMatrix<T> get(int index) {
+            return matrices.get(index);
         }
 
-        public void put(int index, PerfMatrix<T> mtx) {
-            resize(index + 1);
-            super.set(index, mtx);
+        public int size() {
+            return matrices.size();
+        }
+
+        public PerfMatrix<T> putIfAbsent(int index, PerfMatrix<T> mtx) {
+            return matrices.putIfAbsent(index, mtx);
+        }
+
+        @Override
+        public Iterator<PerfMatrix<T>> iterator() {
+            ArrayList<Integer> keys = Lists.newArrayList(matrices.keySet());
+            Collections.sort(keys);
+            List<PerfMatrix<T>> values = Lists.newArrayList();
+            for (int foldN : keys) {
+                values.add(matrices.get(foldN));
+            }
+            return values.iterator();
         }
     }
 
@@ -94,15 +105,19 @@ public class PerfData<T>
                 foldData = prev;
             }
         }
-        foldData.resize(foldNum);
         if (matrix == null) {
-            matrix = foldData.get(foldNum - 1);
+            matrix = foldData.get(foldNum);
             if (matrix == null) {
-                matrix = new PerfMatrix<T>();
-                foldData.put(foldNum - 1, matrix);
+                PerfMatrix<T> prev = foldData.putIfAbsent(foldNum, matrix = new PerfMatrix<T>());
+                if (prev != null) {
+                    matrix = prev;
+                }
             }
         } else {
-            foldData.put(foldNum - 1, matrix);
+            PerfMatrix<T> prev = foldData.putIfAbsent(foldNum, matrix);
+            if (prev != null) {
+                matrix = prev;
+            }
         }
         return matrix;
     }
@@ -170,8 +185,8 @@ public class PerfData<T>
         if (algData != null) {
             FoldData foldData = algData.get(algName);
             if (foldData != null) {
-                if (foldNum <= foldData.size() && foldData.get(foldNum - 1) != null) {
-                    return foldData.get(foldNum - 1).getScore(metric);
+                if (foldNum <= foldData.size() && foldData.get(foldNum) != null) {
+                    return foldData.get(foldNum).getScore(metric);
                 }
             }
         }
@@ -186,8 +201,8 @@ public class PerfData<T>
         if (algData != null) {
             FoldData foldData = algData.get(algName);
             if (foldData != null) {
-                if (foldNum <= foldData.size() && foldData.get(foldNum - 1) != null) {
-                    return foldData.get(foldNum - 1).getScore(metric, lbl);
+                if (foldNum <= foldData.size() && foldData.get(foldNum) != null) {
+                    return foldData.get(foldNum).getScore(metric, lbl);
                 }
             }
         }
@@ -202,8 +217,8 @@ public class PerfData<T>
         if (algData != null) {
             FoldData foldData = algData.get(algName);
             if (foldData != null) {
-                if (foldNum <= foldData.size() && foldData.get(foldNum - 1) != null) {
-                    return foldData.get(foldNum - 1).getScore(metric, orderedLabels);
+                if (foldNum <= foldData.size() && foldData.get(foldNum) != null) {
+                    return foldData.get(foldNum).getScore(metric, orderedLabels);
                 }
             }
         }

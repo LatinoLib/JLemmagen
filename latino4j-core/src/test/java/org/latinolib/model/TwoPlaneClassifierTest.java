@@ -1,15 +1,12 @@
 package org.latinolib.model;
 
-import com.google.common.base.Supplier;
 import com.google.common.collect.Lists;
 import org.junit.Test;
 import org.latinolib.Language;
 import org.latinolib.SparseVector;
 import org.latinolib.bow.BowSpace;
 import org.latinolib.bow.WordWeightType;
-import org.latinolib.eval.CrossValidator;
-import org.latinolib.eval.PerfData;
-import org.latinolib.eval.PerfMetric;
+import org.latinolib.eval.*;
 import org.latinolib.tokenizer.RegexTokenizers;
 
 import java.io.*;
@@ -34,15 +31,7 @@ public class TwoPlaneClassifierTest
         List<LabeledExample<String, String>> labeledExamples = getLabeledExamples();
         LabeledDataset<String, SparseVector> dataset = getBowVectors(labeledExamples);
 
-        PerfData<String> perfData = CrossValidator.stratified(10, dataset).runModel(
-            CrossValidator.getModelList(new Supplier<Model<String, SparseVector>>()
-            {
-                @Override
-                public Model<String, SparseVector> get() {
-                    return new TwoPlaneClassifier<String>("Negative", "Neutral", "Positive");
-                }
-            }, 10));
-
+        PerfData<String> perfData = CrossValidator.stratified(10, dataset).runModel(getModels(10));
         double accuracy = perfData.getAvg("", "", PerfMetric.ACCURACY);
         assertTrue(accuracy >= 0.5 && accuracy <= 0.7);
     }
@@ -54,13 +43,7 @@ public class TwoPlaneClassifierTest
 
         PerfData<String> perfData = CrossValidator
             .stratified(10, dataset)
-            .runModel(CrossValidator.getModelList(new Supplier<Model<String, SparseVector>>()
-            {
-                @Override
-                public Model<String, SparseVector> get() {
-                    return new TwoPlaneClassifier<String>("Negative", "Neutral", "Positive");
-                }
-            }, 10), Executors.newFixedThreadPool(15));
+            .runModel(getModels(10), Executors.newFixedThreadPool(15));
 
         double accuracy = perfData.getAvg("", "", PerfMetric.ACCURACY);
         assertTrue(accuracy >= 0.5 && accuracy <= 0.7);
@@ -74,14 +57,7 @@ public class TwoPlaneClassifierTest
         LabeledDataset<String, SparseVector> dataset = getBowVectors(labeledExamples);
 
         TwoPlaneClassifier<String> classifier = new TwoPlaneClassifier<String>("Negative", "Neutral", "Positive");
-        PerfData<String> perfData = CrossValidator.stratified(10, dataset, false, null).runModel(
-            CrossValidator.getModelList(new Supplier<Model<String, SparseVector>>()
-            {
-                @Override
-                public Model<String, SparseVector> get() {
-                    return new TwoPlaneClassifier<String>("Negative", "Neutral", "Positive");
-                }
-            }, 10));
+        PerfData<String> perfData = CrossValidator.stratified(10, dataset, false, null).runModel(getModels(10));
         double expectedAccuracy = perfData.getAvg("", "", PerfMetric.ACCURACY);
 
         ByteArrayOutputStream bout = new ByteArrayOutputStream();
@@ -91,20 +67,13 @@ public class TwoPlaneClassifierTest
         ByteArrayInputStream bin = new ByteArrayInputStream(bout.toByteArray());
         ObjectInputStream oin = new ObjectInputStream(bin);
 
-        perfData = CrossValidator.stratified(10, dataset, false, null).runModel(
-            CrossValidator.getModelList(new Supplier<Model<String, SparseVector>>()
-            {
-                @Override
-                public Model<String, SparseVector> get() {
-                    return new TwoPlaneClassifier<String>("Negative", "Neutral", "Positive");
-                }
-            }, 10));
+        perfData = CrossValidator.stratified(10, dataset, false, null).runModel(getModels(10));
         double accuracy = perfData.getAvg("", "", PerfMetric.ACCURACY);
 
         assertEquals(expectedAccuracy, accuracy, 0.01);
     }
 
-    private LabeledDataset<String, SparseVector> getBowVectors(List<LabeledExample<String, String>> labeledExamples)
+    private static LabeledDataset<String, SparseVector> getBowVectors(List<LabeledExample<String, String>> labeledExamples)
             throws IOException {
         BowSpace bow = new BowSpace();
         bow.setTokenizer(RegexTokenizers.LATIN.get());
@@ -128,7 +97,7 @@ public class TwoPlaneClassifierTest
         return dataset;
     }
 
-    private List<LabeledExample<String, String>> getLabeledExamples() throws IOException {
+    private static List<LabeledExample<String, String>> getLabeledExamples() throws IOException {
         Pattern urlRegex = Pattern.compile("http\\S*", Pattern.CASE_INSENSITIVE);
         Pattern stockRefRegex = Pattern.compile("\\$\\w+", Pattern.CASE_INSENSITIVE);
         Pattern userRefRegex = Pattern.compile("@\\w+", Pattern.CASE_INSENSITIVE);
@@ -162,5 +131,13 @@ public class TwoPlaneClassifierTest
                 text));
         }
         return examples;
+    }
+
+    private static List<Model<String, SparseVector>> getModels(int size) {
+        List<Model<String, SparseVector>> models = Lists.newArrayList();
+        for (int i = 0; i < size; i++) {
+            models.add(new TwoPlaneClassifier<String>("Negative", "Neutral", "Positive"));
+        }
+        return models;
     }
 }

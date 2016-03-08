@@ -1,7 +1,6 @@
 package org.latinolib.eval;
 
 import com.google.common.base.Preconditions;
-import com.google.common.base.Supplier;
 import com.google.common.collect.Lists;
 import org.latinolib.model.LabeledDataset;
 import org.latinolib.model.LabeledExampleEntry;
@@ -21,7 +20,6 @@ public class CrossValidator<T, U>
     private final boolean stratified;
     private final boolean shuffled;
     private final ConcurrentMap<Integer, FoldData<T, U>> folds = new ConcurrentHashMap<Integer, FoldData<T, U>>();
-
 
     public CrossValidator(int numFolds, LabeledDataset<T, U> data, Random rnd, boolean shuffled, boolean stratified) {
         Preconditions.checkArgument(data.size() >= 2);
@@ -107,13 +105,13 @@ public class CrossValidator<T, U>
         );
     }
 
-    public PerfData<T> runModel(List<Model<T, U>> models) {
-        return runModel(models, "", "");
+    public PerfData<T> runModel(List<Model<T, U>> foldModels) {
+        return runModel(foldModels, "", "");
     }
 
-    public PerfData<T> runModel(final List<Model<T, U>> models, String expName, String algName) {
+    public PerfData<T> runModel(final List<Model<T, U>> foldModels, String expName, String algName) {
         try {
-            return runModel(models, expName, algName, Executors.newSingleThreadExecutor());
+            return runModel(foldModels, expName, algName, Executors.newSingleThreadExecutor());
         } catch (ExecutionException e) {
             throw new RuntimeException(e);
         } catch (InterruptedException e) {
@@ -121,18 +119,27 @@ public class CrossValidator<T, U>
         }
     }
 
-    public PerfData<T> runModel(List<Model<T, U>> models, ExecutorService executor)
+    public PerfData<T> runModel(List<Model<T, U>> foldModels, ExecutorService executor)
             throws ExecutionException, InterruptedException {
-        return runModel(models, "", "", executor);
+        return runModel(foldModels, "", "", executor);
     }
 
-    public PerfData<T> runModel(final List<Model<T, U>> models, final String expName, final String algName,
-            ExecutorService executor) throws ExecutionException, InterruptedException {
+    public PerfData<T> runModel(List<Model<T, U>> models, String expName, String algName, ExecutorService executor)
+            throws ExecutionException, InterruptedException {
+        final PerfData<T> perfData = new PerfData<T>();
+        List<Future<?>> futures = runModel(models, expName, algName, executor, perfData);
+        for (Future<?> future : futures) {
+            future.get();
+        }
+        return perfData;
+    }
+
+    public List<Future<?>> runModel(final List<Model<T, U>> models, final String expName, final String algName,
+            ExecutorService executor, final PerfData<T> perfData) throws ExecutionException, InterruptedException {
         Preconditions.checkNotNull(models);
         Preconditions.checkArgument(models.size() >= numFolds);
         Preconditions.checkNotNull(executor);
 
-        final PerfData<T> perfData = new PerfData<T>();
         List<Future<?>> futures = Lists.newArrayList();
         for (int i = 0; i < numFolds; i++) {
             final int foldN = i + 1;
@@ -140,21 +147,21 @@ public class CrossValidator<T, U>
             {
                 @Override
                 public void run() {
-                    Model<T, U> model = models.get(foldN - 1);
-                    FoldData<T, U> fold = getFold(foldN);
-                    model.train(fold.getTrainSet());
-                    PerfMatrix<T> matrix = perfData.getPerfMatrix(expName, algName, foldN);
-                    for (LabeledExampleEntry<T, U> le : fold.getTestSet()) {
-                        T label = model.predict(le.getExample()).getBest().getLabel();
-                        matrix.addCount(le.getLabel(), label);
-                    }
+                    processFold(models.get(foldN - 1), expName, algName, foldN, perfData);
                 }
             }));
         }
-        for (Future<?> future : futures) {
-            future.get();
+        return futures;
+    }
+
+    public void processFold(Model<T, U> model, String expName, String algName, int foldN, PerfData<T> perfData) {
+        FoldData<T, U> fold = getFold(foldN);
+        model.train(fold.getTrainSet());
+        PerfMatrix<T> matrix = perfData.getPerfMatrix(expName, algName, foldN);
+        for (LabeledExampleEntry<T, U> le : fold.getTestSet()) {
+            T label = model.predict(le.getExample()).getBest().getLabel();
+            matrix.addCount(le.getLabel(), label);
         }
-        return perfData;
     }
 
     public static <T, U> Map<T, List<LabeledExampleEntry<T, U>>> getLabelGroups(LabeledDataset<T, U> data) {
